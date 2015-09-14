@@ -47,11 +47,7 @@ if (app.get('env') === 'development') {
 }
 
 // production error handler
-<<<<<<< HEAD
 // no stacktraces leaked to user
-=======
-// no stacktraces leaked to resources
->>>>>>> b7757cebeaf0e189f2330ecb89e889f95e70d867
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
