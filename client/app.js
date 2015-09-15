@@ -39,7 +39,7 @@ function diplayCards (data){
 function displayCategory (data, category){
     categoryArray = [];
     for (var i = 0; i < data.length; i++){
-        if(data.[i].category === category){
+        if(data[i].category === category){
             categoryArray.push(data[i]);
         }
     }
@@ -49,7 +49,7 @@ function displayCategory (data, category){
 function displaySubject (data, category){
     subjectArray = [];
     for (var i = 0; i < data.length; i++){
-        if(data.[i].subject === subject){
+        if(data[i].subject === subject){
             subjectArray.push(data[i]);
         }
     }
@@ -64,7 +64,7 @@ function displaySubject (data, category){
 function displayTag (data, tag){
     tagArray = [];
     for (var j = 0; j<data.length; j++){
-        data
+        data[j].
 
     }
 
