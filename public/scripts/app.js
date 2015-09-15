@@ -13,7 +13,10 @@ $(document).ready(function(){
         $(this).find(".sub-nav").slideUp(500);
     });
 
+    $(".delete").on("click", function(){
+       confirm("are you sure?");
 
+    });
 
 
 });
