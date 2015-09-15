@@ -11,246 +11,125 @@
     <script src="../public/scripts/app.js"></script>
 </head>
 <body class="container">
-<div class="row">
-    <div class="col-md-6">
-        <h1>Embed Resources</h1>
-    </div>
-
-</div>
-
-<!-- start of search bar -->
-<div class="row">
-    <div class="search col-md-offset-1 col-md-4">
-        <input type="search" alt="search box" placeholder="search">
-        <button type="submit">Search</button>
-    </div>
-</div>
-<!--start the drop down for categories-->
-<li class="navDirectory"><a href="#">Category</a>
-
-    <ul id="navigation-option" class="sub-nav">
-
-        <li class="nav-dir"><a href="#">Graphs and Diagrams</a></li>
-        <li class="nav-dir"><a href="#">Interactive</a></li>
-        <li class="nav-dir"><a href="#">Three</a></li>
-        <li class="nav-dir"><a href="#">Four</a></li>
-
-    </ul>
-
-</li>
-
-<!--  start the drop down for subjects  -->
-
-<li class="navDirectory"><a href="#">Subjects</a>
-
-    <ul id="navigation-option" class="sub-nav">
-
-        <li class="nav-dir"><a href="#">Sone</a></li>
-        <li class="nav-dir"><a href="#">Stwo</a></li>
-        <li class="nav-dir"><a href="#">SThree</a></li>
-        <li class="nav-dir"><a href="#">SFour</a></li>
-
-    </ul>
-
-</li>
-
-
-<!-- start of cards -->
-
-<div class="row">
-    <div class="col-md-4">
-        <div class="card">
-            <div class="row">
-                <div class="logo col-md-offset-1"></div>
-                <div class="title col-md-8">
-                    title
-                </div>
+    <!-- start title of page -->
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Embed Resources</h1>
             </div>
-            <div class="row">
-                <div class="video col-md-offset-2">
-                    <iframe width="267" height="150" src="https://www.youtube.com/embed/EhRuG0D-WsU" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                </div>
-                <div class="row">
-                    <div class="paragraph2 col-md-offset-1 col-md-10">
-                        <!-- HTML to write -->
+        </div>
+    <!-- end title of page -->
 
-                        <div class="paragraph col-md-offset-1 col-md-10">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in mi magna.
-                            Donec necdui eu enim sodales facilisis. Phasellus sit a libero ullamcorper ipsum.
-                            Suspendisseet pharetra mauris. Mauris porttitor lectus nec tortor fermentum pharetra.
-                            Etiam ante libero, varius et quam in, porta bibendum dolor. Sed efficitur nibh nec
-                            sagittis gravida. Quisque ullamcorper in dolor non vestibulum.
+    <!-- start of search bar -->
+        <div class="row">
+            <div class="search col-md-offset-1 col-md-4">
+                <!--<input type="search" alt="search box" placeholder="search">-->
+                <!--<button type="submit">Search</button>-->
+            </div>
+        </div>
+    <!-- end search bar -->
+    <!--start the drop down for categories-->
+        <ul>
+            <li class="navDirectory"><a href="#">Category</a>
+
+                <ul id="navigation-option" class="sub-nav">
+
+                    <li class="nav-dir"><a href="#">Graphs and Diagrams</a></li>
+                    <li class="nav-dir"><a href="#">Interactive</a></li>
+                    <li class="nav-dir"><a href="#">Three</a></li>
+                    <li class="nav-dir"><a href="#">Four</a></li>
+
+                </ul>
+
+            </li>
+        </ul>
+    <!-- end the drop down for categories -->
+    <!--  start the drop down for subjects  -->
+        <ul>
+            <li class="navDirectory"><a href="#">Subjects</a>
+
+                <ul id="navigation-option" class="sub-nav">
+
+                    <li class="nav-dir"><a href="#">Sone</a></li>
+                    <li class="nav-dir"><a href="#">Stwo</a></li>
+                    <li class="nav-dir"><a href="#">SThree</a></li>
+                    <li class="nav-dir"><a href="#">SFour</a></li>
+
+                </ul>
+
+            </li>
+        </ul>
+    <!-- end the drop down for subjects -->
+
+
+
+    <!-- start of cards -->
+        <div class="row">
+            <!-- start of one card -->
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="row">
+                        <div class="logo col-md-offset-1"></div>
+                        <div class="title col-md-8">
+                            title
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-md-offset-4 col-md-2">
+                        <div class="video col-md-offset-2">
+                            <iframe width="267" height="150" src="https://www.youtube.com/embed/EhRuG0D-WsU" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
+                        </div>
+                        <div class="row">
+                            <div class="paragraph2 col-md-offset-1 col-md-10">
+                                <div class="paragraph col-md-offset-1 col-md-10">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in mi magna.
+                                    Donec necdui eu enim sodales facilisis. Phasellus sit a libero ullamcorper ipsum.
+                                    Suspendisseet pharetra mauris. Mauris porttitor lectus nec tortor fermentum pharetra.
+                                    Etiam ante libero, varius et quam in, porta bibendum dolor. Sed efficitur nibh nec
+                                    sagittis gravida. Quisque ullamcorper in dolor non vestibulum.
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-offset-4 col-md-2">
 
-                            <img class="example" src="../public/images/wireframe_modalButton.png">
+                                    <img class="example" src="../public/images/wireframe_modalButton.png">
 
-                            <div id="myModal" class="modal fade">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title">Embed This Resource!</h4>
-                                        </div>
-                                        <div class="modal-body row">
-                                            <div class="col-md-10">
-                                                <iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
+                                    <div id="myModal" class="modal fade">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                    <h4 class="modal-title">Embed This Resource!</h4>
+                                                </div>
+                                                <div class="modal-body row">
+                                                    <div class="col-md-10">
+                                                        <iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
+                                                    </div>
+
+                                                    <div class="embedcode col-md-offset-1 col-md-10">
+                                                        <h5>
+                                                            < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
+                                                        </h5>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                                </div>
                                             </div>
-
-                                            <div class="embedcode col-md-offset-1 col-md-10">
-                                                <h5>
-                                                    < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                                                </h5>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="tags col-md-offset-3 col-md-10">
-                        Tags: ______ ______ ______ ______
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-</div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="row">
-                <div class="logo col-md-offset-1"></div>
-                <div class="title col-md-8">
-                    title
-                </div>
-            </div>
-            <div class="row">
-                <div class="video col-md-offset-2">
-                    <iframe width="267" height="150" src="https://www.youtube.com/embed/EhRuG0D-WsU" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                </div>
-                <div class="row">
-                    <div class="paragraph2 col-md-offset-1 col-md-10">
-                        <!-- HTML to write -->
-
-                        <div class="paragraph col-md-offset-1 col-md-10">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in mi magna.
-                            Donec necdui eu enim sodales facilisis. Phasellus sit a libero ullamcorper ipsum.
-                            Suspendisseet pharetra mauris. Mauris porttitor lectus nec tortor fermentum pharetra.
-                            Etiam ante libero, varius et quam in, porta bibendum dolor. Sed efficitur nibh nec
-                            sagittis gravida. Quisque ullamcorper in dolor non vestibulum.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-offset-4 col-md-2">
-
-                            <img class="example" src="../public/images/wireframe_modalButton.png">
-
-                            <div id="myModal" class="modal fade">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title">Embed This Resource!</h4>
-                                        </div>
-                                        <div class="modal-body row">
-                                            <div class="col-md-10">
-                                                <iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                                            </div>
-
-                                            <div class="embedcode col-md-offset-1 col-md-10">
-                                                <h5>
-                                                    < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                                                </h5>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="tags col-md-offset-3 col-md-10">
+                                Tags: ______ ______ ______ ______
                             </div>
                         </div>
                     </div>
-                    <div class="tags col-md-offset-3 col-md-10">
-                        Tags: ______ ______ ______ ______
-                    </div>
-                </div>
-            </div>
 
+                </div>
+                <!-- end of one card -->
         </div>
+
+
     </div>
-    <div class="col-md-4">
-        <div class="card">
-            <div class="row">
-                <div class="logo col-md-offset-1"></div>
-                <div class="title col-md-8">
-                    title
-                </div>
-            </div>
-            <div class="row">
-                <div class="video col-md-offset-2">
-                    <iframe width="267" height="150" src="https://www.youtube.com/embed/EhRuG0D-WsU" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                </div>
-                <div class="row">
-                    <div class="paragraph2 col-md-offset-1 col-md-10">
-                        <!-- HTML to write -->
-
-                        <div class="paragraph col-md-offset-1 col-md-10">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in mi magna.
-                            Donec necdui eu enim sodales facilisis. Phasellus sit a libero ullamcorper ipsum.
-                            Suspendisseet pharetra mauris. Mauris porttitor lectus nec tortor fermentum pharetra.
-                            Etiam ante libero, varius et quam in, porta bibendum dolor. Sed efficitur nibh nec
-                            sagittis gravida. Quisque ullamcorper in dolor non vestibulum.
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-offset-4 col-md-2">
-
-                            <img class="example" src="../public/images/wireframe_modalButton.png">
-
-                            <div id="myModal" class="modal fade">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title">Embed This Resource!</h4>
-                                        </div>
-                                        <div class="modal-body row">
-                                            <div class="col-md-10">
-                                                <iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                                            </div>
-
-                                            <div class="embedcode col-md-offset-1 col-md-10">
-                                                <h5>
-                                                    < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>                                            <!--<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">-->
-                                                </h5>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tags col-md-offset-3 col-md-10">
-                        Tags: ______ ______ ______ ______
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
 </body>
 </html>
