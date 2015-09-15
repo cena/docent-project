@@ -14,3 +14,8 @@ table td {
 table th {
     text-align: center;
 }
+
+.description, .embedlink, .reourcelink, .howtolink {
+    overflow: scroll;
+    height: 100px;
+}
