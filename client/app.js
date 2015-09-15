@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+
+
+
+    //append resources to DOM on page load
+    displayCards(getResources());
 });
 
 
@@ -17,7 +22,10 @@ function getResources () {
         type: 'GET',
         dataType: 'json',
         url: TBD,
-        success: displayCards(data)
+        success: data.sort(function(a, b) {
+            return a.name - b.name;
+            //(need to test) returns array of data sorted alphabetically by name
+        })
     })
 }
 
@@ -35,6 +43,13 @@ function diplayCards (data){
         $('#cardContainer').append()
     }
 }
+
+function displayModal(data){
+
+
+}
+
+
 
 function displayCategory (data, category){
     categoryArray = [];
@@ -72,3 +87,4 @@ function displayTag (data, tag){
     }
     return tagArray;
 }
+
