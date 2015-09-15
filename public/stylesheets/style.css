@@ -47,12 +47,7 @@ h1 {
 
 .paragraph {
   overflow: scroll;
-  height: 60px;
-  margin-bottom: 20px;
-}
-.paragraph2 {
-  overflow: hidden;
-  height: 60px;
+  height: 50px;
   margin-bottom: 20px;
 }
 
