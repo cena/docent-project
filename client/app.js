@@ -64,11 +64,11 @@ function displaySubject (data, category){
 function displayTag (data, tag){
     tagArray = [];
     for (var j = 0; j<data.length; j++){
-        data[j].
-
+        for (var k = 0; k<data[j].tags.length; k++){
+            if(data[j].tags[k] === tag){
+                tagArray.push(data[j].tags[k]);
+            }
+        }
     }
-
-
-
-
+    return tagArray;
 }
