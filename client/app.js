@@ -47,17 +47,28 @@ function displayCategory (data, category){
 }
 
 function displaySubject (data, category){
-    SubjectArray = [];
+    subjectArray = [];
     for (var i = 0; i < data.length; i++){
         if(data.[i].subject === subject){
-            categoryArray.push(data[i]);
+            subjectArray.push(data[i]);
         }
     }
     for (var i = 0; i < data.length; i++){
-        if(data.[i].subject == null){
-            categoryArray.push(data[i]);
+        if(data[i].subject == null){
+            subjectArray.push(data[i]);
         }
     }
-    return SubjectArray;
+    return subjectArray;
 }
 
+function displayTag (data, tag){
+    tagArray = [];
+    for (var j = 0; j<data.length; j++){
+        data
+
+    }
+
+
+
+
+}
