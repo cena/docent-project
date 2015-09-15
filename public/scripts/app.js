@@ -14,8 +14,7 @@ $(document).ready(function(){
     });
 
     $(".delete").on("click", function(){
-       confirm("are you sure?");
-
+        $("#myModal").modal('show');
     });
 
 
