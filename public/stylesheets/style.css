@@ -48,7 +48,7 @@ h1 {
 .paragraph {
   overflow: scroll;
   height: 50px;
-  margin-bottom: 20px;
+  margin: 20px;
 }
 
 img.example {
