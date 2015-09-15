@@ -46,3 +46,18 @@ function displayCategory (data, category){
     return categoryArray;
 }
 
+function displaySubject (data, category){
+    SubjectArray = [];
+    for (var i = 0; i < data.length; i++){
+        if(data.[i].subject === subject){
+            categoryArray.push(data[i]);
+        }
+    }
+    for (var i = 0; i < data.length; i++){
+        if(data.[i].subject == null){
+            categoryArray.push(data[i]);
+        }
+    }
+    return SubjectArray;
+}
+
