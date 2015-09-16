@@ -110,9 +110,55 @@ function displayTag (data, tag){
     return tagArray;
 }
 
-$("#newModal").on("click", ".submitButton", function(){
-    var tableRow = "<tr></tr>";
-    $("#adminTable").prepend(tableRow);
-    $(tableRow).append(".resourceName").val();
-});
+//ADMIN PAGE
+function adminTable (data){
+    for (var i = 0; i < data.length; i++){
+        name = data[i].name;
+        logo = data[i].logo;
+        embedLink = data[i].embedLink;
+        howToVideo = data[i].howToVideo;
+        description = data[i].description;
+        category = data[i].category;
+        subject = data[i].subject;
+        tags = data[i].tags;
+        var tableRow = '<tr></tr>';
+
+        var nameCell = '<td>'+ name +'</td>';
+        var logoCell = '<td class="logo">'+ logo.text() +'</td>';
+        var videoCell = '<td class="howToLink">'+ howToVideo.text() +'</td>';
+        var embedLinkCell = '<td class="embedLink">'+ embedLink +'</td>';
+        var descriptionCell = '<td class="description">'+ description +'</td>';
+        var tagsCell = '<td><ul><li>'+ tags +'</li></ul></td>';
+        var subjectCell = '<td>'+ subject +'</td>';
+        var categoriesCell = '<td>'+ category +'</td>';
+        var editableCells = logoCell + nameCell + embedLinkCell + videoCell + descriptionCell + tagsCell + subjectCell + categoriesCell;
+        var buttonsCell = '<td><button type="button" class="edit">Edit</button><button type="submit" class="delete">Delete</button></td>';
+        //make variables for the various sections of html (i.e. logoImgDiv, titleDiv, videoDiv, paragraphDiv, tagsDiv)
+
+        var $el =
+            $('#adminTable').append(tableRow);
+
+        //appending to the table row
+        $(tableRow).append(editableCells + buttonsCell);
+    }
+}
+
+
+//function adminTable (data){
+//    name = data[i].name;
+//    logo = data[i].logo;
+//    embedLink = data[i].embedLink;
+//    howToVideo = data[i].howToVideo;
+//    description = data[i].description;
+//    category = data[i].category;
+//    subject = data[i].subject;
+//    tags = data[i].tags;
+//    var adminTableCell = '<td></td>';
+//   $("#adminTable").append(adminTableCell);
+//    $(adminTableCell).append()
+//
+//}
+
+
+
 

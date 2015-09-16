@@ -6,7 +6,7 @@ table {
 }
 
 table td {
-    padding: 10px;
+    padding: 20px;
     text-align: center;
     border-bottom: 1px solid black;
     border-right: 1px solid black;
@@ -16,12 +16,16 @@ table th {
     text-align: center;
     border-bottom: 3px solid black;
     border-right: 1px solid black;
+    padding: 20px;
 }
 
-.description, .embedlink, .reourcelink, .howtolink {
+.description, .embedLink, .reourceLink, .howToLink, .logo {
     overflow: scroll;
     height: 100px;
 }
 
+ul {
+    text-decoration: none;
+}
 
 
