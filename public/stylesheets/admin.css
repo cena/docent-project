@@ -1,0 +1,27 @@
+body {
+    font-family: lato, sans-serif;
+}
+table {
+    margin: 50px auto;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+table th {
+    text-align: center;
+    border-bottom: 3px solid black;
+    border-right: 1px solid black;
+}
+
+.description, .embedlink, .reourcelink, .howtolink {
+    overflow: scroll;
+    height: 100px;
+}
+
+
+

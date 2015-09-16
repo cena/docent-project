@@ -5,6 +5,7 @@ $(document).ready(function(){
 
     //append resources to DOM on page load
     displayCards(getResources());
+
 });
 
 
@@ -29,7 +30,7 @@ function getResources () {
     })
 }
 
-function diplayCards (data){
+function displayCards (data){
     for (var i = 0; i < data.length; i++){
         name = data[i].name;
         logo = data[i].logo;
@@ -39,15 +40,36 @@ function diplayCards (data){
         category = data[i].category;
         subject = data[i].subject;
         tags = data[i].tags;
+        var logoImgTag = '<img src="'+ logo +'">';
+        var cardDiv = '<main class="col-md-4 card"></main>';
+        var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
+        var nameDiv = '<h4 class="title col-md-8">'+ name +'</h4>';
+        var videoDiv = '<iframe class="col-md-offset-1 video" src="'+ howToVideo +'" frameborder="0" allowfullscreen></iframe>';
+        var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
+        var exampleDiv = '<img class="col-md-offset-4 col-md-4 example" src="../public/images/modalButton.png">';
+        var tagsDiv = '<section class="tags col-md-offset-3 col-md-10">'+ tags +'</section>';
+        //make variables for the various sections of html (i.e. logoImgDiv, titleDiv, videoDiv, paragraphDiv, tagsDiv)
+
         var $el =
-        $('#cardContainer').append()
+        $('#cardContainer').append(cardDiv);
+        //appending to the main card div
+        $(cardDiv).append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
+
+        //when you click on the example image the modal will pop up
+        $(exampleDiv).on("click", function(){
+
+        });
     }
 }
 
-function displayModal(data){
 
 
-}
+
+
+//function displayModal(data){
+//
+//
+//}
 
 
 
@@ -87,4 +109,10 @@ function displayTag (data, tag){
     }
     return tagArray;
 }
+
+$("#newModal").on("click", ".submitButton", function(){
+    var tableRow = "<tr></tr>";
+    $("#adminTable").prepend(tableRow);
+    $(tableRow).append(".resourceName").val();
+});
 
