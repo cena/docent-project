@@ -66,10 +66,6 @@ function displayCards (data){
 
 
 
-//function displayModal(data){
-//
-//
-//}
 
 
 
@@ -143,21 +139,23 @@ function adminTable (data){
     }
 }
 
+function adminTable (data){
+    for (var i = 0; i < data.length; i++){
+        name = data[i].name;
+        logo = data[i].logo;
+        embedLink = data[i].embedLink;
+        howToVideo = data[i].howToVideo;
+        description = data[i].description;
+        category = data[i].category;
+        subject = data[i].subject;
+        tags = data[i].tags;
+        var something='';
+        //make variables for the various sections of html (i.e. logoImgDiv, titleDiv, videoDiv, paragraphDiv, tagsDiv)
 
-//function adminTable (data){
-//    name = data[i].name;
-//    logo = data[i].logo;
-//    embedLink = data[i].embedLink;
-//    howToVideo = data[i].howToVideo;
-//    description = data[i].description;
-//    category = data[i].category;
-//    subject = data[i].subject;
-//    tags = data[i].tags;
-//    var adminTableCell = '<td></td>';
-//   $("#adminTable").append(adminTableCell);
-//    $(adminTableCell).append()
-//
-//}
+        var $el = '';
+    }
+}
+
 
 
 
