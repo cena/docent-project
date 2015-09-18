@@ -131,15 +131,14 @@ function adminTable (data){
         var buttonsCell = '<td><button type="button" class="edit">Edit</button><button type="submit" class="delete">Delete</button></td>';
         //make variables for the various sections of html (i.e. logoImgDiv, titleDiv, videoDiv, paragraphDiv, tagsDiv)
 
-        var $el =
-            $('#adminTable').append(tableRow);
+        $('#adminTable').append(tableRow);
 
         //appending to the table row
         $(tableRow).append(editableCells + buttonsCell);
     }
 }
 
-function adminTable (data){
+function somethings (data){
     for (var i = 0; i < data.length; i++){
         name = data[i].name;
         logo = data[i].logo;
@@ -149,7 +148,7 @@ function adminTable (data){
         category = data[i].category;
         subject = data[i].subject;
         tags = data[i].tags;
-        var something='';
+
         //make variables for the various sections of html (i.e. logoImgDiv, titleDiv, videoDiv, paragraphDiv, tagsDiv)
 
         var $el = '';
