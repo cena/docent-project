@@ -11,54 +11,83 @@
         <script src="../public/scripts/app.js"></script>
     </head>
     <body class="container">
-        <!--<table>-->
-        <button type="button" value="newResource" class="newResourceButton">New Resource</button>
-
-            <table id="adminTable">
-                <tr>
-                    <th>Embed Name</th>
-                    <th>Logo Link</th>
-                    <th>Resource Link</th>
-                    <th>Embed Link</th>
-                    <th>How To Video</th>
-                    <th>Description</th>
-                    <th>Category</th>
-                    <th>Subjects</th>
-                    <th>Tags</th>
-                    <th>Edit and Delete</th>
-                </tr>
 
 
-                <tr>
-                    <td>name</td>
-                    <td>logo</td>
-                    <td class="reourcelink">resource link</td>
-                    <td class="embedlink">embed link</td>
-                    <td class="howtolink">how to</td>
-                    <td class="description">description</td>
-                    <td>category</td>
-                    <td>subjects</td>
-                    <td>tags</td>
-                    <td>
-                        <button type="submit" class="editButton">Edit</button>
-                        <button type="submit" class="delete">Delete</button>
-                    </td>
-            </tr>
-            </table>
-            <!--<tr>-->
-                <!--<td>name</td>-->
-                <!--<td class="reourcelink">resource link</td>-->
-                <!--<td class="embedlink">embed link</td>-->
-                <!--<td class="howtolink">how to</td>-->
-                <!--<td class="description">description</td>-->
-                <!--<td>category</td>-->
-                <!--<td>tags</td>-->
-                <!--<td>-->
+    <div class="container"><h2>Example tab 2 (using standard nav-tabs)</h2></div>
+
+    <div id="exTab2" class="container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a  href="#1" data-toggle="tab">Manage Resources</a>
+            </li>
+            <li><a href="#2" data-toggle="tab">Manage Categories and Subjects</a>
+            </li>
+        </ul>
+
+        <div class="tab-content ">
+            <div class="tab-pane active" id="1">
+
+                    <!--<table>-->
+                    <button type="button" value="newResource" class="newResourceButton">New Resource</button>
+
+                    <table id="adminTable">
+                        <tr>
+                            <th>Embed Name</th>
+                            <th>Logo Link</th>
+                            <th>Resource Link</th>
+                            <th>Embed Link</th>
+                            <th>How To Video</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Subjects</th>
+                            <th>Tags</th>
+                            <th>Edit and Delete</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>name</td>
+                            <td>logo</td>
+                            <td class="reourcelink">resource link</td>
+                            <td class="embedlink">embed link</td>
+                            <td class="howtolink">how to</td>
+                            <td class="description">description</td>
+                            <td>category</td>
+                            <td>subjects</td>
+                            <td>tags</td>
+                            <td>
+                                <button type="submit" class="editButton">Edit</button>
+                                <button type="submit" class="delete">Delete</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--<tr>-->
+                    <!--<td>name</td>-->
+                    <!--<td class="reourcelink">resource link</td>-->
+                    <!--<td class="embedlink">embed link</td>-->
+                    <!--<td class="howtolink">how to</td>-->
+                    <!--<td class="description">description</td>-->
+                    <!--<td>category</td>-->
+                    <!--<td>tags</td>-->
+                    <!--<td>-->
                     <!--<button type="submit">Edit</button>-->
                     <!--<button type="submit" class="delete">Delete</button>-->
-                <!--</td>-->
-            <!--</tr>-->
-        <!--</table>-->
+                    <!--</td>-->
+                    <!--</tr>-->
+                    <!--</table>-->
+
+            </div>
+            <div class="tab-pane" id="2">
+                <h3>Categories and Subjects tab</h3>
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+
 <!-- MODAL for new resource button -->
         <div id="newModal" class="modal fade">
             <div class="modal-dialog">
@@ -91,7 +120,6 @@
             </div>
         </div>
 
-<div class="test"></div>
 
 <!-- MODAL for delete button -->
         <div id="myModal" class="modal fade">
