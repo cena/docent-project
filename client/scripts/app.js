@@ -4,7 +4,8 @@ $(document).ready(function(){
 
 
     //append resources to DOM on page load
-    displayCards(getResources());
+    getResources();
+    //displayCards(getResources());
 });
 
 
@@ -18,14 +19,20 @@ var name = "",
     tags = [];
 
 function getResources () {
+    console.log("hey");
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: TBD,
-        success: data.sort(function(a, b) {
-            return a.name - b.name;
-            //(need to test) returns array of data sorted alphabetically by name
-        })
+        url: "/embeds/list",
+        success: function (data) {
+            data.resources.sort(function(a, b){
+                return parseFloat(a.embedName) - parseFloat(b.embedName);
+            });
+            console.log(data);
+        }
+
+
+
     })
 }
 
@@ -33,7 +40,7 @@ function getResources () {
 function makePages (data){
     numOfPages = data.length/30;
     //display numOfPages and clickable <- -> arrows
-    //OR display all pages numbers as clickable numbers
+    //OR display all pages numbers as clickable numbers with arrows on ends
     for(i = 0; i <= numOfPages; i++){
 
     }
@@ -42,7 +49,7 @@ function makePages (data){
 
 var pageStart = 0;
 
-function diplayCards (data){
+function displayCards (data){
     var logoImgTag = '<img src="'+ logo +'">';
     var cardDiv = '<main class="col-md-4 card"></main>';
     var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
