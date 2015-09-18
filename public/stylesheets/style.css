@@ -17,16 +17,14 @@ ul {
 }
 
 .card {
-  height: 500px;
-  /*border: 4px solid #1a1a1a;*/
+  min-height: 500px;
   margin-top: 30px;
-  margin-right: 20px;
   border-radius: 10%;
-  width: 360px;
   background: -webkit-linear-gradient(#da6727, white); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#da6727, white); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(#da6727, white); /* For Firefox 3.6 to 15 */
   background: linear-gradient(#da6727, white); /* Standard syntax (must be last) */
+  box-shadow: 10px 10px 5px #888888;
 }
 
 .logo {
@@ -96,7 +94,7 @@ img.example {
 #navigation-menu li a {
   display: block;
   margin: 0;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 20px 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   line-height: 40px;
@@ -108,18 +106,17 @@ img.example {
   -webkit-transition-timing-function: ease;
   -moz-transition: background 0.5s ease;
   -o-transition: background 0.5s ease;
-  -ms-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
 
 #navigation-menu li a:hover {
   color: #FFFFFF;
-  background: #FF0404;
+  background: #da6727;
 }
 
 #navigation-menu li a.active {
   color: #FFFFFF;
-  background: #FF0404;
+  background: #da6727;
 }
 
 /*/ ---------------------- /*/
@@ -129,27 +126,26 @@ img.example {
   margin: 0 0 0 -2px;
   padding: 0;
   position: absolute;
-  width: 250px;
   height: auto;
   background: #FFFFFF;
   border: 1px solid #CCCCCC;
-  overflow-style: marquee-line;
   z-index: 999;
+  width: 150px;
+
 }
 
 .navigation-option li {
   margin: 0;
   padding: 0;
-  width: 250px;
   height: 31px;
   list-style: none;
+  width: 150px;
 }
 
 .navigation-option .nav-dir h2 {
   margin: 0;
   padding: 5px 0 5px 10px;
   display: block;
-  width: 240px;
   line-height: 21px;
   height: 25px;
   font-family: Arial, Helvetica, sans-serif;
@@ -157,40 +153,43 @@ img.example {
   font-weight: bold;
   color: #FFFFFF;
   background: #242424;
+  width: 150px;
+
 }
 
 .navigation-option .nav-dir a {
   margin: 0;
   padding: 5px 0 5px 10px;
   display: block;
-  width: 240px;
   line-height: 21px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   color: #333333;
   background: #FFFFFF;
   border-right: none !important;
+  width: 150px;
 }
 
 .navigation-option .nav-dir a:hover {
   color: #FFFFFF;
   text-decoration: none;
-  background: #FF0404;
+  background: #da6727;
+  width: 150px;
 }
 
-.nav-shift {
-  margin-left: 10px !important;
-}
+
 
 /*/ DROPDOWN EFFECT /*/
 
 li.navDirectory ul {
   display: none;
+  width: 150px;
 }
 
 .navDirectory {
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 30px;
+  width: 150px;
 }
 
 
@@ -215,4 +214,15 @@ iframe.video {
 .search {
   margin-bottom: 20px;
   margin-top: 20px;
+}
+
+/* PAGE NAVIGATION */
+
+.pageNav img {
+  height: 50px;
+}
+
+.pageNum {
+  display: inline-block;
+  font-size: 20px;
 }
