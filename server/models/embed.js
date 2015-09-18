@@ -3,15 +3,24 @@ var mongoose = require('mongoose'),
     bcrypt = require('bcrypt'),
     SALT_WORK_FACTOR = 10;
 
-var UserSchema = new Schema({
-    username: {type: String, required: true, index: {unique: true} },
+var EmbedSchema = new Schema({
+    
+    embedName: { type: String, required: true, index: {unique:true} },
+    embedLink: { type: String },
+    howto: { type: String },
+    description: { type: String },
+    category: { type: String },
+    tags: { type: Array },
+    subject: { type: String }
+
+   /* username: {type: String, required: true, index: {unique: true} },
     password: {type: String, required: true },
     firstname: {type: String, required:true },
     lastname: {type: String, required: true },
-    lastlogin: {type: Date, default: Date.now()}
+    lastlogin: {type: Date, default: Date.now()}*/
 });
 
-UserSchema.pre('save', function(next){
+/*UserSchema.pre('save', function(next){
     console.log("Pre is starting");
     var user = this;
 
@@ -37,6 +46,6 @@ UserSchema.methods.comparePassword = function(candidatePassword, cb){
         if(err) return cb(err);
         cb(null, isMatch);
     });
-};
+};*/
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('Embed', EmbedSchema);

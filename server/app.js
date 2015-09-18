@@ -7,30 +7,31 @@ var passport = require('passport');
 var session = require('express-session');
 var localStrategy = require('passport-local');
 
-var User = require('./models/user');
+var Embed = require('./models/embed');
 var index = require('./routes/index');
 var register = require('./routes/register');
 
-var users = require('./routes/users');
-
+var embeddable = require('./routes/embeds');
+var mongo = require('mongodb')
 var mongoose = require('mongoose');
 
 app.use(session({
     secret: 'secret',
-    key: 'user',
+    key: 'embed',
     resave: true,
     s: false,
+    saveUninitialized: true,
     cookie: {maxAge: 60000, secure: false}
 }));
 
 app.use(cookieParser());
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({expanded: true}));
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(passport.initialize());
 app.use(passport.session());
 
 //Mongo Setup
-var mongoURI = "mongodb://localhost:27017/prime_passport_lecture";
+var mongoURI = "mongodb://localhost:27017/docentdb";
 var MongoDB = mongoose.connect(mongoURI).connection;
 
 MongoDB.on('error', function(err){
@@ -42,7 +43,7 @@ MongoDB.once('open', function(err){
 });
 
 //PASSPORT SESSION
-passport.serializeUser(function(user, done){
+/*passport.serializeUser(function(user, done){
     done(null, user.id);
 });
 
@@ -72,11 +73,18 @@ passport.use('local', new localStrategy({
         });
     });
 }));
-
+*/
 ////////////
 
-app.use('/register', register);
-app.use('/user', users);
+app.use(function(req,res, next){
+
+    req.db = mongoURI;
+    next();
+
+});
+
+//app.use('/register', register);
+app.use('/embeds', embeddable);
 app.use('/', index);
 
 app.set("port", (process.env.PORT || 5000));

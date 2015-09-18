@@ -5,7 +5,7 @@ var path = require('path');
 var passport = require('passport');
 
 router.post("/", passport.authenticate('local', {
-    successRedirect: "/assets/views/users.html",
+    successRedirect: "/assets/views/embeds.html",
     failureRedirect: "/"
 }));
 
