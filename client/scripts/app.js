@@ -43,7 +43,17 @@ function makePages (data){
 var pageStart = 0;
 
 function diplayCards (data){
+    var logoImgTag = '<img src="'+ logo +'">';
+    var cardDiv = '<main class="col-md-4 card"></main>';
+    var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
+    var nameDiv = '<h4 class="title col-md-8">'+ name +'</h4>';
+    var videoDiv = '<iframe class="col-md-offset-1 video" src="'+ howToVideo +'" frameborder="0" allowfullscreen></iframe>';
+    var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
+    var exampleDiv = '<img class="col-md-offset-4 col-md-4 example" src="../public/images/modalButton.png">';
+    var tagsDiv = '<section class="tags col-md-offset-3 col-md-10">'+ tags +'</section>';
+
     for (var i = pageStart; i < data.length && (pageStart + 30); i++){
+        //sets data
         name = data[i].name;
         logo = data[i].logo;
         embedLink = data[i].embedLink;
@@ -52,9 +62,10 @@ function diplayCards (data){
         category = data[i].category;
         subject = data[i].subject;
         tags = data[i].tags;
-        var $el =
-            $('#cardContainer').append
-        //card elements appended here
+
+        //appends cards
+        $('#cardContainer').append(cardDiv);
+        $(cardDiv).append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
     }
 }
 
