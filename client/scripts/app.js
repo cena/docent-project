@@ -49,7 +49,11 @@ $(document).ready(function(){
 
 
 
-
+//page number navigation button
+    $('body').on('click', '.tag', function(){
+        var tag = $(this).text();
+        getResourcesByTag(tag);
+    });
 
 
 
@@ -69,13 +73,14 @@ $(document).ready(function(){
     getResources();
 });
 
+
 function  getResources() {
     $.ajax({
         type: 'GET',
         dataType: 'json',
         url: "/resources",
         success: function(data) {
-            data.resources.sort(compareToSortAlphabetically);
+            data.resources.sort(compareAlphabetically);
             console.log(pageNumber);
             displayCards(data.resources);
             makePages(data.resources);
@@ -83,8 +88,22 @@ function  getResources() {
     })
 }
 
+function  getResourcesByTag(tag) {
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: "/resources",
+        success: function(data) {
+            data.resources.sort(compareAlphabetically);
+            displayTag(data.resources, tag);
+            displayCards(tagArray);
+            makePages(tagArray);
+        }
+    })
+}
 
-function compareToSortAlphabetically(a,b) {
+
+function compareAlphabetically(a,b) {
     if (a.embedName < b.embedName)
             return -1;
     if (a.embedName > b.embedName)
@@ -110,16 +129,24 @@ function makePages (data){
 
 function displayCards (data){
     $('#cardContainer').empty();
-    for (var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
+
+    for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
         //sets data
         embedName = data[i].embedName;
         logo = data[i].logo;
-        embedLink = (data[i].embedLink) ? "" : data[i].embedName;;
-        howto = (data[i].howto) ? "" : data[i].embedName;;
-        description = (data[i].description) ? "" : data[i].embedName;;
-        category = (data[i].category) ? "" : data[i].embedName;;
-        subject = (data[i].subject) ? "" : data[i].embedName;;
-        tags = (data[i].tags) ? "" : data[i].embedName;;
+        embedLink = (data[i].embedLink) ? "" : data[i].embedName;
+        howto = (data[i].howto) ? "" : data[i].embedName;
+        description = (data[i].description) ? "" : data[i].embedName;
+        category = (data[i].category) ? "" : data[i].embedName;
+        subject = (data[i].subject) ? "" : data[i].embedName;
+        console.log("does it work");
+        if(data[i].tags==null){
+            tags="";
+        } else {
+            for (var j = 0; j < data[i].tags.length; j++) {
+                tags +='<p class="tag">'+data[i].tags[j]+'</p>';
+            }
+        }
 
         //appends cards
         var logoImgTag = '<img src="'+ logo +'">';
@@ -161,12 +188,19 @@ function displaySubject (data, category){
     return subjectArray;
 }
 
+
+
+
+
 function displayTag (data, tag){
     tagArray = [];
+    console.log(data);
     for (var j = 0; j<data.length; j++){
-        for (var k = 0; k<data[j].tags.length; k++){
-            if(data[j].tags[k] === tag){
-                tagArray.push(data[j].tags[k]);
+        if(data[j].tags !== null){
+            for (var k = 0; k<data[j].tags.length; k++){
+                if(data[j].tags[k] === tag){
+                    tagArray.push(data[j]);
+                }
             }
         }
     }
