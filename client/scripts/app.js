@@ -5,7 +5,7 @@ $(document).ready(function(){
 
     //append resources to DOM on page load
     getResources();
-    //displayCards(getResources());
+    displayCards(getResources());
 });
 
 
