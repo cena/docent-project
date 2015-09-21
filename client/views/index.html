@@ -62,8 +62,30 @@
     </li>
 </ul>
 <!-- end of subjects drop down -->
+<div class="container">
 <div id="cardContainer"></div>
-
+<main id="myModal" class="modal fade">
+    <section class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Embed This Resource!</h4>
+            </div>
+            <div class="modal-body row">
+                <iframe class="col-md-10 modalImage" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>
+                <div class="embedcode col-md-offset-1 col-md-10">
+                    <h5>
+                        < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>
+                    </h5>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </section>
+</main>
+</div>
 <!-- start of cards -->
 <!--<div class="row" id="cardContainer">-->
     <!-- start of one card -->
@@ -98,27 +120,27 @@
                             <!--<section class="col-md-offset-4 col-md-4 example"></section>-->
                             <!--<img class="col-md-offset-4 example" src="/assets/images/modalButton.png">-->
                              <!--start modal window-->
-                            <main id="myModal" class="modal fade">
-                                <section class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                            <h4 class="modal-title">Embed This Resource!</h4>
-                                        </div>
-                                        <div class="modal-body row">
-                                                <iframe class="col-md-10 modalImage" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>
-                                            <div class="embedcode col-md-offset-1 col-md-10">
-                                                <h5>
-                                                    < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>
-                                                </h5>
-                                            </div>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                        </div>
-                                    </div>
-                                </section>
-                            </main>
+                            <!--<main id="myModal" class="modal fade">-->
+                                <!--<section class="modal-dialog">-->
+                                    <!--<div class="modal-content">-->
+                                        <!--<div class="modal-header">-->
+                                            <!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>-->
+                                            <!--<h4 class="modal-title">Embed This Resource!</h4>-->
+                                        <!--</div>-->
+                                        <!--<div class="modal-body row">-->
+                                                <!--<iframe class="col-md-10 modalImage" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>-->
+                                            <!--<div class="embedcode col-md-offset-1 col-md-10">-->
+                                                <!--<h5>-->
+                                                    <!--< iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>-->
+                                                <!--</h5>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                        <!--<div class="modal-footer">-->
+                                            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</section>-->
+                            <!--</main>-->
                             <!-- end modal window -->
                     <!-- start of tags -->
                     <!--<section class="tags col-md-offset-3 col-md-10">-->
@@ -138,7 +160,7 @@
 
 
         </section>
-    </div>
+
 <!-- end page nav -->
 </body>
 </html>
