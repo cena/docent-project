@@ -19,12 +19,15 @@ ul {
 .card {
   min-height: 450px;
   margin-top: 30px;
-  border-radius: 10%;
-  background: -webkit-linear-gradient(#da6727, white); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#da6727, white); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#da6727, white); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#da6727, white); /* Standard syntax (must be last) */
+  width: 360px;
+  margin-right:15px;
+  border-radius: 5%;
+  background: -webkit-linear-gradient(#59b65a, white); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#59b65a, white); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#59b65a, white); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#59b65a, white); /* Standard syntax (must be last) */
   box-shadow: 7px 7px 5px #888888;
+  border: 1px solid black;
 }
 
 .logo {
@@ -35,7 +38,6 @@ ul {
   border: 2px solid #1a1a1a;
   padding:40px;
   margin-top: 20px;
-  background-image: url("../images/logo_placeholder.png");
   background-size: cover;
 }
 
