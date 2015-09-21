@@ -6,7 +6,7 @@ var embedName = "",
     category = "",
     subject = "",
     tags = [];
-var resources = [];
+
 
 $(document).ready(function(){
 
@@ -22,8 +22,6 @@ $(document).ready(function(){
 
 
 function  getResources() {
-
-    console.log("hey");
     $.ajax({
         type: 'GET',
         dataType: 'json',
@@ -32,7 +30,6 @@ function  getResources() {
             data.resources.sort(compareToSortAlphabetically);
             displayCards(data.resources);
         }
-
     });
 }
 
@@ -61,7 +58,7 @@ var pageStart = 0;
 function displayCards (data){
 
 console.log(data);
-    for (var i = pageStart; i < data.length && (pageStart + 30); i++){
+    for (var i = pageStart; i < data.length && i < (pageStart + 30); i++){
         //sets data
         embedName = data[i].embedName;
         logo = data[i].logo;
