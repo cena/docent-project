@@ -7,10 +7,12 @@ $(document).ready(function(){
 
 //the drop downs
 
-    $(".navDirectory").on("click", function () {
-        $(this).find(".sub-nav").slideToggle();
+    $(".navDirectory").on("mouseenter", function () {
+        $(this).find(".sub-nav").slideDown();
     });
-
+    $(".navDirectory").on("mouseleave", function () {
+        $(this).find(".sub-nav").slideUp();
+    });
 
     //$(".navDirectory").mouseenter( function () {
     //    $(this).find(".sub-nav").slideDown(500);
