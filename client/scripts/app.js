@@ -111,7 +111,7 @@ console.log(data);
 
         //appends cards
         var logoImgTag = '<img src="'+ logo +'">';
-        var cardDiv = '<main id= "cardDiv" class="col-md-4 card"></main>';
+        var cardDiv = '<main class="col-md-4 card"></main>';
         var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
         var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
         var videoDiv = '<iframe class="col-md-offset-1 video" src="'+ howto +'" frameborder="0" allowfullscreen></iframe>';
@@ -119,7 +119,7 @@ console.log(data);
         var exampleDiv = '<img class="col-md-offset-4 col-md-4 example" src="../public/images/modalButton.png">';
         var tagsDiv = '<section class="tags col-md-offset-3 col-md-10">'+ tags +'</section>';
         $('#cardContainer').append(cardDiv);
-        $('main').last().append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
+        $('.card').last().append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
     }
 }
 
