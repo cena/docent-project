@@ -17,7 +17,9 @@ module.exports = function(grunt){
                 src: [
                     "views/index.html",
                     "views/register.html",
-                    "views/users.html"
+                    "views/users.html",
+                    "views/another.html",
+                    "views/login.html"
                 ],
                 dest: "server/public/assets/"
             },
