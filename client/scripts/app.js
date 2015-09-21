@@ -52,14 +52,21 @@ $(document).ready(function(){
 
 
 
-//append resources to DOM on page load
-    getResources();
+
+//page number navigation button
     $('body').on('click', '.pageNum', function(){
-        console.log('click');
         pageNumber = $(this).data('page');
         getResources();
     });
 
+//Arrow navigation button
+    $('body').on('click', '.arrow', function(){
+        pageNumber += $(this).data('page-turn');
+        getResources();
+    });
+
+//append resources to DOM on page load
+    getResources();
 });
 
 function  getResources() {
@@ -88,10 +95,14 @@ function compareToSortAlphabetically(a,b) {
 function makePages (data){
     $('.pageNav').empty();
     numOfPages = Math.ceil(data.length/30);
+    if (pageNumber > 1){$('.pageNav').append('<img class ="arrow" data-page-turn="-1" src="/assets/images/nav_backArrow.svg">')}
     for(i = 1; i <= numOfPages; i++){
         $('.pageNav').append('<div data-page='+i+' class="pageNum">'+i+'</div>');
     }
+    if (pageNumber < numOfPages){ $('.pageNav').append('<img class ="arrow" data-page-turn="1" src="/assets/images/nav_forwardArrow.svg">')}
 }
+
+
 
 
 
