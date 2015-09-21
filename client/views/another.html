@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+    <p>Hello</p>
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type: "GET",
+                url: "/user/name",
+                success: function(data){
+                    console.log(data);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
