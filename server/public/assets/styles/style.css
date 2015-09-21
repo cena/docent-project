@@ -17,8 +17,9 @@ ul {
 }
 
 .card {
-  min-height: 500px;
+  min-height: 450px;
   margin-top: 30px;
+  /*margin-right: 50px;*/
   border-radius: 10%;
   background: -webkit-linear-gradient(#da6727, white); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(#da6727, white); /* For Opera 11.1 to 12.0 */

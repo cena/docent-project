@@ -111,7 +111,7 @@ console.log(data);
 
         //appends cards
         var logoImgTag = '<img src="'+ logo +'">';
-        var cardDiv = '<main id= "cardDiv" class="col-md-4 card"></main>';
+        var cardDiv = '<main id= "cardDiv" class="col-md-offset-1 col-md-3 card"></main>';
         var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
         var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
         var videoDiv = '<iframe class="col-md-offset-1 video" src="'+ howto +'" frameborder="0" allowfullscreen></iframe>';
