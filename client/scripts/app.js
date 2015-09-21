@@ -1,9 +1,45 @@
 $(document).ready(function(){
 
 
+    $(".example").on("click", function () {
+        $("#myModal").modal('show');
+    });
+
+//the drop downs
+
+    $(".navDirectory").on("click", function () {
+        $(this).find(".sub-nav").slideToggle();
+    });
 
 
-    //append resources to DOM on page load
+    //$(".navDirectory").mouseenter( function () {
+    //    $(this).find(".sub-nav").slideDown(500);
+    //});
+    //
+    //$(".navDirectory").mouseleave( function () {
+    //    $(this).find(".sub-nav").slideUp(500);
+    //});
+
+
+//the delete modal on admin page
+    $(".delete").on("click", function () {
+        $("#myModal").modal('show');
+    });
+    $(".newResourceButton").on("click", function () {
+        $("#newModal").modal('show');
+    });
+    $(".editButton").on("click", function () {
+        $("#newModal").modal('show');
+    });
+
+
+
+
+
+
+
+
+//append resources to DOM on page load
     displayCards(getResources());
 });
 
