@@ -4,7 +4,7 @@ var router = express.Router();
 var resources = require('../models/embed');
 
 
-router.get('/list', function(req, res){
+router.get('/', function(req, res){
 
 	resources.find({}, function(err,docs) {
 		if (err) {

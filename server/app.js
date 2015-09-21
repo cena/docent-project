@@ -7,7 +7,7 @@ var passport = require('passport');
 var session = require('express-session');
 var localStrategy = require('passport-local');
 
-var Embed = require('./models/embed');
+//var Embed = require('./models/embed');
 var index = require('./routes/index');
 var register = require('./routes/register');
 
@@ -29,6 +29,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(passport.initialize());
 app.use(passport.session());
+
+
 
 //Mongo Setup
 var mongoURI = "mongodb://localhost:27017/docentdb";
@@ -83,8 +85,24 @@ app.use(function(req,res, next){
 
 });
 
+app.all('/*', function(req, res, next) {
+  // CORS headers
+  res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
+  res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+  // Set custom headers for CORS
+  res.header('Access-Control-Allow-Headers', 'Content-type,Accept');
+  // If someone calls with method OPTIONS, let's display the allowed methods on our API
+  if (req.method == 'OPTIONS') {
+    res.status(200);
+    res.write("Allow: GET,PUT,POST,DELETE,OPTIONS");
+    res.end();
+  } else {
+    next();
+  }
+});
+
 //app.use('/register', register);
-app.use('/embeds', embeddable);
+app.use('/resources', embeddable);
 app.use('/', index);
 
 app.set("port", (process.env.PORT || 5000));
