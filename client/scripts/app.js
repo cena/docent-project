@@ -6,6 +6,7 @@ var embedName = "",
     category = "",
     subject = "",
     tags = [];
+var pageNumber = 1;
 
 
 $(document).ready(function(){
@@ -45,18 +46,33 @@ $(document).ready(function(){
     });
 
 
-    $(function () {
-        $('#myTab a:last').tab('show')
+
+
+
+
+//page number navigation button
+    $('body').on('click', '.tag', function(){
+        var tag = $(this).text();
+        getResourcesByTag(tag);
     });
 
 
+
+//page number navigation button
+    $('body').on('click', '.pageNum', function(){
+        pageNumber = $(this).data('page');
+        getResources();
+    });
+
+//Arrow navigation button
+    $('body').on('click', '.arrow', function(){
+        pageNumber += $(this).data('page-turn');
+        getResources();
+    });
+
 //append resources to DOM on page load
-    displayCards(getResources());
-
+    getResources();
 });
-
-
-
 
 
 function  getResources() {
@@ -65,14 +81,30 @@ function  getResources() {
         dataType: 'json',
         url: "/resources",
         success: function(data) {
-            data.resources.sort(compareToSortAlphabetically);
+            data.resources.sort(compareAlphabetically);
+            console.log(pageNumber);
             displayCards(data.resources);
+            makePages(data.resources);
         }
-    });
+    })
+}
+
+function  getResourcesByTag(tag) {
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: "/resources",
+        success: function(data) {
+            data.resources.sort(compareAlphabetically);
+            displayTag(data.resources, tag);
+            displayCards(tagArray);
+            makePages(tagArray);
+        }
+    })
 }
 
 
-function compareToSortAlphabetically(a,b) {
+function compareAlphabetically(a,b) {
     if (a.embedName < b.embedName)
             return -1;
     if (a.embedName > b.embedName)
@@ -80,33 +112,42 @@ function compareToSortAlphabetically(a,b) {
     return 0;
 }
 
-
 function makePages (data){
-    numOfPages = data.length/30;
-    //display numOfPages and clickable <- -> arrows
-    //OR display all pages numbers as clickable numbers
-    for(i = 0; i <= numOfPages; i++){
-
+    $('.pageNav').empty();
+    numOfPages = Math.ceil(data.length/30);
+    if (pageNumber > 1){$('.pageNav').append('<img class ="arrow" data-page-turn="-1" src="/assets/images/nav_backArrow.svg">')}
+    for(i = 1; i <= numOfPages; i++){
+        $('.pageNav').append('<div data-page='+i+' class="pageNum">'+i+'</div>');
     }
+    if (pageNumber < numOfPages){ $('.pageNav').append('<img class ="arrow" data-page-turn="1" src="/assets/images/nav_forwardArrow.svg">')}
 }
 
 
-var pageStart = 0;
+
+
+
+
 
 function displayCards (data){
+    $('#cardContainer').empty();
 
-console.log(data);
-    for (var i = pageStart; i < data.length && i < (pageStart + 30); i++){
+    for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
         //sets data
         embedName = data[i].embedName;
         logo = data[i].logo;
-        embedLink = data[i].embedLink;
-        howto = data[i].howto;
-        description = data[i].description;
-        category = data[i].category;
-        subject = data[i].subject;
-        tags = data[i].tags;
-        console.log(embedName);
+        embedLink = (data[i].embedLink) ? "" : data[i].embedName;
+        howto = (data[i].howto) ? "" : data[i].embedName;
+        description = (data[i].description) ? "" : data[i].embedName;
+        category = (data[i].category) ? "" : data[i].embedName;
+        subject = (data[i].subject) ? "" : data[i].embedName;
+        console.log("does it work");
+        if(data[i].tags==null){
+            tags="";
+        } else {
+            for (var j = 0; j < data[i].tags.length; j++) {
+                tags +='<p class="tag">'+data[i].tags[j]+'</p>';
+            }
+        }
 
         //appends cards
         var logoImgTag = '<img src="'+ logo +'">';
@@ -149,12 +190,19 @@ function displaySubject (data, category){
     return subjectArray;
 }
 
+
+
+
+
 function displayTag (data, tag){
     tagArray = [];
+    console.log(data);
     for (var j = 0; j<data.length; j++){
-        for (var k = 0; k<data[j].tags.length; k++){
-            if(data[j].tags[k] === tag){
-                tagArray.push(data[j].tags[k]);
+        if(data[j].tags !== null){
+            for (var k = 0; k<data[j].tags.length; k++){
+                if(data[j].tags[k] === tag){
+                    tagArray.push(data[j]);
+                }
             }
         }
     }
