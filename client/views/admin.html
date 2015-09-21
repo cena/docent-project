@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Docent Embeddable Resources Admin</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="/server/public/assets/styles/admin.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="../client/scripts/app.js"></script>
+    </head>
+    <body class="container">
+
+
+    <div class="container"><h2>Example tab 2 (using standard nav-tabs)</h2></div>
+
+    <div id="exTab2" class="container">
+        <ul class="nav nav-tabs">
+            <li class="active">
+                <a  href="#1" data-toggle="tab">Manage Resources</a>
+            </li>
+            <li><a href="#2" data-toggle="tab">Manage Categories and Subjects</a>
+            </li>
+        </ul>
+
+        <div class="tab-content ">
+            <div class="tab-pane active" id="1">
+
+                    <!--<table>-->
+                    <button type="button" value="newResource" class="newResourceButton">New Resource</button>
+
+                    <table id="adminTable">
+                        <tr>
+                            <th>Embed Name</th>
+                            <th>Logo Link</th>
+                            <th>Resource Link</th>
+                            <th>Embed Link</th>
+                            <th>How To Video</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Subjects</th>
+                            <th>Tags</th>
+                            <th>Edit and Delete</th>
+                        </tr>
+
+
+                        <tr>
+                            <td>name</td>
+                            <td>logo</td>
+                            <td class="reourcelink">resource link</td>
+                            <td class="embedlink">embed link</td>
+                            <td class="howtolink">how to</td>
+                            <td class="description">description</td>
+                            <td>category</td>
+                            <td>subjects</td>
+                            <td>tags</td>
+                            <td>
+                                <button type="submit" class="editButton">Edit</button>
+                                <button type="submit" class="delete">Delete</button>
+                            </td>
+                        </tr>
+                    </table>
+                    <!--<tr>-->
+                    <!--<td>name</td>-->
+                    <!--<td class="reourcelink">resource link</td>-->
+                    <!--<td class="embedlink">embed link</td>-->
+                    <!--<td class="howtolink">how to</td>-->
+                    <!--<td class="description">description</td>-->
+                    <!--<td>category</td>-->
+                    <!--<td>tags</td>-->
+                    <!--<td>-->
+                    <!--<button type="submit">Edit</button>-->
+                    <!--<button type="submit" class="delete">Delete</button>-->
+                    <!--</td>-->
+                    <!--</tr>-->
+                    <!--</table>-->
+
+            </div>
+            <div class="tab-pane" id="2">
+                <h3>Categories and Subjects tab</h3>
+        </div>
+
+        </div>
+    </div>
+
+
+
+
+
+<!-- MODAL for new resource button -->
+        <div id="newModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title">Create or Edit a Resource!</h3>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-md-6">
+                            <h4>Name of Resource:</h4> <input class="resourceName" type="text" placeholder="Name of Resource">
+                            <h4>Logo Image:</h4> <input type="text" placeholder="Logo">
+                            <h4>Link of Resource:</h4> <input type="url" placeholder="Link of Resource">
+                            <h4>Embed Link of Resource:</h4> <input type="text" placeholder="Embed Link of Resource">
+                            <h4>How To Video Link:</h4> <input type="url" placeholder="How To Video Link">
+                        </div>
+                        <div>
+                            <h4>Description:</h4> <textarea placeholder="Description" rows="4" cols="25"></textarea>
+                            <h4>Categories:</h4> <input type="text" placeholder="Categories of Resource">
+                            <h4>Subjects:</h4> <input type="text" placeholder="Subjects of Resource">
+                            <h4>Tags:</h4> <input type="text" placeholder="Tags of Resource">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-default submitButton">Submit</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- MODAL for delete button -->
+        <div id="myModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h3 class="modal-title">You are about to delete this resource!</h3>
+                    </div>
+                    <div class="modal-body row">
+                        <div class="col-md-10">
+                        <h4>Are you sure you would like to delete the _ resource?</h4>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-warning" data-append="modal">Delete Resource</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </body>
+</html>

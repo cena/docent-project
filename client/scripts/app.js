@@ -1,10 +1,48 @@
 $(document).ready(function(){
 
 
+    $(".example").on("click", function () {
+        $("#myModal").modal('show');
+    });
 
+//the drop downs
 
     //append resources to DOM on page load
     getResources();
+
+    $(".navDirectory").on("click", function () {
+        $(this).find(".sub-nav").slideToggle();
+    });
+
+
+    //$(".navDirectory").mouseenter( function () {
+    //    $(this).find(".sub-nav").slideDown(500);
+    //});
+    //
+    //$(".navDirectory").mouseleave( function () {
+    //    $(this).find(".sub-nav").slideUp(500);
+    //});
+
+
+//the delete modal on admin page
+    $(".delete").on("click", function () {
+        $("#myModal").modal('show');
+    });
+    $(".newResourceButton").on("click", function () {
+        $("#newModal").modal('show');
+    });
+    $(".editButton").on("click", function () {
+        $("#newModal").modal('show');
+    });
+
+
+
+
+
+
+
+
+//append resources to DOM on page load
     displayCards(getResources());
 });
 
@@ -19,20 +57,14 @@ var name = "",
     tags = [];
 
 function getResources () {
-    console.log("hey");
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: "/embeds/list",
-        success: function (data) {
-            data.resources.sort(function(a, b){
-                return parseFloat(a.embedName) - parseFloat(b.embedName);
-            });
-            console.log(data);
-        }
-
-
-
+        url: TBD,
+        success: data.sort(function(a, b) {
+            return a.name - b.name;
+            //(need to test) returns array of data sorted alphabetically by name
+        })
     })
 }
 
@@ -40,7 +72,7 @@ function getResources () {
 function makePages (data){
     numOfPages = data.length/30;
     //display numOfPages and clickable <- -> arrows
-    //OR display all pages numbers as clickable numbers with arrows on ends
+    //OR display all pages numbers as clickable numbers
     for(i = 0; i <= numOfPages; i++){
 
     }
@@ -49,7 +81,7 @@ function makePages (data){
 
 var pageStart = 0;
 
-function displayCards (data){
+function diplayCards (data){
     var logoImgTag = '<img src="'+ logo +'">';
     var cardDiv = '<main class="col-md-4 card"></main>';
     var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';

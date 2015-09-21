@@ -19,14 +19,15 @@ module.exports = function(grunt){
                     "views/register.html",
                     "views/users.html",
                     "views/another.html",
-                    "views/login.html"
+                    "views/login.html",
+                    "views/admin.html"
                 ],
                 dest: "server/public/assets/"
             },
             style: {
                 expand: true,
                 cwd: "client",
-                src: 'styles/style.css',
+                src: ['styles/style.css','styles/admin.css'],
                 dest: 'server/public/assets/'
             },
             jquery: {
@@ -34,6 +35,12 @@ module.exports = function(grunt){
                 cwd: 'node_modules',
                 src: 'jquery/dist/jquery.min.js',
                 dest: 'server/public/vendors'
+            },
+            bootstrap: {
+                expand: true,
+                cwd: "node_modules",
+                src: ['bootstrap/dist/css/bootstrap.min.css', 'bootstrap/dist.css.bootstrap-theme.min.css'],
+                dest:'server/public/vendors'
             }
         }
     });
