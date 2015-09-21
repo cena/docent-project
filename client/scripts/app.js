@@ -9,10 +9,10 @@ $(document).ready(function(){
 });
 
 
-var name = "",
+var embedName = "",
     logo = "",
     embedLink = "",
-    howToVideo = "",
+    howto = "",
     description = "",
     category = "",
     subject = "",
@@ -23,16 +23,19 @@ function getResources () {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: "/embeds/list",
+        url: "/resources",
         success: function (data) {
-            data.resources.sort(function(a, b){
-                return parseFloat(a.embedName) - parseFloat(b.embedName);
-            });
+            function compare(a,b) {
+                if (a.embedName < b.embedName)
+                    return -1;
+                if (a.embedName > b.embedName)
+                    return 1;
+                return 0;
+            }
+            data.resources.sort(compare);
+
             console.log(data);
         }
-
-
-
     })
 }
 
@@ -61,10 +64,10 @@ function displayCards (data){
 
     for (var i = pageStart; i < data.length && (pageStart + 30); i++){
         //sets data
-        name = data[i].name;
+        embedName = data[i].name;
         logo = data[i].logo;
         embedLink = data[i].embedLink;
-        howToVideo = data[i].howToVideo;
+        howto = data[i].howToVideo;
         description = data[i].description;
         category = data[i].category;
         subject = data[i].subject;
