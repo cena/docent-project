@@ -8,6 +8,7 @@ var embedName = "",
     tags = [];
 var pageNumber = 1;
 
+
 $(document).ready(function(){
 
 
@@ -52,13 +53,10 @@ $(document).ready(function(){
 
 
 //append resources to DOM on page load
-    displayCards(getResources());
+    getResources();
+    console.log(resources);
 
 });
-
-
-
-
 
 function  getResources() {
     $.ajax({
@@ -68,8 +66,9 @@ function  getResources() {
         success: function(data) {
             data.resources.sort(compareToSortAlphabetically);
             displayCards(data.resources);
+            makePages(data.resources);
         }
-    });
+    })
 }
 
 
@@ -82,16 +81,13 @@ function compareToSortAlphabetically(a,b) {
 }
 
 function makePages (data){
-    numOfPages = data.length/30;
-    //display numOfPages and clickable <- -> arrows
-    //OR display all pages numbers as clickable numbers with arrows on ends
-    for(i = 0; i <= numOfPages; i++){
-        $('#pageNav').append('<div class="pageButton">'+i+'</div>');
-
+    numOfPages = Math.ceil(data.length/30);
+    for(i = 1; i <= numOfPages; i++){
+        $('.pageNav').append('<div class="pageNum">'+i+'</div>');
     }
 }
 
-('body').on('click', '.pageButton', function(){
+$('body').on('click', '.pageButton', function(){
     pageNumber = 4
 });
 
@@ -103,9 +99,7 @@ function loadClickedPage (pageNumber){
 
 
 function displayCards (data){
-
-console.log(data);
-    for (var i = pageStart; i < data.length && i < (pageNumber * 30); i++){
+    for (var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
         //sets data
         embedName = data[i].embedName;
         logo = data[i].logo;
@@ -115,7 +109,6 @@ console.log(data);
         category = (data[i].category) ? "" : data[i].embedName;;
         subject = (data[i].subject) ? "" : data[i].embedName;;
         tags = (data[i].tags) ? "" : data[i].embedName;;
-
 
         //appends cards
         var logoImgTag = '<img src="'+ logo +'">';
