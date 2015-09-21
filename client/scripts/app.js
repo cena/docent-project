@@ -80,7 +80,7 @@ function makePages (data){
 
 var pageStart = 0;
 
-function diplayCards (data){
+function displayCards (data){
     var logoImgTag = '<img src="'+ logo +'">';
     var cardDiv = '<main class="col-md-4 card"></main>';
     var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
