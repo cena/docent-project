@@ -1,52 +1,141 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Just a template Node / Express App</title>
-
-    <!--STYLES-->
-    <!--<link rel="stylesheet" href="/assets/styles/styles.css">-->
-
-    <!--SCRIPTS-->
-    <script type="text/javascript" src="/vendors/jquery/dist/jquery.min.js"
-    <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <title>DocentEDU Embeddable Resources</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--<script src="../scripts/app.js"></script>-->
+    <script src="../scripts/app.js"></script>
 </head>
-<body>
-<p>Page Loaded!</p>
-
-<h2>Embeddable Resources List TEST</h2>
-
-<table>
-    <thead>
-    <th>Name</th>
-    <th>Link</th>
-    <th>Howto</th>
-    <th>Description</th>
-    <th>Category</th>
-    <th>Tags</th>
-    <th>Subject</th>
-    </thead>
-    <tbody>
-    </tbody>
-
-
-</table>
-
-
-
-<!-- <form action="/" method="post">
-    <div>
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username"/>
+<body class="container">
+<div class="row">
+    <div class="col-md-6">
+        <h1>Embed Resources</h1>
     </div>
-    <div>
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password"/>
+
+</div>
+
+<!-- start of search bar -->
+<div class="row">
+    <div class="search col-xs-offset-1 col-xs-6 col-sm-offset-1 col-sm-6 col-md-offset-1 col-md-4">
+        <input type="search" alt="search box" placeholder="search">
+        <button type="submit">Search</button>
     </div>
-    <div>
-        <input type="submit" value="Log In"/>
-        <a href="/register">Register</a>
-    </div>
-</form> -->
+</div>
+<!-- end of search bar -->
+
+
+<!--start the drop down for categories-->
+<ul>
+    <li class="navDirectory"><a href="#">Category</a><br>
+        <ul class="navigation-option sub-nav">
+            <li class="nav-dir"><a href="#">Graphs and Diagrams</a></li>
+            <li class="nav-dir"><a href="#">Interactive</a></li>
+            <li class="nav-dir"><a href="#">Three</a></li>
+            <li class="nav-dir"><a href="#">Four</a></li>
+        </ul>
+    </li>
+<!-- end of categories drop down -->
+
+
+<!--  start the drop down for subjects  (continues the ul list above)-->
+    <li class="navDirectory"><a href="#">Subjects</a><br>
+
+        <ul class="navigation-option sub-nav">
+
+            <li class="nav-dir"><a href="#">Sone</a></li>
+            <li class="nav-dir"><a href="#">Stwo</a></li>
+            <li class="nav-dir"><a href="#">SThree</a></li>
+            <li class="nav-dir"><a href="#">SFour</a></li>
+        </ul>
+
+    </li>
+</ul>
+<!-- end of subjects drop down -->
+
+
+<!-- start of cards -->
+<div class="row" id="cardContainer">
+    <!-- start of one card -->
+
+
+        <main class="col-xs-6 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-1 col-lg-3 card"></main>
+        <main class="col-xs-6 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-1 col-lg-3 card"></main>
+        <main class="col-xs-6 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-1 col-lg-3 card"></main>
+        <main class="col-xs-6 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-1 col-lg-3 card"></main>
+        <main class="col-xs-6 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-1 col-lg-3 card"></main>
+        <main class="col-xs-6 col-xs-offset-1 col-sm-offset-2 col-md-4 col-md-offset-1 col-lg-3 card">
+            <div class="row">
+                <!--<div class="logo col-md-offset-1"></div>-->
+                <!--&lt;!&ndash; start of title &ndash;&gt;-->
+                <!--<section class="title col-md-8">-->
+                    <!--title-->
+                <!--</section>-->
+                <!--&lt;!&ndash; end of title &ndash;&gt;-->
+            <!--</div>-->
+            <!--<div class="row">-->
+                 <!--&lt;!&ndash;start of video&ndash;&gt;-->
+                <!--<section class="video">-->
+                    <!--<iframe class="col-md-offset-1 video" src="https://www.youtube.com/embed/EhRuG0D-WsU" frameborder="0" allowfullscreen></iframe>                                            &lt;!&ndash;<img class="modalImage" src="http://images.wikia.com/desencyclopedie/images/a/a7/Image_de_jour_1.jpg">&ndash;&gt;-->
+                <!--</section>-->
+                <!--&lt;!&ndash; end of video &ndash;&gt;-->
+                        <!--&lt;!&ndash; start scrolling paragraph &ndash;&gt;-->
+                        <!--<p class="paragraph col-md-offset-1 col-md-10">-->
+                            <!--Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in mi magna.-->
+                            <!--Donec necdui eu enim sodales facilisis. Phasellus sit a libero ullamcorper ipsum.-->
+                            <!--Suspendisseet pharetra mauris. Mauris porttitor lectus nec tortor fermentum pharetra.-->
+                            <!--Etiam ante libero, varius et quam in, porta bibendum dolor. Sed efficitur nibh nec-->
+                            <!--sagittis gravida. Quisque ullamcorper in dolor non vestibulum.-->
+                        <!--</p>-->
+                        <!--&lt;!&ndash; end scrolling paragraph &ndash;&gt;-->
+
+                            <!--<section class="col-md-offset-4 col-md-4 example"></section>-->
+                            <!--<img class="col-md-offset-4 col-md-4 example" src="../public/images/modalButton.png">-->
+                             <!--start modal window-->
+                            <main id="myModal" class="modal fade">
+                                <section class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                            <h4 class="modal-title">Embed This Resource!</h4>
+                                        </div>
+                                        <div class="modal-body row">
+                                                <iframe class="col-md-10 modalImage" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>
+                                            <div class="embedcode col-md-offset-1 col-md-10">
+                                                <h5>
+                                                    < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+                                </section>
+                            </main>
+                            <!-- end modal window -->
+                    <!-- start of tags -->
+                    <!--<section class="tags col-md-offset-3 col-md-10">-->
+                        <!--Tags:-->
+                    <!--</section>-->
+                    <!--&lt;!&ndash; end of tags &ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--</main>-->
+<!-- end one card -->
+
+
+</div>
+</main></div><br>
+<!-- start page nav -->
+        <section class="pageNav">
+            <img src="../images/nav_backArrow.svg">
+            <div class="pageNum">Page: </div>
+            <img src="../images/nav_forwardArrow.svg">
+        </section>
+<!-- end page nav -->
 </body>
 </html>

@@ -26,7 +26,7 @@ module.exports = function(grunt){
             style: {
                 expand: true,
                 cwd: "client",
-                src: 'styles/style.css',
+                src: ['styles/style.css','styles/admin.css'],
                 dest: 'server/public/assets/'
             },
             jquery: {
