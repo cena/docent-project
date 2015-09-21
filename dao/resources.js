@@ -92,7 +92,6 @@ var resources = {
         }
       }
     });
- 
   },
  
   delete: function(req, res) {

@@ -1,0 +1,659 @@
+{
+  "embedName": "123D Autodesk Models",
+  "embedLink": "http://www.123dapp.com/Gallery/content/all&sa=D&ust=1442335222211000&usg=AFQjCNGyaIc55e8fc21FvfrunguePTdAZwJ",
+  "howto": null,
+  "description": "User created collection of 3D models made with Autodesk's free tools",
+  "category": "Graphs and Diagrams",
+  "tags": ["3d", "models", "engineering", "design", "modeling", "CAD", "STEM", "art"],
+  "subject": null
+}
+
+{
+  "embedName": "AM Charts",
+  "embedLink": "http://live.amcharts.com/&sa=D&ust=1442335222212000&usg=AFQjCNGCV7r-TjScNcxLe4yeMD16bkcAvw",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Audioboom",
+  "embedLink": "http://audioboom.com/",
+  "howto": "https://www.youtube.com/watch?v=hfNT_zIz8x4",
+  "description": "Record, upload, and create playlists of audio recordings or songs. Audioboom has it's own app which makes recording away from your computer much easier. This is a great app if you want to setup multiple audio recordings or songs to play in a row or if you want to have an image included with the audio.",
+  "category": "Creation",
+  "tags": ["audio", "playlists", "app", "music", "news", "radio"],
+  "subject": null
+}
+
+{
+  "embedName": "AudioSnaps",
+  "embedLink": "http://audiosnaps.com/",
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": ["audio", "sound", "photo", "app"],
+  "subject": null
+}
+
+ {
+  "embedName": "Chart Blocks",
+  "embedLink": "http://www.chartblocks.com/en",
+  "howto": null,
+  "description": "Easily create interactive graphs from your data sets. Students can move the mouse over different points on the graph to view the data value.",
+  "category": "Graphs and Diagrams",
+  "tags": ["charts", "graphs", "data", "science", "math"],
+  "subject": null
+}
+
+{
+  "embedName": "Clyp",
+  "embedLink": "https://clyp.it/",
+  "howto": "https://www.youtube.com/watch?v=aG-MGEFbkmQ",
+  "description": "Quickly create audio recordings on their website and then paste the embed code. This is a good way to add your voice to lessons.",
+  "category": "Creation",
+  "tags": ["accessibility", "voice", "audio"],
+  "subject": null
+}
+
+{
+  "embedName": "Codebender",
+  "embedLink": "http://codebender.cc/",
+  "howto": "https://www.youtube.com/watch?v=jsX2Uefpyhw",
+  "description": "Embed arduino (microcontroller) sketches right into your docents. Students can upload the code to their Arduino directly from the embed. They can also edit the code directly for quick prototyping as well as clone and edit the sketch into their own Codebender account.",
+  "category": "Creation",
+  "tags": ["arduino", "computer programming", "code", "STEM"],
+  "subject": null
+}
+
+{
+  "embedName": "Coggle",
+  "embedLink": "https://coggle.it/",
+  "howto": null,
+  "description": "Easily create clean looking flow charts. This tool is easy enough for students to use as well. The embedded chart is draggable so large charts are not scaled down and unreadable.",
+  "category": "Graphs and Diagrams",
+  "tags": ["mind map", "flow chart", "charts"],
+  "subject": null
+}
+
+{
+  "embedName": "Desmos",
+  "embedLink": "https://www.desmos.com/",
+  "howto": null,
+  "description": "Create beautiful and interactive graphs with this advanced online calculator. Embed static images of the graphs or embed an interactive graph by creating a custom iframe to embed using the site http://7thspace.com/webmaster_tools/iframe_generator.html",
+  "category": "Interactives",
+  "tags": ["graphs", "algebra", "equations", "calculator", "math", "science"],
+  "subject": null
+}
+
+{
+  "embedName": "EdPuzzle",
+  "embedLink": "https://edpuzzle.com/",
+  "howto": "https://www.youtube.com/watch?v=pOLlOjZQYaI",
+  "description": "Edit and enhance videos from a variety of sources or upload your own. Add notes, quizzes, and more to points within the EdPuzzle.",
+  "category": "Videos",
+  "tags": ["video editing"],
+  "subject": null
+}
+
+{
+  "embedName": "emaze",
+  "embedLink": "https://www.emaze.com/",
+  "howto": "http://youtu.be/HJxJehb287M",
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Facebook",
+  "embedLink": null,
+  "howto": null,
+  "description": "Embed Facebook posts to connect material with your student's social lives. Note: Facebook embeds will not work if your school blocks Facebook.",
+  "category": null,
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Flat",
+  "embedLink": "https://flat.io",
+  "howto": null,
+  "description": "Interactive sheet music. Use their website to create and collaborate on writing music and them embed the final composition.",
+  "category": "Interactives",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Fotobabble",
+  "embedLink": "http://www.fotobabble.com/",
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Geogebra",
+  "embedLink": "https://www.geogebra.org/",
+  "howto": null,
+  "description": "nteractive math lessons. Search through user created projects. Some embed well, others do not so pay close attention to how it's designed.",
+  "category": "Interactives",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Gifs",
+  "embedLink": null,
+  "howto": "http://youtu.be/PejiezRAhN0",
+  "description": "Copy and paste animated gifs. It's that easy.",
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Glogster",
+  "embedLink": "http://glogster.com/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Calendar",
+  "embedLink": "https://www.google.com/calendar",
+  "howto": null,
+  "description": null,
+  "category": null,
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Docs",
+  "embedLink": null,
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Drawing",
+  "embedLink": null,
+  "howto": "https://www.youtube.com/watch?v=B5RNUxi80Xw",
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Drive",
+  "embedLink": null,
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Forms",
+  "embedLink": null,
+  "howto": "https://www.youtube.com/watch?v=NSaHhWE37gw",
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Hangouts",
+  "embedLink": null,
+  "howto": null,
+  "description": null,
+  "category": "Videos",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Maps",
+  "embedLink": "https://www.google.com/maps/",
+  "howto": "https://www.youtube.com/watch?v=VvYeVVHTrNs",
+  "description": null,
+  "category": "Interactives",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Presentation",
+  "embedLink": null,
+  "howto": "https://www.youtube.com/watch?v=U2-_T2ITulo&feature=youtu.be",
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google Spreadsheet",
+  "embedLink": null,
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Google+",
+  "embedLink": null,
+  "howto": null,
+  "description": null,
+  "category": null,
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Haiku Deck",
+  "embedLink": "https://www.haikudeck.com/",
+  "howto": "https://www.youtube.com/watch?v=7mMPHyxltK4",
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Instagram",
+  "embedLink": "http://instagram.com",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Lucid Chart",
+  "embedLink": "https://www.lucidchart.com/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Molecular Workbench",
+  "embedLink": "http://mw.concord.org/nextgen/",
+  "howto": "https://www.youtube.com/watch?v=oJH6iN9D8AE",
+  "description": "Collection of interactive science simulations for biology, chemistry, and physics lessons. The simulations work on iPads/mobile.",
+  "category": "Interactives",
+  "tags": ["science", "biology", "chemistry", "physics", "simulations", "interactive"],
+  "subject": null
+}
+
+{
+  "embedName": "Office Mix",
+  "embedLink": "https://mix.office.com/",
+  "howto": null,
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Padlet",
+  "embedLink": "https://padlet.com/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Picto4me",
+  "embedLink": "http://www.picto4.me/",
+  "howto": null,
+  "description": "Create symbol and sound boards that can include audio. Boards are saved to your google drive and can be downloaded as a PDF for printing. Picto4me boards do not have an embed code but can be turned into an iframe using http://embedresponsively.com/",
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Piktochart",
+  "embedLink": "http://piktochart.com/",
+  "howto": null,
+  "description": "Create easy-to-use inforgraphics.",
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Pinterest",
+  "embedLink": null,
+  "howto": null,
+  "description": null,
+  "category": null,
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Pixton",
+  "embedLink": "http://www.pixton.com/",
+  "howto": null,
+  "description": "Make online comics.",
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Plotly",
+  "embedLink": "https://plot.ly/",
+  "howto": null,
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Popplet",
+  "embedLink": "http://popplet.com/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Prezi",
+  "embedLink": "http://www.prezi.com/",
+  "howto": "https://www.youtube.com/watch?v=aXkdYrp2iQ8",
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Quizizz",
+  "embedLink": "http://quizizz.com/",
+  "howto": null,
+  "description": "Use the embed generator tool",
+  "category": "Assessment",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Quizlet",
+  "embedLink": "http://quizlet.com/",
+  "howto": null,
+  "description": null,
+  "category": "Assessment",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "readwritethink",
+  "embedLink": "http://www.readwritethink.org/classroom-resources/student-interactives/",
+  "howto": "http://youtu.be/1xipv9DjOy0",
+  "description": null,
+  "category": "Interactives",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Realtime Board",
+  "embedLink": "https://realtimeboard.com/",
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Scratch",
+  "embedLink": "https://scratch.mit.edu/",
+  "howto": null,
+  "description": null,
+  "category": null,
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Screencast-o-Matic",
+  "embedLink": "http://www.screencast-o-matic.com/",
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Shuttersong",
+  "embedLink": "http://www.shuttersong.com/",
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Sketchfab",
+  "embedLink": "https://sketchfab.com/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Slideshare",
+  "embedLink": "http://www.slideshare.net/",
+  "howto": "https://www.youtube.com/watch?v=bafO6IQE6GA",
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Snagit",
+  "embedLink": "http://www.techsmith.com/snagit.html",
+  "howto": null,
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Speaker Deck",
+  "embedLink": "https://speakerdeck.com/",
+  "howto": null,
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Storify",
+  "embedLink": "https://storify.com/",
+  "howto": null,
+  "description": null,
+  "category": null,
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Tackk",
+  "embedLink": "https://tackk.com/",
+  "howto": "https://www.youtube.com/watch?v=hCjHMUPC0BE",
+  "description": null,
+  "category": "Presentations",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Thinglink",
+  "embedLink": "http://thinglink.com/",
+  "howto": "https://www.youtube.com/watch?v=nB1S9yjnkzY",
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "TinkerCAD",
+  "embedLink": "https://www.tinkercad.com/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Trinket",
+  "embedLink": "https://trinket.io/",
+  "howto": null,
+  "description": null,
+  "category": null,
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Ustream",
+  "embedLink": "http://www.ustream.tv/",
+  "howto": null,
+  "description": null,
+  "category": "Videos",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Vimeo",
+  "embedLink": "http://vimeo.com/",
+  "howto": "https://www.youtube.com/watch?v=KIuC_0gCkAI",
+  "description": null,
+  "category": "Videos",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Vine",
+  "embedLink": "https://vine.co/",
+  "howto": null,
+  "description": "http://blog.vine.co/post/55514921892/embed-vine-posts",
+  "category": "Videos",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Wideo",
+  "embedLink": "http://wideo.co/en/",
+  "howto": null,
+  "description": "Make professional videos in minutes.",
+  "category": "Videos",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Wordle",
+  "embedLink": "http://www.wordle.net/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Youtube",
+  "embedLink": "http://youtube.com/",
+  "howto": "https://www.youtube.com/watch?v=ol1D8Rk5px4",
+  "description": null,
+  "category": "Videos",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Youtube Recorder",
+  "embedLink": "https://www.youtube.com/my_webcam",
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Zaption",
+  "embedLink": "http://www.zaption.com/",
+  "howto": "https://www.youtube.com/watch?v=NSYeFrvJlrU",
+  "description": null,
+  "category": "Videos",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Ziteboard",
+  "embedLink": "https://ziteboard.com/",
+  "howto": null,
+  "description": null,
+  "category": "Graphs and Diagrams",
+  "tags": null,
+  "subject": null
+}
+
+{
+  "embedName": "Smore",
+  "embedLink": "https://www.smore.com/",
+  "howto": null,
+  "description": null,
+  "category": "Creation",
+  "tags": null,
+  "subject": null
+}
