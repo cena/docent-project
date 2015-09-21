@@ -1,0 +1,202 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: lato, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  font-family: lato, sans-serif;
+}
+
+ul {
+  display: inline-block;
+}
+
+.card {
+  height: 500px;
+  border: 4px solid #1a1a1a;
+  margin-top: 30px;
+  border-radius: 10%;
+
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  float: left;
+  border: 2px solid #1a1a1a;
+  padding:40px;
+  margin-top: 20px;
+  background-image: url("../images/logo_placeholder.png");
+  background-size: cover;
+}
+
+.title {
+  font-size: 25px;
+  height: 100px;
+  margin-top: 20px;
+  font-family: lato, sans-serif;
+}
+
+.video {
+  height: 110px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.paragraph {
+  overflow: scroll;
+  height: 50px;
+  margin: 20px;
+}
+
+img.example {
+  height: 50px;
+  display: inline-block
+}
+
+.tags {
+  margin-top: 20px;
+}
+
+/*/ ---------------------- /*/
+/*/ LEVEL ZERO /*/
+
+#navigationWrapper {
+  margin: 0;
+  padding: 0;
+  width: 960px;
+  height: 40px;
+}
+
+#navigation-menu {
+  margin: 0 auto;
+  padding: 0;
+  width: 960px;
+  height: 40px;
+}
+
+#navigation-menu li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  float: left;
+}
+
+#navigation-menu li a {
+  display: block;
+  margin: 0;
+  padding: 0 20px 0 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 40px;
+  color: #FFFFFF;
+  background: #242424;
+  text-decoration: none;
+  -webkit-transition-property: background;
+  -webkit-transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition: background 0.5s ease;
+  -o-transition: background 0.5s ease;
+  -ms-transition: background 0.5s ease;
+  transition: background 0.5s ease;
+}
+
+#navigation-menu li a:hover {
+  color: #FFFFFF;
+  background: #FF0404;
+}
+
+#navigation-menu li a.active {
+  color: #FFFFFF;
+  background: #FF0404;
+}
+
+/*/ ---------------------- /*/
+/*/ LEVEL ONE /*/
+
+#navigation-option {
+  margin: 0 0 0 -2px;
+  padding: 0;
+  position: absolute;
+  width: 250px;
+  height: auto;
+  background: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  overflow-style: marquee-line;
+  z-index: 999;
+}
+
+#navigation-option li {
+  margin: 0;
+  padding: 0;
+  width: 250px;
+  height: 31px;
+  list-style: none;
+}
+
+#navigation-option .nav-dir h2 {
+  margin: 0;
+  padding: 5px 0 5px 10px;
+  display: block;
+  width: 240px;
+  line-height: 21px;
+  height: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #FFFFFF;
+  background: #242424;
+}
+
+#navigation-option .nav-dir a {
+  margin: 0;
+  padding: 5px 0 5px 10px;
+  display: block;
+  width: 240px;
+  line-height: 21px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #333333;
+  background: #FFFFFF;
+  border-right: none !important;
+}
+
+#navigation-option .nav-dir a:hover {
+  color: #FFFFFF;
+  text-decoration: none;
+  background: #FF0404;
+}
+
+.nav-shift {
+  margin-left: 10px !important;
+}
+
+/*/ DROPDOWN EFFECT /*/
+
+li.navDirectory ul {
+  display: none;
+}
+
+.navDirectory {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+
+.modalImage {
+  height: 350px;
+  margin: 25px;
+}
+
+.embedcode {
+  border: 2px solid black;
+  height: 50px;
+  overflow: scroll;
+}
+
