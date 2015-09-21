@@ -77,13 +77,13 @@ img.example {
   height: 40px;
   display: inline-block;
 }
-
+/* group of tags in each card */
 .tags {
   margin-top: 20px;
   overflow: scroll;
   width: 300px;
 }
-
+/* individual tag */
 .tag {
   display: inline;
   padding: 10px;
