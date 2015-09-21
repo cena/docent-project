@@ -1,3 +1,1 @@
-
-DocentEDU API
-
+Docent EDU embeddable resources
