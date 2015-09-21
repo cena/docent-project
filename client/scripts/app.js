@@ -54,7 +54,11 @@ $(document).ready(function(){
 
 //append resources to DOM on page load
     getResources();
-    console.log(resources);
+    $('body').on('click', '.pageNum', function(){
+        console.log('click');
+        pageNumber = $(this).data('page');
+        getResources();
+    });
 
 });
 
@@ -65,6 +69,7 @@ function  getResources() {
         url: "/resources",
         success: function(data) {
             data.resources.sort(compareToSortAlphabetically);
+            console.log(pageNumber);
             displayCards(data.resources);
             makePages(data.resources);
         }
@@ -81,24 +86,19 @@ function compareToSortAlphabetically(a,b) {
 }
 
 function makePages (data){
+    $('.pageNav').empty();
     numOfPages = Math.ceil(data.length/30);
     for(i = 1; i <= numOfPages; i++){
-        $('.pageNav').append('<div class="pageNum">'+i+'</div>');
+        $('.pageNav').append('<div data-page='+i+' class="pageNum">'+i+'</div>');
     }
 }
 
-$('body').on('click', '.pageButton', function(){
-    pageNumber = 4
-});
 
-function loadClickedPage (pageNumber){
-    pageStart = pageNumber-1;
-    getResources();
-}
 
 
 
 function displayCards (data){
+    $('#cardContainer').empty();
     for (var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
         //sets data
         embedName = data[i].embedName;
