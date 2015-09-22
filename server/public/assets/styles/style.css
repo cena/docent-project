@@ -54,17 +54,14 @@ h6.tags {
 }
 
 .video {
-  min-height: 120px;
+  height: 150px;
+  width: 300px;
   display: inline-block;
   margin-bottom: 10px;
-}
-
-.videoPlaceholder {
-  height: 120px;
-  display: inline-block;
-  margin-bottom: 10px;
-  border: 2px solid black;
-  width: 200px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 .paragraph {
@@ -116,7 +113,7 @@ img.example {
   float: left;
 }
 
-#navigation-menu li a {
+#navigation-menu li {
   display: block;
   margin: 0;
   padding: 0 20px 20px 20px;
@@ -134,12 +131,12 @@ img.example {
   transition: background 0.5s ease;
 }
 
-#navigation-menu li a:hover {
+#navigation-menu li:hover {
   color: #FFFFFF;
   background: #da6727;
 }
 
-#navigation-menu li a.active {
+#navigation-menu li.active {
   color: #FFFFFF;
   background: #da6727;
 }
@@ -182,7 +179,7 @@ img.example {
 
 }
 
-.navigation-option .nav-dir a {
+.navigation-option .nav-dir {
   margin: 0;
   padding: 5px 0 5px 10px;
   display: block;
@@ -195,7 +192,7 @@ img.example {
   width: 150px;
 }
 
-.navigation-option .nav-dir a:hover {
+.navigation-option .nav-dir:hover {
   color: #FFFFFF;
   text-decoration: none;
   background: #da6727;

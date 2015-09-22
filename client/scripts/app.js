@@ -177,16 +177,25 @@ function displayCards (data){
         }
 
         //appends cards
-        var logoImgTag = '<img src="'+ logo +'">';
+        var logoImgTag = '<img class="logo" src="'+ logo +'">';
 
         var cardDiv = '<main class="col-md-4 card"></main>';
-        var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
+        var logoDiv = '<div class="col-md-offset-1">'+ logoImgTag +'</div>';
         var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
 
 
+        var video = document.createElement('video');
+        if(video.src == null){
+            video.src = "";
+        }else{
+            video.src = howto
+        }
+        video.autoPlay = false;
 
-
-        var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ howto +'"></video></div>';
+        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="'+howto+'" frameborder="0" allowfullscreen></iframe></div>';
+        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe></div>';
+        //var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ video.src +'"></video></div>';
+        var videoDiv = '<div class="col-md-offset-1 video">'+ video.src + '</div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
         var exampleDiv = ' <img class="col-md-offset-4 example" src="/assets/images/modalButton.png">';
         var tagsDiv = '<h6 class="tags col-md-3">'+ tags +'</h6>';
