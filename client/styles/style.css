@@ -231,11 +231,6 @@ li.navDirectory ul {
   overflow: scroll;
 }
 
-/*video {*/
-  /*height: 150px;*/
-  /*width: 300px;*/
-/*}*/
-
 .search {
   margin-bottom: 20px;
   margin-top: 20px;
@@ -252,3 +247,8 @@ li.navDirectory ul {
   font-size: 20px;
   margin: 10px;
 }
+
+.pageNum:active, .pageNum:focus, .pageNum:hover {
+  text-decoration: underline;
+}
+

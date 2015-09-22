@@ -149,6 +149,8 @@ function displayCards (data){
         var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
 
 
+
+
         var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ howto +'"></video></div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
         var exampleDiv = ' <img class="col-md-offset-4 example" src="/assets/images/modalButton.png">';
@@ -157,7 +159,6 @@ function displayCards (data){
         $('.card').last().append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
 
         $(".example").on("click", function(){
-            console.log("modal click is working");
             $("#myModal").modal("show");
         })
 
@@ -208,3 +209,6 @@ function displayTag (data, tag){
     }
     return tagArray;
 }
+
+
+
