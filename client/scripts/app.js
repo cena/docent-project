@@ -38,9 +38,17 @@ $(document).ready(function(){
     });
 
 
+//category selection
+    $('body').on('click', '.category', function($event){
+        var category = $(this).text();
+        getResourcesByCategory(category);
+    });
 
-
-
+//category subject
+    $('body').on('click', '.subject', function($event){
+        var subject = $(this).text();
+        getResourcesByCategory(subject);
+    });
 
 //page number navigation button
     $('body').on('click', '.tag', function(){
@@ -95,6 +103,33 @@ function  getResourcesByTag(tag) {
     })
 }
 
+function  getResourcesBySubject(subject) {
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: "/resources",
+        success: function(data) {
+            data.resources.sort(compareAlphabetically);
+            displaySubject(data.resources, subject);
+            displayCards(subjectArray);
+            makePages(subjectArray);
+        }
+    })
+}
+
+function  getResourcesByCategory(category) {
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: "/resources",
+        success: function(data) {
+            data.resources.sort(compareAlphabetically);
+            displayCategory(data.resources, category);
+            displayCards(categoryArray);
+            makePages(categoryArray);
+        }
+    })
+}
 
 function compareAlphabetically(a,b) {
     if (a.embedName < b.embedName)
@@ -176,7 +211,7 @@ function displayCategory (data, category){
     return categoryArray;
 }
 
-function displaySubject (data, category){
+function displaySubject (data, subject){
     subjectArray = [];
     for (var i = 0; i < data.length; i++){
         if(data[i].subject === subject){
@@ -197,7 +232,6 @@ function displaySubject (data, category){
 
 function displayTag (data, tag){
     tagArray = [];
-    console.log(data);
     for (var j = 0; j<data.length; j++){
         if(data[j].tags !== null){
             for (var k = 0; k<data[j].tags.length; k++){
