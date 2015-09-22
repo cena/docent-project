@@ -157,11 +157,6 @@ function makePages (data){
 }
 
 
-
-
-
-
-
 function displayCards (data){
     $('#cardContainer').empty();
 
@@ -184,11 +179,11 @@ function displayCards (data){
         }
 
         //appends cards
-        var logoImgTag = '<img src="'+ logo +'">';
+        var logoImgTag = '<img class='logo' src="'+ logo +'">';
 
         var cardDiv = '<main class="col-md-4 card"></main>';
         var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
-        var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
+        //var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
 
 
 

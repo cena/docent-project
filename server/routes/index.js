@@ -30,7 +30,6 @@ router.get('/create', function(req, res, next){
 });*/
 
 router.get("/*", function(req, res, next){
-    console.log("Hit: ", req.params);
     var file = req.params[0] || "/assets/views/index.html";
     res.sendFile(path.join(__dirname, "../public", file));
 });

@@ -39,7 +39,7 @@
   "category": "Creation",
   "tags": ["audio", "sound", "photo", "app"],
   "subject": null,
-  "logo":"http://mnolog.com/logos/123d.png"
+  "logo":"http://mnolog.com/logos/audiosnaps.png"
 }
 
  {
@@ -50,7 +50,7 @@
   "category": "Graphs and Diagrams",
   "tags": ["charts", "graphs", "data", "science", "math"],
   "subject": null,
-  "logo":"http://mnolog.com/logos/123d.png"
+  "logo":"http://mnolog.com/logos/chartblocks.png"
 }
 
 {
@@ -61,7 +61,7 @@
   "category": "Creation",
   "tags": ["accessibility", "voice", "audio"],
   "subject": null,
-  "logo":"http://mnolog.com/logos/123d.jpg"
+  "logo":"http://mnolog.com/logos/clyp.png"
 }
 
 {
@@ -94,7 +94,7 @@
   "category": "Interactives",
   "tags": ["graphs", "algebra", "equations", "calculator", "math", "science"],
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/desmos.png"
 }
 
 {
@@ -116,7 +116,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/emaze.png"
 }
 
 {
@@ -127,7 +127,7 @@
   "category": null,
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/facebook.png"
 }
 
 {
@@ -138,7 +138,7 @@
   "category": "Interactives",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/flat.png"
 }
 
 {
@@ -149,7 +149,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/fotobabble.png"
 }
 
 {
@@ -171,7 +171,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/gif.png"
 }
 
 {
@@ -193,7 +193,7 @@
   "category": null,
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googlecalendar.png"
 }
 
 {
@@ -204,7 +204,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googledocs.png"
 }
 
 {
@@ -215,7 +215,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googledrawing.png"
 }
 
 {
@@ -226,7 +226,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googledrive.png"
 }
 
 {
@@ -237,7 +237,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googleforms.png"
 }
 
 {
@@ -248,7 +248,7 @@
   "category": "Videos",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googlehangouts.jpeg"
 }
 
 {
@@ -259,7 +259,7 @@
   "category": "Interactives",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googlemaps.jpeg"
 }
 
 {
@@ -270,7 +270,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googlepresentations.png"
 }
 
 {
@@ -281,7 +281,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googlesheets.png"
 }
 
 {
@@ -292,7 +292,7 @@
   "category": null,
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/googleplus.png"
 }
 
 {
@@ -314,7 +314,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/instagram.png"
 }
 
 {
@@ -325,7 +325,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/lucidchart.png"
 }
 
 {
@@ -347,7 +347,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/officemix.png"
 }
 
 {
@@ -358,7 +358,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/padlet.png"
 }
 
 {
@@ -369,7 +369,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/picto4me.jpg"
 }
 
 {
@@ -380,7 +380,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/piktochart.png"
 }
 
 {
@@ -391,7 +391,7 @@
   "category": null,
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/pinterest.png"
 }
 
 {
@@ -402,7 +402,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/pixton.png"
 }
 
 {
@@ -413,7 +413,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/plotly.png"
 }
 
 {
@@ -424,7 +424,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/popplet.png"
+  "logo":"http://mnolog.com/logos/popplet.jpg"
 }
 
 {
@@ -457,7 +457,7 @@
   "category": "Assessment",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/quizlet.png"
 }
 
 {
@@ -479,7 +479,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/realtimeboard.png"
 }
 
 {
@@ -490,7 +490,7 @@
   "category": null,
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/scratch.png"
 }
 
 {
@@ -512,7 +512,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/shuttersong.png"
 }
 
 {
@@ -534,7 +534,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/slideshare.png"
 }
 
 {
@@ -545,7 +545,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/snagit.png"
 }
 
 {
@@ -556,7 +556,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/speakerdeck.png"
 }
 
 {
@@ -567,7 +567,7 @@
   "category": null,
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/storify.jpg"
 }
 
 {
@@ -578,7 +578,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/tackk.png"
 }
 
 {
@@ -589,7 +589,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/thinglink.png"
 }
 
 {
@@ -622,7 +622,7 @@
   "category": "Videos",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/ustream.png"
 }
 
 {
@@ -633,7 +633,7 @@
   "category": "Videos",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/vimeo.png"
 }
 
 {
@@ -655,7 +655,7 @@
   "category": "Videos",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/wideo.jpg"
 }
 
 {
@@ -677,7 +677,7 @@
   "category": "Videos",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/youtube.png"
 }
 
 {
@@ -688,7 +688,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/youtube.png"
 }
 
 {
@@ -699,7 +699,7 @@
   "category": "Videos",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/coggle.png"
+  "logo":"http://mnolog.com/logos/zaption.png"
 }
 
 {
@@ -720,5 +720,6 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo": "http://mnolog.com/logos/smore.png"
 }
