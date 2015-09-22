@@ -86,7 +86,11 @@ img.example {
 /* individual tag */
 .tag {
   display: inline;
-  padding: 10px;
+  padding: 11px;
+}
+
+.tag:hover {
+  text-decoration: underline;
 }
 /*/ ---------------------- /*/
 /*/ LEVEL ZERO /*/
@@ -212,7 +216,7 @@ li.navDirectory ul {
   margin-left: 30px;
   width: 150px;
 }
-
+/* modal */
 
 .modalImage {
   height: 350px;
@@ -225,11 +229,6 @@ li.navDirectory ul {
   border: 2px solid black;
   height: 50px;
   overflow: scroll;
-}
-
-iframe.video {
-  height: 150px;
-  width: 300px;
 }
 
 .search {
@@ -246,4 +245,10 @@ iframe.video {
 .pageNum {
   display: inline-block;
   font-size: 20px;
+  margin: 10px;
 }
+
+.pageNum:active, .pageNum:focus, .pageNum:hover {
+  text-decoration: underline;
+}
+
