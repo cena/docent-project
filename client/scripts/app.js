@@ -8,6 +8,8 @@ var embedName = "",
     tags = [];
 var pageNumber = 1;
 
+var activeModal;
+
 
 $(document).ready(function(){
 
@@ -23,6 +25,11 @@ $(document).ready(function(){
     });
     $(".navDirectory").on("mouseleave", function () {
         $(this).find(".sub-nav").slideUp();
+    });
+
+//modal pop out click function
+    $(".myModal").on("click", function(){
+
     });
 
 
@@ -244,5 +251,15 @@ function displayTag (data, tag){
     return tagArray;
 }
 
-
-
+//pop up modal functionality
+function  getEmbedExamplesById() {
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: "/resource/:id",
+        success: function(data) {
+            console.log(data);
+            activeModal = data.id;
+        }
+    })
+}
