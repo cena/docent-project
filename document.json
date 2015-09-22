@@ -5,7 +5,8 @@
   "description": "User created collection of 3D models made with Autodesk's free tools",
   "category": "Graphs and Diagrams",
   "tags": ["3d", "models", "engineering", "design", "modeling", "CAD", "STEM", "art"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/123d.png"
 }
 
 {
@@ -15,7 +16,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/amcharts.png"
 }
 
 {
@@ -25,7 +27,8 @@
   "description": "Record, upload, and create playlists of audio recordings or songs. Audioboom has it's own app which makes recording away from your computer much easier. This is a great app if you want to setup multiple audio recordings or songs to play in a row or if you want to have an image included with the audio.",
   "category": "Creation",
   "tags": ["audio", "playlists", "app", "music", "news", "radio"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/audioboom.png"
 }
 
 {
@@ -35,7 +38,8 @@
   "description": null,
   "category": "Creation",
   "tags": ["audio", "sound", "photo", "app"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/123d.png"
 }
 
  {
@@ -45,7 +49,8 @@
   "description": "Easily create interactive graphs from your data sets. Students can move the mouse over different points on the graph to view the data value.",
   "category": "Graphs and Diagrams",
   "tags": ["charts", "graphs", "data", "science", "math"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/123d.png"
 }
 
 {
@@ -55,7 +60,8 @@
   "description": "Quickly create audio recordings on their website and then paste the embed code. This is a good way to add your voice to lessons.",
   "category": "Creation",
   "tags": ["accessibility", "voice", "audio"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/123d.jpg"
 }
 
 {
@@ -65,7 +71,8 @@
   "description": "Embed arduino (microcontroller) sketches right into your docents. Students can upload the code to their Arduino directly from the embed. They can also edit the code directly for quick prototyping as well as clone and edit the sketch into their own Codebender account.",
   "category": "Creation",
   "tags": ["arduino", "computer programming", "code", "STEM"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/Codebender.png"
 }
 
 {
@@ -75,7 +82,8 @@
   "description": "Easily create clean looking flow charts. This tool is easy enough for students to use as well. The embedded chart is draggable so large charts are not scaled down and unreadable.",
   "category": "Graphs and Diagrams",
   "tags": ["mind map", "flow chart", "charts"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -85,7 +93,8 @@
   "description": "Create beautiful and interactive graphs with this advanced online calculator. Embed static images of the graphs or embed an interactive graph by creating a custom iframe to embed using the site http://7thspace.com/webmaster_tools/iframe_generator.html",
   "category": "Interactives",
   "tags": ["graphs", "algebra", "equations", "calculator", "math", "science"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -95,7 +104,8 @@
   "description": "Edit and enhance videos from a variety of sources or upload your own. Add notes, quizzes, and more to points within the EdPuzzle.",
   "category": "Videos",
   "tags": ["video editing"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/edpuzzle.png"
 }
 
 {
@@ -105,7 +115,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -115,7 +126,8 @@
   "description": "Embed Facebook posts to connect material with your student's social lives. Note: Facebook embeds will not work if your school blocks Facebook.",
   "category": null,
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -125,7 +137,8 @@
   "description": "Interactive sheet music. Use their website to create and collaborate on writing music and them embed the final composition.",
   "category": "Interactives",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -135,7 +148,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -145,7 +159,8 @@
   "description": "nteractive math lessons. Search through user created projects. Some embed well, others do not so pay close attention to how it's designed.",
   "category": "Interactives",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/GeoGebra.png"
 }
 
 {
@@ -155,7 +170,8 @@
   "description": "Copy and paste animated gifs. It's that easy.",
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -165,7 +181,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/glogster.png"
 }
 
 {
@@ -175,7 +192,8 @@
   "description": null,
   "category": null,
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -185,7 +203,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -195,7 +214,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -205,7 +225,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -215,7 +236,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -225,7 +247,8 @@
   "description": null,
   "category": "Videos",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -235,7 +258,8 @@
   "description": null,
   "category": "Interactives",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -245,7 +269,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -255,7 +280,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -265,7 +291,8 @@
   "description": null,
   "category": null,
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -275,7 +302,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/haiku_deck.png"
 }
 
 {
@@ -285,7 +313,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -295,7 +324,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -305,7 +335,8 @@
   "description": "Collection of interactive science simulations for biology, chemistry, and physics lessons. The simulations work on iPads/mobile.",
   "category": "Interactives",
   "tags": ["science", "biology", "chemistry", "physics", "simulations", "interactive"],
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/molcular_workbench.png"
 }
 
 {
@@ -315,7 +346,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -325,7 +357,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -335,7 +368,8 @@
   "description": "Create symbol and sound boards that can include audio. Boards are saved to your google drive and can be downloaded as a PDF for printing. Picto4me boards do not have an embed code but can be turned into an iframe using http://embedresponsively.com/",
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -345,7 +379,8 @@
   "description": "Create easy-to-use inforgraphics.",
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -355,7 +390,8 @@
   "description": null,
   "category": null,
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -365,7 +401,8 @@
   "description": "Make online comics.",
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -375,7 +412,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -385,7 +423,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/popplet.png"
 }
 
 {
@@ -395,7 +434,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/prezi.png"
 }
 
 {
@@ -405,7 +445,8 @@
   "description": "Use the embed generator tool",
   "category": "Assessment",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/quizizz.png"
 }
 
 {
@@ -415,7 +456,8 @@
   "description": null,
   "category": "Assessment",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -425,7 +467,8 @@
   "description": null,
   "category": "Interactives",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/readwritethink.gif"
 }
 
 {
@@ -435,7 +478,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -445,7 +489,8 @@
   "description": null,
   "category": null,
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -455,7 +500,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/screencast-o-matic.png"
 }
 
 {
@@ -465,7 +511,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -475,7 +522,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/sketchfab.png"
 }
 
 {
@@ -485,7 +533,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -495,7 +544,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -505,7 +555,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -515,7 +566,8 @@
   "description": null,
   "category": null,
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -525,7 +577,8 @@
   "description": null,
   "category": "Presentations",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -535,7 +588,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -545,7 +599,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/tinkercad.png"
 }
 
 {
@@ -555,7 +610,8 @@
   "description": null,
   "category": null,
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/trinket.png"
 }
 
 {
@@ -565,7 +621,8 @@
   "description": null,
   "category": "Videos",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -575,7 +632,8 @@
   "description": null,
   "category": "Videos",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -585,7 +643,8 @@
   "description": "http://blog.vine.co/post/55514921892/embed-vine-posts",
   "category": "Videos",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/vine.png"
 }
 
 {
@@ -595,7 +654,8 @@
   "description": "Make professional videos in minutes.",
   "category": "Videos",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -605,7 +665,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/wordle.gif"
 }
 
 {
@@ -615,7 +676,8 @@
   "description": null,
   "category": "Videos",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -625,7 +687,8 @@
   "description": null,
   "category": "Creation",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -635,7 +698,8 @@
   "description": null,
   "category": "Videos",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/coggle.png"
 }
 
 {
@@ -645,7 +709,8 @@
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
-  "subject": null
+  "subject": null,
+  "logo":"http://mnolog.com/logos/ziteboard.png"
 }
 
 {
