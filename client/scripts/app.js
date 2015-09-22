@@ -150,11 +150,6 @@ function makePages (data){
 }
 
 
-
-
-
-
-
 function displayCards (data){
     $('#cardContainer').empty();
 
