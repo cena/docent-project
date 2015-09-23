@@ -27,6 +27,7 @@ router.get('/create', function(req, res, next){
     res.sendFile(path.join(__dirname, "../public/assets/views/another.html"));
 });*/
 
+
 router.get("/*", function(req, res, next){
     var file = req.params[0] || "/assets/views/index.html";
     res.sendFile(path.join(__dirname, "../public", file));

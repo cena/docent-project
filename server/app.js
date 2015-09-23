@@ -106,7 +106,7 @@ app.use(function(req,res, next){
 })*/;
 
 //app.use('/register', register);
-app.use('admin', admin);
+app.use('/admin', admin);
 app.use('/resources', embeds);
 app.use('/', index);
 
