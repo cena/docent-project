@@ -39,17 +39,15 @@ $(document).ready(function(){
 
 //append resources to DOM on page load
     getResources(logo, logo, function(response) {
-        console.log(response);;
         displayCards(response);
         makePages(response);
 
         //tag button
         $('body').on('click', '.tag', function(){
-            console.log(response);
             value = $(this).text();
             filterResources("tag", value, response);
             displayCards(filteredArray);
-            console.log(filteredArray);
+
         });
 
         //category selection
@@ -172,8 +170,7 @@ function displayCards (data){
         embedName = data[i].embedName;
         logo = data[i].logo;
         embedLink = (data[i].embedLink) ? data[i].embedLink : data[i].embedName;
-        howto = (data[i].howto) ? data[i].howto : "Video coming soon";
-        //howto = (data[i].howto) ? data[i].howto : videoPlaceholderText;
+        howto = (data[i].howto) ? data[i].howto : "";
         description = (data[i].description) ? data[i].description : descriptionPlaceholder;
         category = (data[i].category) ? data[i].category : "";
         subject = (data[i].subject) ? "" : data[i].embedName;
