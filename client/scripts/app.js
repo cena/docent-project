@@ -34,9 +34,6 @@ $(document).ready(function(){
         $("#newModal").modal('show');
     });
 
-
-
-
     //page number navigation button
     $('body').on('click', '.pageNum', function(){
         pageNumber = $(this).data('page');
@@ -46,6 +43,8 @@ $(document).ready(function(){
     //Arrow navigation button
     $('body').on('click', '.arrow', function(){
         pageNumber += $(this).data('page-turn');
+        console.log(pageNumber);
+
         getResources(function(response){
           getNewPage();
         })
@@ -86,11 +85,7 @@ $(document).ready(function(){
             makePages(filteredArray);
             return filteredArray;
         });
-
-
     });
-
-
 });
 
 function getNewPage (){
@@ -103,11 +98,8 @@ function getNewPage (){
             makePages(response);
         })
     }
-
-
-
-
 }
+
 function  getResources(callback) {
     filteredArray=[];
     $.ajax({
@@ -181,7 +173,8 @@ function makePages (data){
         $('.pageNav').append('<div data-page='+i+' class="pageNum">'+i+'</div>');
     }
     if (pageNumber < numOfPages){ $('.pageNav').append('<img class ="arrow" data-page-turn="1" src="/assets/images/nav_forwardArrow.svg">')}
-    $('.pageNum[data-page=1]').addClass('currentPage');
+    $(".pageNum").removeClass("currentPage");
+    $('.pageNum[data-page='+pageNumber+']').addClass('currentPage');
 }
 
 
