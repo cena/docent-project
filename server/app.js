@@ -10,8 +10,9 @@ var localStrategy = require('passport-local');*/
 //var embed = require('./models/embed');
 //var register = require('./routes/register');
 
-var index = require('./routes/index');
+var admin = require('./routes/admin');
 var embeds = require('./routes/embeds');
+var index = require('./routes/index');
 var mongo = require('mongodb')
 var mongoose = require('mongoose');
 
@@ -105,6 +106,7 @@ app.use(function(req,res, next){
 })*/;
 
 //app.use('/register', register);
+app.use('admin', admin);
 app.use('/resources', embeds);
 app.use('/', index);
 
