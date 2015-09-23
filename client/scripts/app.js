@@ -128,7 +128,7 @@ function filterResources(key, value, data){
     filteredArray = [];
     switch (key){
         case "category":
-            for (var i = 0; i < data.length; i++){
+            for  (i = 0; i < data.length; i++){
                 if(data[i].category === value){
                     filteredArray.push(data[i]);
                 }
@@ -136,12 +136,12 @@ function filterResources(key, value, data){
             break;
 
         case "subject":
-            for (var i = 0; i < data.length; i++){
+            for (i = 0; i < data.length; i++){
                 if(data[i].subject === value){
                     filteredArray.push(data[i]);
                 }
             }
-            for (var i = 0; i < data.length; i++){
+            for ( i = 0; i < data.length; i++){
                 if(data[i].subject == null){
                     filteredArray.push(data[i]);
                 }
