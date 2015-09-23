@@ -5,6 +5,7 @@ var embedName = "",
     description = "",
     category = "",
     subject = "",
+    id = "",
     tags = [];
 var pageNumber = 1;
 
@@ -169,7 +170,8 @@ function displayCards (data){
         description = (data[i].description) ? data[i].description : data[i].embedName;
         category = (data[i].category) ? "" : data[i].embedName;
         subject = (data[i].subject) ? "" : data[i].embedName;
-        console.log("does it work");
+        id = (data[i]._id);
+        console.log(data);
         if(data[i].tags==null){
             tags="";
         } else {
@@ -179,10 +181,10 @@ function displayCards (data){
         }
 
         //appends cards
-        var logoImgTag = '<img class="logo" src="'+ logo +'">';
+        var logoImgTag = '<img class="logo" src='+ logo +'>';
 
         var cardDiv = '<main class="col-xs-offset-1 col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 card"></main>';
-        var logoDiv = '<div class="col-xs-offset-1">'+ logoImgTag +'</div>';
+        var logoDiv = '<div class="col-xs-offset-1" id="' + id + '">' + logoImgTag +'</div>';
         var nameDiv = '<h4 class="title col-xs-6 col-md-8">'+ embedName +'</h4>';
 
 
@@ -205,6 +207,13 @@ function displayCards (data){
         $('.card').last().append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
 
         $(".example").on("click", function(){
+            console.log(id);
+            for(var x = 0; x < data.length; x++){
+                if($(this).)
+            }
+
+            $("#modal-title").text();
+
             $("#myModal").modal("show");
         })
 
