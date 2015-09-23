@@ -1,21 +1,22 @@
 var express = require('express');
-var app = express();
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var path = require('path');
 
-var passport = require('passport');
+/*var passport = require('passport');
 var session = require('express-session');
-var localStrategy = require('passport-local');
+var localStrategy = require('passport-local');*/
 
-//var Embed = require('./models/embed');
+//var embed = require('./models/embed');
+//var register = require('./routes/register');
+
+var admin = require('./routes/admin');
+var embeds = require('./routes/embeds');
 var index = require('./routes/index');
-var register = require('./routes/register');
-
-var embeddable = require('./routes/embeds');
 var mongo = require('mongodb')
 var mongoose = require('mongoose');
 
-app.use(session({
+/*app.use(session({
     secret: 'secret',
     key: 'embed',
     resave: true,
@@ -23,12 +24,15 @@ app.use(session({
     saveUninitialized: true,
     cookie: {maxAge: 60000, secure: false}
 }));
+*/
+
+var app = express();
 
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(passport.initialize());
-app.use(passport.session());
+/*app.use(passport.initialize());
+app.use(passport.session());*/
 
 
 
@@ -85,13 +89,13 @@ app.use(function(req,res, next){
 
 });
 
-app.all('/*', function(req, res, next) {
+/*app.all('/*', function(req, res, next) {
   // CORS headers
   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   // Set custom headers for CORS
   res.header('Access-Control-Allow-Headers', 'Content-type,Accept');
-  // If someone calls with method OPTIONS, let's display the allowed methods on our API
+  // If someone calls with method OPTIONS, display the allowed methods on our API
   if (req.method == 'OPTIONS') {
     res.status(200);
     res.write("Allow: GET,PUT,POST,DELETE,OPTIONS");
@@ -99,10 +103,11 @@ app.all('/*', function(req, res, next) {
   } else {
     next();
   }
-});
+})*/;
 
 //app.use('/register', register);
-app.use('/resources', embeddable);
+app.use('/admin', admin);
+app.use('/resources', embeds);
 app.use('/', index);
 
 app.set("port", (process.env.PORT || 5000));
