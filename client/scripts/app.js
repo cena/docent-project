@@ -5,12 +5,13 @@ var embedName = "",
     description = "",
     category = "",
     subject = "",
-    tags = [];
+    tags = "";
 var pageNumber = 1;
-
+var resources=[];
+var value="";
+var filteredArray=[];
 
 $(document).ready(function(){
-
 
     //$(".example").on("click", function () {
     //    $("#myModal").modal('show');
@@ -25,7 +26,6 @@ $(document).ready(function(){
         $(this).find(".sub-nav").slideUp();
     });
 
-
 //the delete modal on admin page
     $(".delete").on("click", function () {
         $("#myModal").modal('show');
@@ -37,105 +37,120 @@ $(document).ready(function(){
         $("#newModal").modal('show');
     });
 
-
-//category selection
-    $('body').on('click', '.category', function($event){
-        var category = $(this).text();
-        getResourcesByCategory(category);
-    });
-
-//category subject
-    $('body').on('click', '.subject', function($event){
-        var subject = $(this).text();
-        getResourcesByCategory(subject);
-    });
-
-//page number navigation button
-    $('body').on('click', '.tag', function(){
-        var tag = $(this).text();
-        getResourcesByTag(tag);
-    });
-
-
-
-//page number navigation button
-    $('body').on('click', '.pageNum', function(){
-        pageNumber = $(this).data('page');
-        getResources();
-    });
-
-//Arrow navigation button
-    $('body').on('click', '.arrow', function(){
-        pageNumber += $(this).data('page-turn');
-        getResources();
-    });
-
 //append resources to DOM on page load
-    getResources();
+    getResources(logo, logo, function(response) {
+        console.log(response);;
+        displayCards(response);
+        makePages(response);
+
+        //tag button
+        $('body').on('click', '.tag', function(){
+            console.log(response);
+            value = $(this).text();
+            filterResources("tag", value, response);
+            displayCards(filteredArray);
+            console.log(filteredArray);
+        });
+
+        //category selection
+        $('body').on('click', '.category', function($event){
+            value = $(this).text();
+            filterResources("category", value, response);
+            displayCards(filteredArray);
+        });
+
+        //subject selection
+        $('body').on('click', '.subject', function($event){
+            value = $(this).text();
+            filterResources("subject", value, response);
+            displayCards(filteredArray);
+        });
+
+        //page number navigation button
+        $('body').on('click', '.pageNum', function(){
+            pageNumber = $(this).data('page');
+            getResources();
+        });
+
+        //Arrow navigation button
+        $('body').on('click', '.arrow', function(){
+            pageNumber += $(this).data('page-turn');
+            getResources();
+        });
+    });
+
+
 });
 
 
-function  getResources() {
+function  getResources(key, value, callback) {
     $.ajax({
         type: 'GET',
         dataType: 'json',
         url: "/resources",
         success: function(data) {
             data.resources.sort(compareAlphabetically);
-            console.log(pageNumber);
-            displayCards(data.resources);
-            makePages(data.resources);
+            //resources=data.resources;
+            //displayCards(data.resources);
+            //makePages(data.resources);
+            console.log("get");
+            callback(data.resources);
         }
     })
 }
 
-function  getResourcesByTag(tag) {
-    $.ajax({
-        type: 'GET',
-        dataType: 'json',
-        url: "/resources",
-        success: function(data) {
-            data.resources.sort(compareAlphabetically);
-            displayTag(data.resources, tag);
-            displayCards(tagArray);
-            makePages(tagArray);
-        }
-    })
+
+function filterResources(key, value, data){
+    filteredArray = [];
+    switch (key){
+        case "category":
+            for (var i = 0; i < data.length; i++){
+                if(data[i].category === value){
+                    filteredArray.push(data[i]);
+                }
+            }
+            break;
+
+        case "subject":
+            for (var i = 0; i < data.length; i++){
+                if(data[i].subject === value){
+                    filteredArray.push(data[i]);
+                }
+            }
+            for (var i = 0; i < data.length; i++){
+                if(data[i].subject == null){
+                    filteredArray.push(data[i]);
+                }
+            }
+            break;
+
+        case "tag":
+            for (var j = 0; j<data.length; j++){
+                if(data[j].tags != null){
+                    console.log("these have tags; ", data[j]);
+                    for (var k = 0; k<data[j].tags.length; k++){
+                        if(data[j].tags[k] === value){
+                            console.log("have selected tag: ", data[j]);
+                            filteredArray.push(data[j]);
+                        }
+
+                    }
+                }
+            }
+            break;
+
+        default:
+            filteredArray = data;
+    }
+    return filteredArray;
 }
 
-function  getResourcesBySubject(subject) {
-    $.ajax({
-        type: 'GET',
-        dataType: 'json',
-        url: "/resources",
-        success: function(data) {
-            data.resources.sort(compareAlphabetically);
-            displaySubject(data.resources, subject);
-            displayCards(subjectArray);
-            makePages(subjectArray);
-        }
-    })
-}
-
-function  getResourcesByCategory(category) {
-    $.ajax({
-        type: 'GET',
-        dataType: 'json',
-        url: "/resources",
-        success: function(data) {
-            data.resources.sort(compareAlphabetically);
-            displayCategory(data.resources, category);
-            displayCards(categoryArray);
-            makePages(categoryArray);
-        }
-    })
-}
 
 function compareAlphabetically(a,b) {
     if (a.embedName < b.embedName)
-            return -1;
+        return -1;
     if (a.embedName > b.embedName)
-            return 1;
+        return 1;
     return 0;
 }
 
@@ -154,7 +169,7 @@ function displayCards (data){
     $('#cardContainer').empty();
 
     for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
-        //sets data
+        tags="";
         embedName = data[i].embedName;
         logo = data[i].logo;
         embedLink = (data[i].embedLink) ? "" : data[i].embedName;
@@ -162,91 +177,28 @@ function displayCards (data){
         description = (data[i].description) ? data[i].description : data[i].embedName;
         category = (data[i].category) ? "" : data[i].embedName;
         subject = (data[i].subject) ? "" : data[i].embedName;
-        console.log("does it work");
-        if(data[i].tags==null){
-            tags="";
-        } else {
+        if(data[i].tags !== null && data[i].tags !== 0){
             for (var j = 0; j < data[i].tags.length; j++) {
-                tags +='<p class="tag">'+data[i].tags[j]+'</p>';
+                console.log("does it work");
+                tags+='<p class="tag">'+data[i].tags[j]+'</p>';
             }
         }
 
         //appends cards
         var logoImgTag = '<img class="logo" src="'+ logo +'">';
-
-        var cardDiv = '<main class="col-xs-offset-1 col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 card"></main>';
-        var logoDiv = '<div class="col-xs-offset-1">'+ logoImgTag +'</div>';
-        var nameDiv = '<h4 class="title col-xs-6 col-md-8">'+ embedName +'</h4>';
-
-
-        var video = document.createElement('video');
-        if(video.src == null){
-            video.src = "";
-        }else{
-            video.src = howto
-        }
-        video.autoPlay = false;
-
-        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="'+howto+'" frameborder="0" allowfullscreen></iframe></div>';
-        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe></div>';
-        //var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ video.src +'"></video></div>';
-        var videoDiv = '<div class="col-xs-offset-1 col-sm-6 col-md-6 video">'+ video.src + '</div>';
+        var cardDiv = '<main class="col-md-4 card"></main>';
+        var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
+        var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
+        var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ howto +'"></video></div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
-        var exampleDiv = ' <img class="col-xs-offset-4 example" src="/assets/images/modalButton.png">';
+        var exampleDiv = ' <img class="col-md-offset-4 example" src="/assets/images/modalButton.png">';
         var tagsDiv = '<h6 class="tags col-md-3">'+ tags +'</h6>';
         $('#cardContainer').append(cardDiv);
         $('.card').last().append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
 
         $(".example").on("click", function(){
             $("#myModal").modal("show");
-        })
-
+        });
+        console.log(tags);
     }
 }
-
-
-function displayCategory (data, category){
-    categoryArray = [];
-    for (var i = 0; i < data.length; i++){
-        if(data[i].category === category){
-            categoryArray.push(data[i]);
-        }
-    }
-    return categoryArray;
-}
-
-function displaySubject (data, subject){
-    subjectArray = [];
-    for (var i = 0; i < data.length; i++){
-        if(data[i].subject === subject){
-            subjectArray.push(data[i]);
-        }
-    }
-    for (var i = 0; i < data.length; i++){
-        if(data[i].subject == null){
-            subjectArray.push(data[i]);
-        }
-    }
-    return subjectArray;
-}
-
-
-
-
-
-function displayTag (data, tag){
-    tagArray = [];
-    for (var j = 0; j<data.length; j++){
-        if(data[j].tags !== null){
-            for (var k = 0; k<data[j].tags.length; k++){
-                if(data[j].tags[k] === tag){
-                    tagArray.push(data[j]);
-                }
-            }
-        }
-    }
-    return tagArray;
-}
-
-
-
