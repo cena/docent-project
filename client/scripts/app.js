@@ -34,51 +34,84 @@ $(document).ready(function(){
         $("#newModal").modal('show');
     });
 
+
+
+
+    //page number navigation button
+    $('body').on('click', '.pageNum', function(){
+        pageNumber = $(this).data('page');
+        getNewPage();
+    });
+
+    //Arrow navigation button
+    $('body').on('click', '.arrow', function(){
+        pageNumber += $(this).data('page-turn');
+        getResources(function(response){
+          getNewPage();
+        })
+    });
+
 //append resources to DOM on page load
-    getResources(logo, logo, function(response) {
+    getResources(function(response) {
         displayCards(response);
         makePages(response);
 
         //tag button
         $('body').on('click', '.tag', function(){
             value = $(this).text();
+            pageNumber = 1;
             filterResources("tag", value, response);
             displayCards(filteredArray);
+            makePages(filteredArray);
+            return filteredArray;
 
         });
 
         //category selection
-        $('body').on('click', '.category', function($event){
+        $('body').on('click', '.category', function(){
             value = $(this).text();
+            pageNumber = 1;
             filterResources("category", value, response);
             displayCards(filteredArray);
+            makePages(filteredArray);
+            return filteredArray;
         });
 
         //subject selection
-        $('body').on('click', '.subject', function($event){
+        $('body').on('click', '.subject', function(){
             value = $(this).text();
+            pageNumber = 1;
             filterResources("subject", value, response);
             displayCards(filteredArray);
+            makePages(filteredArray);
+            return filteredArray;
         });
 
-        //page number navigation button
-        $('body').on('click', '.pageNum', function(){
-            pageNumber = $(this).data('page');
-            getResources();
-        });
 
-        //Arrow navigation button
-        $('body').on('click', '.arrow', function(){
-            pageNumber += $(this).data('page-turn');
-            getResources();
-        });
     });
 
 
 });
 
+function getNewPage (){
+    if(filteredArray.length > 0){
+        console.log("if");
+        displayCards(filteredArray);
+        makePages(filteredArray);
+    }else {
+        getResources(function (response) {
+            console.log("else");
+            displayCards(response);
+            makePages(response);
+        })
+    }
 
-function  getResources(key, value, callback) {
+
+
+
+}
+function  getResources(callback) {
+    filteredArray=[];
     $.ajax({
         type: 'GET',
         dataType: 'json',
@@ -122,7 +155,6 @@ function filterResources(key, value, data){
                         if(data[j].tags[k] === value){
                             filteredArray.push(data[j]);
                         }
-
                     }
                 }
             }
@@ -156,11 +188,10 @@ function makePages (data){
 
 function displayCards (data){
     $('#cardContainer').empty();
-
+    console.log(data);
     for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
             var descriptionPlaceholder = "Description Coming Soon";
-            var videoPlaceholderText = "Video Coming Soon";
-
+        console.log("i is: " + i);
         //sets data
         tags="";
         embedName = data[i].embedName;
@@ -178,13 +209,10 @@ function displayCards (data){
 
         //appends cards
         var logoImgTag = '<img class="logo" src="'+ logo +'">';
-
         var cardDiv = '<main class="col-xs-offset-1 col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 card"></main>';
         var logoDiv = '<div class="col-xs-offset-1 col-xs-10">'+ logoImgTag +'</div>';
         var nameDiv = '<h4 class="title col-xs-6 col-md-8">'+ embedName +'</h4>';
         var categoryDiv = '<h3 class="category col-xs-offset-5 col-xs-10">'+ category +'</h3>';
-
-
         var videoDiv = '<div class="col-md-offset-1"><iframe width="290" height="150" src="'+ howto +'" frameborder="0" allowfullscreen></iframe></iframe></div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
         var exampleDiv = ' <i class="col-xs-offset-5 example fa fa-external-link fa-2x"></i>';
