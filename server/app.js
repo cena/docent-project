@@ -2,21 +2,27 @@ var express = require('express');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var path = require('path');
-
-/*var passport = require('passport');
+var User = require('./models/localauth');
+var passport = require('passport');
 var session = require('express-session');
-var localStrategy = require('passport-local');*/
+var localStrategy = require('passport-local');
+//var auth = require('passport-google-oauth');
+var flash = require('connect-flash');
 
 //var embed = require('./models/embed');
 //var register = require('./routes/register');
-
+var login = require('./routes/login');
 var admin = require('./routes/admin');
 var embeds = require('./routes/embeds');
 var index = require('./routes/index');
 var mongo = require('mongodb')
 var mongoose = require('mongoose');
 
-/*app.use(session({
+
+var app = express();
+
+
+app.use(session({
     secret: 'secret',
     key: 'embed',
     resave: true,
@@ -24,17 +30,17 @@ var mongoose = require('mongoose');
     saveUninitialized: true,
     cookie: {maxAge: 60000, secure: false}
 }));
-*/
 
-var app = express();
+
+
 
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-/*app.use(passport.initialize());
-app.use(passport.session());*/
 
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 //Mongo Setup
 var mongoURI = "mongodb://localhost:27017/docentdb";
@@ -49,7 +55,7 @@ MongoDB.once('open', function(err){
 });
 
 //PASSPORT SESSION
-/*passport.serializeUser(function(user, done){
+passport.serializeUser(function(user, done){
     done(null, user.id);
 });
 
@@ -79,7 +85,7 @@ passport.use('local', new localStrategy({
         });
     });
 }));
-*/
+
 ////////////
 
 app.use(function(req,res, next){
@@ -106,6 +112,7 @@ app.use(function(req,res, next){
 })*/;
 
 //app.use('/register', register);
+app.use('/login', login);
 app.use('/admin', admin);
 app.use('/resources', embeds);
 app.use('/', index);
