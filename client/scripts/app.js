@@ -69,6 +69,7 @@ $(document).ready(function(){
         //page number navigation button
         $('body').on('click', '.pageNum', function(){
             pageNumber = $(this).data('page');
+            filtered
             getResources();
         });
 
@@ -90,10 +91,6 @@ function  getResources(key, value, callback) {
         url: "/resources",
         success: function(data) {
             data.resources.sort(compareAlphabetically);
-            //resources=data.resources;
-            //displayCards(data.resources);
-            //makePages(data.resources);
-            console.log("get");
             callback(data.resources);
         }
     })
@@ -127,10 +124,8 @@ function filterResources(key, value, data){
         case "tag":
             for (var j = 0; j<data.length; j++){
                 if(data[j].tags != null){
-                    console.log("these have tags; ", data[j]);
                     for (var k = 0; k<data[j].tags.length; k++){
                         if(data[j].tags[k] === value){
-                            console.log("have selected tag: ", data[j]);
                             filteredArray.push(data[j]);
                         }
 
@@ -182,7 +177,6 @@ function displayCards (data){
         subject = (data[i].subject) ? "" : data[i].embedName;
         if(data[i].tags !== null && data[i].tags !== 0){
             for (var j = 0; j < data[i].tags.length; j++) {
-                console.log("does it work");
                 tags+='<p class="tag">'+data[i].tags[j]+'</p>';
             }
         }
@@ -206,6 +200,5 @@ function displayCards (data){
         $(".example").on("click", function(){
             $("#myModal").modal("show");
         });
-        console.log(tags);
     }
 }
