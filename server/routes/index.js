@@ -14,9 +14,7 @@ var resource = require('../../dao/resources');
  router.get('/resource/:id', resource.getOne);
  router.post('/resource/', resource.create);
  router.put('/resource/:id', resource.update);
- router.delete('/resource/:id', resource.delete);
-
-
+ router.delete('/resource/:id', resource.delete); 
 
 
 /*router.post("/", passport.authenticate('local', {
