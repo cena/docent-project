@@ -179,7 +179,7 @@ function displayCards (data){
         var cardDiv = '<main class="col-xs-offset-1 col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 card"></main>';
         var logoDiv = '<div class="col-xs-offset-1 col-xs-10">'+ logoImgTag +'</div>';
         var nameDiv = '<h4 class="title col-xs-6 col-md-8">'+ embedName +'</h4>';
-        var categoryDiv = '<h3 class="category col-xs-offset-3 col-xs-6">'+ embedName +'</h3>';
+        var categoryDiv = '<h3 class="category col-xs-offset-5 col-xs-10">'+ category +'</h3>';
 
 
         var videoDiv = '<div class="col-md-offset-1"><iframe width="290" height="150" src="'+ howto +'" frameborder="0" allowfullscreen></iframe></iframe></div>';
