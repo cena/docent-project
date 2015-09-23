@@ -50,14 +50,7 @@ $(document).ready(function(){
     $('body').on('click', '.arrow', function(){
         pageNumber += $(this).data('page-turn');
         getResources(function(response){
-            if(filteredArray.length > 0){
-                displayCards(filteredArray);
-                makePages(filteredArray);
-            }else{
-                displayCards(response);
-                makePages(response);
-            }
-
+          getNewPage();
         })
     });
 
@@ -69,6 +62,7 @@ $(document).ready(function(){
         //tag button
         $('body').on('click', '.tag', function(){
             value = $(this).text();
+            pageNumber = 1;
             filterResources("tag", value, response);
             displayCards(filteredArray);
             makePages(filteredArray);
@@ -79,20 +73,20 @@ $(document).ready(function(){
         //category selection
         $('body').on('click', '.category', function(){
             value = $(this).text();
+            pageNumber = 1;
             filterResources("category", value, response);
             displayCards(filteredArray);
             makePages(filteredArray);
-            pageNumber = 1;
             return filteredArray;
         });
 
         //subject selection
         $('body').on('click', '.subject', function(){
             value = $(this).text();
+            pageNumber = 1;
             filterResources("subject", value, response);
             displayCards(filteredArray);
             makePages(filteredArray);
-            pageNumber = 1;
             return filteredArray;
         });
 
