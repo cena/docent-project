@@ -7,7 +7,7 @@ var passport = require('passport');
 var session = require('express-session');
 var localStrategy = require('passport-local');
 //var auth = require('passport-google-oauth');
-var flash = require('connect-flash');
+//var flash = require('connect-flash');
 
 //var embed = require('./models/embed');
 //var register = require('./routes/register');

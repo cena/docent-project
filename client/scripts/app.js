@@ -13,12 +13,9 @@ var filteredArray=[];
 
 $(document).ready(function(){
 
-    //$(".example").on("click", function () {
-    //    $("#myModal").modal('show');
-    //});
+
 
 //the drop downs
-
     $(".navDirectory").on("mouseenter", function () {
         $(this).find(".sub-nav").slideDown();
     });
