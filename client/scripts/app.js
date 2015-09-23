@@ -154,13 +154,15 @@ function displayCards (data){
     $('#cardContainer').empty();
 
     for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
+            var descriptionPlaceholder = "Description Coming Soon";
+
         //sets data
         embedName = data[i].embedName;
         logo = data[i].logo;
-        embedLink = (data[i].embedLink) ? "" : data[i].embedName;
-        howto = (data[i].howto) ? data[i].howto : data[i].embedName;
-        description = (data[i].description) ? data[i].description : data[i].embedName;
-        category = (data[i].category) ? "" : data[i].embedName;
+        embedLink = (data[i].embedLink) ? data[i].embedLink : data[i].embedName;
+        howto = (data[i].howto) ? data[i].howto : "";
+        description = (data[i].description) ? data[i].description : descriptionPlaceholder;
+        category = (data[i].category) ? data[i].category : data[i].embedName;
         subject = (data[i].subject) ? "" : data[i].embedName;
         console.log("does it work");
         if(data[i].tags==null){
@@ -175,27 +177,17 @@ function displayCards (data){
         var logoImgTag = '<img class="logo" src="'+ logo +'">';
 
         var cardDiv = '<main class="col-xs-offset-1 col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 card"></main>';
-        var logoDiv = '<div class="col-xs-offset-1">'+ logoImgTag +'</div>';
+        var logoDiv = '<div class="col-xs-offset-1 col-xs-10">'+ logoImgTag +'</div>';
         var nameDiv = '<h4 class="title col-xs-6 col-md-8">'+ embedName +'</h4>';
+        var categoryDiv = '<h3 class="category col-xs-offset-3 col-xs-6">'+ embedName +'</h3>';
 
 
-        var video = document.createElement('video');
-        if(video.src == null){
-            video.src = "";
-        }else{
-            video.src = howto
-        }
-        video.autoPlay = false;
-
-        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="'+howto+'" frameborder="0" allowfullscreen></iframe></div>';
-        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe></div>';
-        //var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ video.src +'"></video></div>';
-        var videoDiv = '<div class="col-xs-offset-1 col-sm-6 col-md-6 video">'+ video.src + '</div>';
+        var videoDiv = '<div class="col-md-offset-1"><iframe width="290" height="150" src="'+ howto +'" frameborder="0" allowfullscreen></iframe></iframe></div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
-        var exampleDiv = ' <img class="col-xs-offset-4 example" src="/assets/images/modalButton.png">';
+        var exampleDiv = ' <i class="col-xs-offset-5 example fa fa-external-link fa-2x"></i>';
         var tagsDiv = '<h6 class="tags col-md-3">'+ tags +'</h6>';
         $('#cardContainer').append(cardDiv);
-        $('.card').last().append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
+        $('.card').last().append('<div class="row">'+ logoDiv +'</div><div class="row">'+ categoryDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
 
         $(".example").on("click", function(){
             $("#myModal").modal("show");
