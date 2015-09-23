@@ -67,7 +67,6 @@ $(document).ready(function(){
         //page number navigation button
         $('body').on('click', '.pageNum', function(){
             pageNumber = $(this).data('page');
-            filtered
             getResources();
         });
 
