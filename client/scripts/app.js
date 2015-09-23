@@ -95,12 +95,10 @@ $(document).ready(function(){
 
 function getNewPage (){
     if(filteredArray.length > 0){
-        console.log("if");
         displayCards(filteredArray);
         makePages(filteredArray);
     }else {
         getResources(function (response) {
-            console.log("else");
             displayCards(response);
             makePages(response);
         })
@@ -183,15 +181,15 @@ function makePages (data){
         $('.pageNav').append('<div data-page='+i+' class="pageNum">'+i+'</div>');
     }
     if (pageNumber < numOfPages){ $('.pageNav').append('<img class ="arrow" data-page-turn="1" src="/assets/images/nav_forwardArrow.svg">')}
+    $('.pageNum[data-page=1]').addClass('currentPage');
 }
 
 
 function displayCards (data){
     $('#cardContainer').empty();
-    console.log(data);
     for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
             var descriptionPlaceholder = "Description Coming Soon";
-        console.log("i is: " + i);
+
         //sets data
         tags="";
         embedName = data[i].embedName;
