@@ -76,7 +76,7 @@ passport.use('local', new localStrategy({
     });
 }));
 */
-////////////
+
 
 app.use(function(req,res, next){
 

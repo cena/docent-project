@@ -23,7 +23,7 @@
 {
   "embedName": "Audioboom",
   "embedLink": "http://audioboom.com/",
-  "howto": "https://www.youtube.com/watch?v=hfNT_zIz8x4",
+  "howto": "https://www.youtube.com/embed/hfNT_zIz8x4",
   "description": "Record, upload, and create playlists of audio recordings or songs. Audioboom has it's own app which makes recording away from your computer much easier. This is a great app if you want to setup multiple audio recordings or songs to play in a row or if you want to have an image included with the audio.",
   "category": "Creation",
   "tags": ["audio", "playlists", "app", "music", "news", "radio"],
@@ -56,7 +56,7 @@
 {
   "embedName": "Clyp",
   "embedLink": "https://clyp.it/",
-  "howto": "https://www.youtube.com/watch?v=aG-MGEFbkmQ",
+  "howto": "https://www.youtube.com/embed/aG-MGEFbkmQ",
   "description": "Quickly create audio recordings on their website and then paste the embed code. This is a good way to add your voice to lessons.",
   "category": "Creation",
   "tags": ["accessibility", "voice", "audio"],
@@ -67,7 +67,7 @@
 {
   "embedName": "Codebender",
   "embedLink": "http://codebender.cc/",
-  "howto": "https://www.youtube.com/watch?v=jsX2Uefpyhw",
+  "howto": "https://www.youtube.com/embed/jsX2Uefpyhw",
   "description": "Embed arduino (microcontroller) sketches right into your docents. Students can upload the code to their Arduino directly from the embed. They can also edit the code directly for quick prototyping as well as clone and edit the sketch into their own Codebender account.",
   "category": "Creation",
   "tags": ["arduino", "computer programming", "code", "STEM"],
@@ -100,7 +100,7 @@
 {
   "embedName": "EdPuzzle",
   "embedLink": "https://edpuzzle.com/",
-  "howto": "https://www.youtube.com/watch?v=pOLlOjZQYaI",
+  "howto": "https://www.youtube.com/embed/pOLlOjZQYaI",
   "description": "Edit and enhance videos from a variety of sources or upload your own. Add notes, quizzes, and more to points within the EdPuzzle.",
   "category": "Videos",
   "tags": ["video editing"],
@@ -111,7 +111,7 @@
 {
   "embedName": "emaze",
   "embedLink": "https://www.emaze.com/",
-  "howto": "http://youtu.be/HJxJehb287M",
+  "howto": "https://youtube.com/embed/HJxJehb287M",
   "description": null,
   "category": "Presentations",
   "tags": null,
@@ -149,7 +149,7 @@
   "category": "Creation",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/fotobabble.png"
+  "logo":"http://mnolog.com/logos/fotobabble.jpg"
 }
 
 {
@@ -166,7 +166,7 @@
 {
   "embedName": "Gifs",
   "embedLink": null,
-  "howto": "http://youtu.be/PejiezRAhN0",
+  "howto": "https://youtube.com/embed/PejiezRAhN0",
   "description": "Copy and paste animated gifs. It's that easy.",
   "category": "Graphs and Diagrams",
   "tags": null,
@@ -193,7 +193,7 @@
   "category": null,
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/googlecalendar.png"
+  "logo":"http://mnolog.com/logos/googlecalendar.jpg"
 }
 
 {
@@ -210,7 +210,7 @@
 {
   "embedName": "Google Drawing",
   "embedLink": null,
-  "howto": "https://www.youtube.com/watch?v=B5RNUxi80Xw",
+  "howto": "https://www.youtube.com/embed/B5RNUxi80Xw",
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
@@ -232,7 +232,7 @@
 {
   "embedName": "Google Forms",
   "embedLink": null,
-  "howto": "https://www.youtube.com/watch?v=NSaHhWE37gw",
+  "howto": "https://www.youtube.com/embed/NSaHhWE37gw",
   "description": null,
   "category": "Creation",
   "tags": null,
@@ -254,7 +254,7 @@
 {
   "embedName": "Google Maps",
   "embedLink": "https://www.google.com/maps/",
-  "howto": "https://www.youtube.com/watch?v=VvYeVVHTrNs",
+  "howto": "https://www.youtube.com/embed/VvYeVVHTrNs",
   "description": null,
   "category": "Interactives",
   "tags": null,
@@ -265,7 +265,7 @@
 {
   "embedName": "Google Presentation",
   "embedLink": null,
-  "howto": "https://www.youtube.com/watch?v=U2-_T2ITulo&feature=youtu.be",
+  "howto": "https://www.youtube.com/embed/U2-_T2ITulo",
   "description": null,
   "category": "Presentations",
   "tags": null,
@@ -298,7 +298,7 @@
 {
   "embedName": "Haiku Deck",
   "embedLink": "https://www.haikudeck.com/",
-  "howto": "https://www.youtube.com/watch?v=7mMPHyxltK4",
+  "howto": "https://www.youtube.com/embed/7mMPHyxltK4",
   "description": null,
   "category": "Presentations",
   "tags": null,
@@ -331,7 +331,7 @@
 {
   "embedName": "Molecular Workbench",
   "embedLink": "http://mw.concord.org/nextgen/",
-  "howto": "https://www.youtube.com/watch?v=oJH6iN9D8AE",
+  "howto": "https://www.youtube.com/embed/oJH6iN9D8AE",
   "description": "Collection of interactive science simulations for biology, chemistry, and physics lessons. The simulations work on iPads/mobile.",
   "category": "Interactives",
   "tags": ["science", "biology", "chemistry", "physics", "simulations", "interactive"],
@@ -358,7 +358,7 @@
   "category": "Graphs and Diagrams",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/padlet.png"
+  "logo":"http://mnolog.com/logos/padlet.jpg"
 }
 
 {
@@ -430,7 +430,7 @@
 {
   "embedName": "Prezi",
   "embedLink": "http://www.prezi.com/",
-  "howto": "https://www.youtube.com/watch?v=aXkdYrp2iQ8",
+  "howto": "https://www.youtube.com/embed/aXkdYrp2iQ8",
   "description": null,
   "category": "Presentations",
   "tags": null,
@@ -463,7 +463,7 @@
 {
   "embedName": "readwritethink",
   "embedLink": "http://www.readwritethink.org/classroom-resources/student-interactives/",
-  "howto": "http://youtu.be/1xipv9DjOy0",
+  "howto": "https://youtube.com/embed/1xipv9DjOy0",
   "description": null,
   "category": "Interactives",
   "tags": null,
@@ -529,7 +529,7 @@
 {
   "embedName": "Slideshare",
   "embedLink": "http://www.slideshare.net/",
-  "howto": "https://www.youtube.com/watch?v=bafO6IQE6GA",
+  "howto": "https://www.youtube.com/embed/bafO6IQE6GA",
   "description": null,
   "category": "Presentations",
   "tags": null,
@@ -556,7 +556,7 @@
   "category": "Presentations",
   "tags": null,
   "subject": null,
-  "logo":"http://mnolog.com/logos/speakerdeck.png"
+  "logo":"http://mnolog.com/logos/speakerdeck.jpg"
 }
 
 {
@@ -573,7 +573,7 @@
 {
   "embedName": "Tackk",
   "embedLink": "https://tackk.com/",
-  "howto": "https://www.youtube.com/watch?v=hCjHMUPC0BE",
+  "howto": "https://www.youtube.com/embed/hCjHMUPC0BE",
   "description": null,
   "category": "Presentations",
   "tags": null,
@@ -584,7 +584,7 @@
 {
   "embedName": "Thinglink",
   "embedLink": "http://thinglink.com/",
-  "howto": "https://www.youtube.com/watch?v=nB1S9yjnkzY",
+  "howto": "https://www.youtube.com/embed/B1S9yjnkzY",
   "description": null,
   "category": "Graphs and Diagrams",
   "tags": null,
@@ -628,7 +628,7 @@
 {
   "embedName": "Vimeo",
   "embedLink": "http://vimeo.com/",
-  "howto": "https://www.youtube.com/watch?v=KIuC_0gCkAI",
+  "howto": "https://www.youtube.com/embed/KIuC_0gCkAI",
   "description": null,
   "category": "Videos",
   "tags": null,
@@ -672,7 +672,7 @@
 {
   "embedName": "Youtube",
   "embedLink": "http://youtube.com/",
-  "howto": "https://www.youtube.com/watch?v=ol1D8Rk5px4",
+  "howto": "https://www.youtube.com/embed/ol1D8Rk5px4",
   "description": null,
   "category": "Videos",
   "tags": null,
@@ -694,7 +694,7 @@
 {
   "embedName": "Zaption",
   "embedLink": "http://www.zaption.com/",
-  "howto": "https://www.youtube.com/watch?v=NSYeFrvJlrU",
+  "howto": "https://www.youtube.com/embed/NSYeFrvJlrU",
   "description": null,
   "category": "Videos",
   "tags": null,
