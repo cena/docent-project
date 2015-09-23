@@ -21,6 +21,10 @@ h6.tags {
   float: left;
 }
 
+button {
+  display: inline-block;
+}
+
 .card {
   height: 500px;
   margin-top: 30px;
