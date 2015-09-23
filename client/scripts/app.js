@@ -39,17 +39,15 @@ $(document).ready(function(){
 
 //append resources to DOM on page load
     getResources(logo, logo, function(response) {
-        console.log(response);;
         displayCards(response);
         makePages(response);
 
         //tag button
         $('body').on('click', '.tag', function(){
-            console.log(response);
             value = $(this).text();
             filterResources("tag", value, response);
             displayCards(filteredArray);
-            console.log(filteredArray);
+
         });
 
         //category selection
