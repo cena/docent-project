@@ -174,16 +174,25 @@ function displayCards (data){
         //appends cards
         var logoImgTag = '<img class="logo" src="'+ logo +'">';
 
-        var cardDiv = '<main class="col-md-4 card"></main>';
-        var logoDiv = '<div class="logo col-md-offset-1">'+ logoImgTag +'</div>';
-        //var nameDiv = '<h4 class="title col-md-8">'+ embedName +'</h4>';
+        var cardDiv = '<main class="col-xs-offset-1 col-xs-12 col-sm-offset-3 col-sm-6 col-md-offset-1 col-md-4 col-lg-offset-0 card"></main>';
+        var logoDiv = '<div class="col-xs-offset-1">'+ logoImgTag +'</div>';
+        var nameDiv = '<h4 class="title col-xs-6 col-md-8">'+ embedName +'</h4>';
 
 
+        var video = document.createElement('video');
+        if(video.src == null){
+            video.src = "";
+        }else{
+            video.src = howto
+        }
+        video.autoPlay = false;
 
-
-        var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ howto +'"></video></div>';
+        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="'+howto+'" frameborder="0" allowfullscreen></iframe></div>';
+        //var videoDiv = '<div class="col-md-offset-1 video"><iframe width="560" height="315" src="https://www.youtube.com/embed/tntOCGkgt98" frameborder="0" allowfullscreen></iframe></div>';
+        //var videoDiv = '<div class="col-md-offset-1 video"><video src="'+ video.src +'"></video></div>';
+        var videoDiv = '<div class="col-xs-offset-1 col-sm-6 col-md-6 video">'+ video.src + '</div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
-        var exampleDiv = ' <img class="col-md-offset-4 example" src="/assets/images/modalButton.png">';
+        var exampleDiv = ' <img class="col-xs-offset-4 example" src="/assets/images/modalButton.png">';
         var tagsDiv = '<h6 class="tags col-md-3">'+ tags +'</h6>';
         $('#cardContainer').append(cardDiv);
         $('.card').last().append('<div class="row">'+ logoDiv + nameDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
