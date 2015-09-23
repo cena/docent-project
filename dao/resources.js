@@ -19,7 +19,7 @@ var resources = {
         console.log(err);
       } else {
         if (resource) {
-          res.send(resource);
+          res.json(resource);
         } else {
           res.status(404);
           res.json({

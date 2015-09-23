@@ -165,15 +165,17 @@ function displayCards (data){
 
     for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
             var descriptionPlaceholder = "Description Coming Soon";
+            var videoPlaceholderText = "Video Coming Soon";
 
         //sets data
         tags="";
         embedName = data[i].embedName;
         logo = data[i].logo;
         embedLink = (data[i].embedLink) ? data[i].embedLink : data[i].embedName;
-        howto = (data[i].howto) ? data[i].howto : "";
+        howto = (data[i].howto) ? data[i].howto : "Video coming soon";
+        //howto = (data[i].howto) ? data[i].howto : videoPlaceholderText;
         description = (data[i].description) ? data[i].description : descriptionPlaceholder;
-        category = (data[i].category) ? data[i].category : data[i].embedName;
+        category = (data[i].category) ? data[i].category : "";
         subject = (data[i].subject) ? "" : data[i].embedName;
         if(data[i].tags !== null && data[i].tags !== 0){
             for (var j = 0; j < data[i].tags.length; j++) {
