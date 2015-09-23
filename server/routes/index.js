@@ -17,15 +17,10 @@ var resource = require('../../dao/resources');
  router.delete('/resource/:id', resource.delete); 
 
 
-/*router.post("/", passport.authenticate('local', {
-    successRedirect: "/assets/views/embeds.html",
+router.post("/", passport.authenticate('local', {
+    successRedirect: "/assets/views/admin.html",
     failureRedirect: "/"
 }));
-
-router.get('/create', function(req, res, next){
-    console.log("Made it here");
-    res.sendFile(path.join(__dirname, "../public/assets/views/another.html"));
-});*/
 
 
 router.get("/*", function(req, res, next){
