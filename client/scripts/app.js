@@ -24,7 +24,7 @@ $(document).ready(function(){
     });
 
 //modal example
-    $(".example").on("click", function(){
+    $("body").on("click", '.example', function(){
         $("#myModal").modal("show");
     });
 
