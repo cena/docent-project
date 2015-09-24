@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>DocentEDU Embeddable Resources</title>
+    <!--STYLES-->
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="assets/styles/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
 
 
-    <!--STYLES-->
-    <!--<link rel="stylesheet" href="/assets/styles/styles.css">-->
 
     <!--SCRIPTS-->
     <script type="text/javascript" src="/vendors/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/assets/scripts/app.min.js"></script>
+    <script type="text/javascript" src="../assets/scripts/app.min.js"></script>
 </head>
 <body class="container">
 <button id="adminButton" class="float-right submit-button">Admin</button>
@@ -45,12 +44,15 @@
 </form>
 <!-- end of search bar -->
 
-
 <!--start the drop down for categories-->
 <ul>
     <li class="navDirectory"><a href="#">Category</a><br>
         <ul class="navigation-option sub-nav">
             <li class="category nav-dir">Graphs and Diagrams</li>
+<<<<<<< HEAD
+=======
+
+>>>>>>> d8e17acd3f688c18a71d3ac6aaef5ace7240d19d
             <li class="category nav-dir">Interactives</li>
             <li class="category nav-dir">Creation</li>
             <li class="category nav-dir">Videos</li>
@@ -74,6 +76,7 @@
 
     </li>
 </ul>
+<hr>
 <!-- end of subjects drop down -->
 <div class="container">
 <div id="cardContainer"></div>
@@ -87,10 +90,11 @@
                 <h4 class="modal-title">Embed This Resource!</h4>
             </div>
             <div class="modal-body row">
-                <iframe class="col-md-10 modalImage" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen></iframe>
+                <div id="embedExample" class="col-md-10 modalImage"></div>
                 <div class="embedcode col-md-offset-1 col-md-10">
                     <h5>
-                        < iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>
+                        <p id="embedLink"></p>
+                        //iframe width="560" height="315" src="http://www.allthatsepic.com/wp-content/uploads/2013/05/grumpy-cat-movie-560x350.jpg" frameborder="0" allowfullscreen>< /iframe>
                     </h5>
                 </div>
             </div>
@@ -174,7 +178,6 @@
 <!-- end page nav -->
 
 
-<!--<video width="560" height="315" src="https://www.youtube.com/watch?v=hfNT_zIz8x4" frameborder="0" allowfullscreen autoplay="false"></video>-->
 
 
 </body>

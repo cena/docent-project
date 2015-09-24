@@ -89,6 +89,7 @@ button {
 img.example {
   height: 40px;
   display: inline-block;
+  cursor: pointer;
 }
 /* group of tags in each card */
 .tags {
@@ -229,6 +230,7 @@ li.navDirectory ul {
   display: inline-block;
   margin-left: 30px;
   width: 150px;
+  margin-top: 20px;
 }
 /* modal */
 
@@ -239,6 +241,11 @@ li.navDirectory ul {
   margin-bottom:10px;
 }
 
+/* trying something */
+#embedExample:first-child {
+  height: 350px;
+  width: 560px;
+}
 .embedcode {
   border: 2px solid black;
   height: 50px;
