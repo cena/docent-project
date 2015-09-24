@@ -241,6 +241,11 @@ li.navDirectory ul {
   margin-bottom:10px;
 }
 
+/* trying something */
+#embedExample:first-child {
+  height: 350px;
+  width: 560px;
+}
 .embedcode {
   border: 2px solid black;
   height: 50px;

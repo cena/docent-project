@@ -6,14 +6,14 @@
 $(document).ready(function() {
 
     //the delete modal on admin page
-    $(".delete").on("click", function () {
+    $(".deleteButton").on("click", function () {
         $("#myModal").modal('show');
     });
     $(".newResourceButton").on("click", function () {
         $("#newModal").modal('show');
     });
     $(".editButton").on("click", function () {
-        $("#newModal").modal('show');
+        $("#editModal").modal('show');
     });
 
     getResources();
@@ -53,10 +53,8 @@ function displayAdmin (data){
                 tags += '<p class="tag">' + data.resources[i].tags[j] + '</p>';
             }
         }
-        var tableHead = '<th>Embed Name</th><th>Logo Link</th><th>Embed Link</th><th>How To Video</th><th>Description</th><th>Category</th><th>Subjects</th><th>Tags</th><th>Edit and Delete</th>';
-        var tableRow = '<tr></tr>';
 
-        $("#admin").append('<tr><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td></tr>')
+        $("#admin").append('<tr><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="editButton">Delete</button></td></tr>')
 
         console.log("working?")
     }
