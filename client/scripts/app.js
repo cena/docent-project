@@ -24,6 +24,7 @@ $(document).ready(function(){
     });
 
 //modal example
+
     $("body").on("click", '.example', function(){
         getResourceById($(this).data('id'));
         $("#myModal").modal("show");
@@ -53,6 +54,7 @@ $(document).ready(function(){
           getNewPage();
         })
     });
+adminPage();
 
 //append resources to DOM on page load
 
@@ -94,6 +96,7 @@ $(document).ready(function(){
             return filteredArray;
         });
     });
+
 
 
     //runs search for input when search button clicked
@@ -211,7 +214,7 @@ function displayCards (data){
         //sets data
         tags="";
         embedName = data[i].embedName;
-        logo = data[i].logo;
+        logo = (data[i].logo) ? data[i].logo : data[i].embedName;
         embedLink = (data[i].embedLink) ? data[i].embedLink : data[i].embedName;
         howto = (data[i].howto) ? data[i].howto : "";
         description = (data[i].description) ? data[i].description : descriptionPlaceholder;
@@ -231,7 +234,7 @@ function displayCards (data){
         var categoryDiv = '<h3 class="category col-xs-offset-5 col-xs-10">'+ category +'</h3>';
         var videoDiv = '<div class="col-md-offset-1"><iframe width="290" height="150" src="'+ howto +'" frameborder="0" allowfullscreen></iframe></iframe></div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
-        var exampleDiv = ' <i data-id='+ data[i]._id +' class="col-xs-offset-5 example fa fa-external-link fa-2x"></i>';
+        var exampleDiv = ' <i data-id='+ data[i]._id +' class="example col-xs-offset-5 fa fa-external-link fa-2x"></i>';
         var tagsDiv = '<h6 class="tags col-md-3">'+ tags +'</h6>';
         $('#cardContainer').append(cardDiv);
         $('.card').last().append('<div class="row">'+ logoDiv +'</div><div class="row">'+ categoryDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
@@ -259,4 +262,59 @@ function getResourceById (id){
 }
 
 
+// ADMIN PAGE CONTENT
+function adminPage (data){
+    for(var i = 0; i<data; i++) {
+        console.log(data);
+        tags = "";
+        embedName = data[i].embedName;
+        logo = data[i].logo;
+        embedLink = (data[i].embedLink) ? data[i].embedLink : data[i].embedName;
+        howto = (data[i].howto) ? data[i].howto : "";
+        description = (data[i].description) ? data[i].description : descriptionPlaceholder;
+        category = (data[i].category) ? data[i].category : "";
+        subject = (data[i].subject) ? "" : data[i].embedName;
+        if (data[i].tags !== null && data[i].tags !== 0) {
+            for (var j = 0; j < data[i].tags.length; j++) {
+                tags += '<p class="tag">' + data[i].tags[j] + '</p>';
+            }
+        }
+        var adminTable = '<table id="adminTable"></table>';
+        var tableHead = '<th>Embed Name</th><th>Logo Link</th><th>Embed Link</th><th>How To Video</th><th>Description</th><th>Category</th><th>Subjects</th><th>Tags</th><th>Edit and Delete</th>';
+        var tableRow = '<tr></tr>';
 
+        $("#admin").append(adminTable);
+        $(adminTable).append(tableHead + tableRow);
+        $(tableRow).append('<td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td>')
+
+    }
+
+}
+
+//function searchDatabase (query) {
+//    $.ajax({
+//        type: 'POST',
+//        dataType: 'json',
+//        data: JSON.stringify(query),
+//        url: "/resources/search",
+//        success: function(data) {
+//            data.resources.sort(compareAlphabetically);
+//            callback(data.resources);
+//        }
+//    })
+//}
+
+//$('#searchForm').submit(function(event){
+//    event.preventDefault();
+//    var formData = $("#searchForm").val();
+//    console.log(formData);
+//    $.ajax({
+//        type: "POST",
+//        url: "/resources/search",
+//        data: formData,
+//        success: function(data){
+//            //displayCards(data);
+//            console.log('success?');
+//        }
+//    })
+//});
