@@ -272,5 +272,7 @@ li.navDirectory ul {
 
 .currentPage {
   text-decoration: underline;
+  background-color: #da6727;
+  padding: 5px;
 }
 
