@@ -130,7 +130,7 @@ function  getResources(callback) {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: "/api/resources",
+        url: "/resources",
         success: function(data) {
             data.resources.sort(compareAlphabetically);
             callback(data.resources);

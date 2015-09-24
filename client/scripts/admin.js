@@ -22,7 +22,6 @@ $(document).ready(function() {
 // ADMIN PAGE CONTENT
 
 function displayAdmin (data) {
-
     //sets data
     embedName = data[i].embedName;
     logo = data[i].logo;
