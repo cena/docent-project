@@ -24,8 +24,17 @@ $(document).ready(function(){
     });
 
 //modal example
-    $("body").on("click", ".example", function(){
+
+    $("body").on("click", '.example', function(){
+        getResourceById($(this).data('id'));
         $("#myModal").modal("show");
+        var embedLink = '<iframe src="https://www.haikudeck.com/e/SnptnKTSEr/?isUrlHashEnabled=false&isPreviewEnabled=false&isHeaderVisible=false" width="640" height="541" frameborder="0" marginheight="0" marginwidth="0"></iframe><br/><span style="font-family: arial, sans-serif; font-size: 8pt;"><a title="Heat Presentation" href="https://www.haikudeck.com/p/SnptnKTSEr/heat?utm_campaign=embed&utm_source=webapp&utm_medium=text-link">Heat</a> - Created with Haiku Deck, presentation software that inspires</span>';
+        $('#embedExample').append(embedLink);
+        embedLink=embedLink.replace(/</g, "&lt");
+        embedLink=embedLink.replace(/>/g, "&gt");
+        $('#embedLink').html(embedLink);
+
+
     });
 
 
@@ -47,12 +56,10 @@ $(document).ready(function(){
     });
 adminPage();
 
-    //run search when search button clicked
-    $(".searchButton").on("click", function () {
-
-    });
-
 //append resources to DOM on page load
+
+
+
     getResources(function(response) {
         displayCards(response);
         makePages(response);
@@ -91,6 +98,8 @@ adminPage();
     });
 
 
+
+    //runs search for input when search button clicked
     $('body').on('click', '#submit', function(event){
         event.preventDefault();
         $.ajax({
@@ -99,7 +108,6 @@ adminPage();
             data: {search: $('#search').val()},
             url: '/resources',
             success: function (data) {
-                console.log(data);
                 displayCards(data);
                 //callback(data.resources);
             }
@@ -125,7 +133,7 @@ function  getResources(callback) {
     $.ajax({
         type: 'GET',
         dataType: 'json',
-        url: "/resources",
+        url: "/api/resources",
         success: function(data) {
             data.resources.sort(compareAlphabetically);
             callback(data.resources);
@@ -234,7 +242,23 @@ function displayCards (data){
 }
 
 function getResourceById (id){
+    console.log('hello');
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: "api/resources/"+id,
+        success: function(data) {
+            var embedLink = data.embedLink;
+            $('#embedExample').append(embedLink);
+            embedLink=embedLink.replace(/</g, "&lt");
+            embedLink=embedLink.replace(/>/g, "&gt");
+            $('#embedLink').html(embedLink);
+        },
+        error: function(err){
+            console.log(err);
+        }
 
+    })
 }
 
 
