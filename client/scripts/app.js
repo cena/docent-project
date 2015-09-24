@@ -100,6 +100,11 @@ $(document).ready(function(){
         });
     });
 
+    $('body').on('click', '#adminButton', function(){
+       location.href = '/login';
+    });
+
+
 });
 
 function getNewPage (){

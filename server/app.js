@@ -95,6 +95,11 @@ app.use(function(req,res, next){
 
 });
 
+app.get('/logout', function(req, res){
+    req.logOut();
+    res.redirect('/');
+});
+
 /*app.all('/*', function(req, res, next) {
   // CORS headers
   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain

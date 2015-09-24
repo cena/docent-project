@@ -16,6 +16,11 @@ $(document).ready(function() {
         $("#newModal").modal('show');
     });
 
+    $('body').on('click', '#logoutButton', function(event){
+        event.preventDefault();
+
+    });
+
 
 });
 
