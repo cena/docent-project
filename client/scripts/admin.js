@@ -60,3 +60,13 @@ function displayAdmin (data){
     }
 
 }
+
+
+$('#newResourceForm').submit(function(event){
+    event.preventDefault();
+
+
+    new
+    var $input = $
+
+})
