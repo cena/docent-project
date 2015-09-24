@@ -4,6 +4,8 @@ body {
 }
 table {
     margin: 50px auto;
+    table-layout: fixed;
+    text-wrap: normal;
 }
 
 table td {
@@ -11,6 +13,7 @@ table td {
     text-align: center;
     border: 1px solid black;
     width: 100px;
+    word-wrap: break-word;
 }
 
 table th {
