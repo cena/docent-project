@@ -15,4 +15,6 @@ var EmbedSchema = new Schema({
 
 });
 
+EmbedSchema.index({ embedName: 'text', howto: 'text', description: 'text', category: 'text', tags: 'text', subject: 'text'});
+
 module.exports = mongoose.model('Embed', EmbedSchema);
