@@ -250,6 +250,7 @@ li.navDirectory ul {
   border: 2px solid black;
   height: 50px;
   overflow: scroll;
+  margin-top: 10px;
 }
 
 .search {

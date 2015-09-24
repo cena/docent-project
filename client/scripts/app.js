@@ -30,7 +30,7 @@ $(document).ready(function(){
         $('#embedExample').empty();
         $('#embedLink').empty();
         $("#myModal").modal("show");
-        var embedLink = '<iframe src="https://www.haikudeck.com/e/SnptnKTSEr/?isUrlHashEnabled=false&isPreviewEnabled=false&isHeaderVisible=false" width="640" height="541" frameborder="0" marginheight="0" marginwidth="0"></iframe><br/><span style="font-family: arial, sans-serif; font-size: 8pt;"><a title="Heat Presentation" href="https://www.haikudeck.com/p/SnptnKTSEr/heat?utm_campaign=embed&utm_source=webapp&utm_medium=text-link">Heat</a> - Created with Haiku Deck, presentation software that inspires</span>';
+        var embedLink = '<iframe src="https://www.haikudeck.com/e/SnptnKTSEr/?isUrlHashEnabled=false&isPreviewEnabled=false&isHeaderVisible=false" width="520" height="341" frameborder="0" marginheight="0" marginwidth="0"></iframe><br/><span style="font-family: arial, sans-serif; font-size: 8pt;"><a title="Heat Presentation" href="https://www.haikudeck.com/p/SnptnKTSEr/heat?utm_campaign=embed&utm_source=webapp&utm_medium=text-link">Heat</a> - Created with Haiku Deck, presentation software that inspires</span>';
         $('#embedExample').append(embedLink);
         embedLink=embedLink.replace(/</g, "&lt");
         embedLink=embedLink.replace(/>/g, "&gt");
