@@ -250,6 +250,7 @@ li.navDirectory ul {
   border: 2px solid black;
   height: 50px;
   overflow: scroll;
+  margin-top: 10px;
 }
 
 .search {
@@ -271,5 +272,7 @@ li.navDirectory ul {
 
 .currentPage {
   text-decoration: underline;
+  background-color: #da6727;
+  padding: 5px;
 }
 

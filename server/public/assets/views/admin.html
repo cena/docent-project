@@ -53,19 +53,21 @@
                         <h3 class="modal-title">Create a Resource!</h3>
                     </div>
                     <div class="modal-body row">
-                        <div class="col-md-6">
-                            <h4>Name of Resource:</h4> <input class="resourceName" type="text" placeholder="Name of Resource">
-                            <h4>Logo Image:</h4> <input type="url" placeholder="Logo">
-                            
-                            <h4>Embed Link of Resource:</h4> <input type="url" placeholder="Embed Link of Resource">
-                            <h4>How To Video Link:</h4> <input type="url" placeholder="How To Video Link">
-                            <h4>Tags:</h4> <input type="text" placeholder="Tags of Resource">
-                        </div>
-                        <div>
-                            <h4>Description:</h4> <textarea placeholder="Description" rows="4" cols="25"></textarea>
-                            <h4>Categories:</h4> <input type="text" placeholder="Categories of Resource">
-                            <h4>Subjects:</h4> <input type="text" placeholder="Subjects of Resource">
-                        </div>
+                        <form>
+                            <div class="col-md-6">
+                                <h4>Name of Resource:</h4> <input class="resourceName" type="text" placeholder="Name of Resource">
+                                <h4>Logo Image:</h4> <input type="url" placeholder="Logo">
+
+                                <h4>Embed Link of Resource:</h4> <input type="url" placeholder="Embed Link of Resource">
+                                <h4>How To Video Link:</h4> <input type="url" placeholder="How To Video Link">
+                                <h4>Tags:</h4> <input type="text" placeholder="Tags of Resource">
+                            </div>
+                            <div>
+                                <h4>Description:</h4> <textarea placeholder="Description" rows="4" cols="25"></textarea>
+                                <h4>Categories:</h4> <input type="text" placeholder="Categories of Resource">
+                                <h4>Subjects:</h4> <input type="text" placeholder="Subjects of Resource">
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -85,19 +87,21 @@
                         <h3 class="modal-title">Edit a Resource!</h3>
                     </div>
                     <div class="modal-body row">
-                        <div class="col-md-6">
-                            <h4>Name of Resource:</h4> <input class="resourceName" type="text" placeholder="Name of Resource">
-                            <h4>Logo Image:</h4> <input type="text" placeholder="Logo">
+                        <form>
+                            <div class="col-md-6">
+                                <h4>Name of Resource:</h4> <input class="resourceName" type="text" placeholder="Name of Resource">
+                                <h4>Logo Image:</h4> <input type="text" placeholder="Logo">
 
-                            <h4>Embed Link of Resource:</h4> <input type="text" placeholder="Embed Link of Resource">
-                            <h4>How To Video Link:</h4> <input type="url" placeholder="How To Video Link">
-                        </div>
-                        <div>
-                            <h4>Description:</h4> <textarea placeholder="Description" rows="4" cols="25"></textarea>
-                            <h4>Categories:</h4> <input type="text" placeholder="Categories of Resource">
-                            <h4>Subjects:</h4> <input type="text" placeholder="Subjects of Resource">
-                            <h4>Tags:</h4> <input type="text" placeholder="Tags of Resource">
-                        </div>
+                                <h4>Embed Link of Resource:</h4> <input type="text" placeholder="Embed Link of Resource">
+                                <h4>How To Video Link:</h4> <input type="url" placeholder="How To Video Link">
+                            </div>
+                            <div>
+                                <h4>Description:</h4> <textarea placeholder="Description" rows="4" cols="25"></textarea>
+                                <h4>Categories:</h4> <input type="text" placeholder="Categories of Resource">
+                                <h4>Subjects:</h4> <input type="text" placeholder="Subjects of Resource">
+                                <h4>Tags:</h4> <input type="text" placeholder="Tags of Resource">
+                            </div>
+                        </form>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -110,7 +114,7 @@
 
 
 <!-- MODAL for delete button -->
-        <div id="myModal" class="deleteModal modal fade">
+        <div id="deleteModal" class="deleteModal modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -123,7 +127,7 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-warning" data-append="modal">Delete Resource</button>
 
                     </div>
