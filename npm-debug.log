@@ -1,4 +1,8 @@
 0 info it worked if it ends with ok
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7375b1f97d5464192d8934f4a5720795fdd1fecd
 1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
 2 info using npm@2.12.1
 3 info using node@v0.12.7
