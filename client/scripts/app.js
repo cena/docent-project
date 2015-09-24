@@ -95,6 +95,22 @@ $(document).ready(function(){
         });
     });
 
+
+    //runs search for input when search button clicked
+    $('body').on('click', '#submit', function(event){
+        event.preventDefault();
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            data: {search: $('#search').val()},
+            url: '/resources',
+            success: function (data) {
+                displayCards(data);
+                //callback(data.resources);
+            }
+        });
+    });
+
 });
 
 function getNewPage (){

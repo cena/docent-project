@@ -15,7 +15,7 @@ var login = require('./routes/login');
 var admin = require('./routes/admin');
 var embeds = require('./routes/embeds');
 var index = require('./routes/index');
-var mongo = require('mongodb')
+var mongo = require('mongodb');
 var mongoose = require('mongoose');
 
 

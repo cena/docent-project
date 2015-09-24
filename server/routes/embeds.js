@@ -3,9 +3,20 @@ var express = require('express');
 var router = express.Router();
 var resources = require('../models/embed');
 
+router.post('/', function(req, res){
+	resources.find({ $text: { $search: req.body.search}}, function(err,item) {
+		if (err) {
+			res.send({error:err});
+		} else {
+
+			res.send(JSON.stringify(item));
+		}
+
+	});
+
+});
 
 router.get('/', function(req, res){
-
 	resources.find({}, function(err,docs) {
 		if (err) {
 			res.send({error:err});
