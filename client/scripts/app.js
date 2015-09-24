@@ -37,6 +37,11 @@ $(document).ready(function(){
         $("#newModal").modal('show');
     });
 
+    //run search when search button clicked
+    $(".searchButton").on("click", function () {
+
+    });
+
 //append resources to DOM on page load
     getResources(logo, logo, function(response) {
         displayCards(response);
@@ -77,6 +82,20 @@ $(document).ready(function(){
         });
     });
 
+    $('body').on('click', '#submit', function(event){
+        event.preventDefault();
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            data: {search: $('#search').val()},
+            url: '/resources',
+            success: function (data) {
+                console.log(data);
+                displayCards(data);
+                //callback(data.resources);
+            }
+        });
+    });
 
 });
 
@@ -199,3 +218,31 @@ function displayCards (data){
         });
     }
 }
+
+//function searchDatabase (query) {
+//    $.ajax({
+//        type: 'POST',
+//        dataType: 'json',
+//        data: JSON.stringify(query),
+//        url: "/resources/search",
+//        success: function(data) {
+//            data.resources.sort(compareAlphabetically);
+//            callback(data.resources);
+//        }
+//    })
+//}
+
+//$('#searchForm').submit(function(event){
+//    event.preventDefault();
+//    var formData = $("#searchForm").val();
+//    console.log(formData);
+//    $.ajax({
+//        type: "POST",
+//        url: "/resources/search",
+//        data: formData,
+//        success: function(data){
+//            //displayCards(data);
+//            console.log('success?');
+//        }
+//    })
+//});
