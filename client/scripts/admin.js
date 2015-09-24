@@ -6,14 +6,14 @@
 $(document).ready(function() {
 
     //the delete modal on admin page
-    $(".deleteButton").on("click", function () {
-        $("#myModal").modal('show');
+    $("table").on("click", ".deleteButton", function () {
+        $(".myModal").modal('show');
     });
     $(".newResourceButton").on("click", function () {
-        $("#newModal").modal('show');
+        $(".newModal").modal('show');
     });
-    $(".editButton").on("click", function () {
-        $("#editModal").modal('show');
+    $("table").on("click", ".editButton", function () {
+        $(".editModal").modal('show');
     });
 
     getResources();

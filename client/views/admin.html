@@ -19,8 +19,9 @@
     <body class="container">
 
         <h2>Manage The DocentEDU Embed Resources Page</h2>
-
+        <button type="button" value="newResource" class="newResourceButton">New Resource</button>
         <table id="admin" width="100%" border="0" cellspacing="0" cellpadding="0">
+
             <tr>
                 <th>Embed Name</th>
                 <th>Logo Link</th>
@@ -37,12 +38,11 @@
 
 
 
-    <button type="button" value="newResource" class="newResourceButton">New Resource</button>
 
 
 
 <!-- MODAL for new resource button -->
-        <div id="newModal" class="modal fade">
+        <div id="newModal" class="newModal modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -74,7 +74,7 @@
         </div>
 
         <!-- MODAL for edit resource button -->
-        <div id="editModal" class="modal fade">
+        <div id="editModal" class="editModal modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -107,7 +107,7 @@
 
 
 <!-- MODAL for delete button -->
-        <div id="myModal" class="modal fade">
+        <div id="myModal" class="deleteModal modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
