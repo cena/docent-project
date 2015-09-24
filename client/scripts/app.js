@@ -23,17 +23,10 @@ $(document).ready(function(){
         $(this).find(".sub-nav").slideUp();
     });
 
-//the delete modal on admin page
-    $(".delete").on("click", function () {
-        $("#myModal").modal('show');
+//modal example
+    $(".example").on("click", function(){
+        $("#myModal").modal("show");
     });
-    $(".newResourceButton").on("click", function () {
-        $("#newModal").modal('show');
-    });
-    $(".editButton").on("click", function () {
-        $("#newModal").modal('show');
-    });
-
 
 
 
@@ -46,6 +39,8 @@ $(document).ready(function(){
     //Arrow navigation button
     $('body').on('click', '.arrow', function(){
         pageNumber += $(this).data('page-turn');
+        console.log(pageNumber);
+
         getResources(function(response){
           getNewPage();
         })
@@ -56,6 +51,7 @@ adminPage();
     getResources(function(response) {
         displayCards(response);
         makePages(response);
+        console.log(response);
 
         //tag button
         $('body').on('click', '.tag', function(){
@@ -87,30 +83,22 @@ adminPage();
             makePages(filteredArray);
             return filteredArray;
         });
-
-
     });
-
 
 });
 
 function getNewPage (){
     if(filteredArray.length > 0){
-        console.log("if");
         displayCards(filteredArray);
         makePages(filteredArray);
     }else {
         getResources(function (response) {
-            console.log("else");
             displayCards(response);
             makePages(response);
         })
     }
-
-
-
-
 }
+
 function  getResources(callback) {
     filteredArray=[];
     $.ajax({
@@ -129,7 +117,7 @@ function filterResources(key, value, data){
     filteredArray = [];
     switch (key){
         case "category":
-            for (var i = 0; i < data.length; i++){
+            for  (i = 0; i < data.length; i++){
                 if(data[i].category === value){
                     filteredArray.push(data[i]);
                 }
@@ -137,12 +125,12 @@ function filterResources(key, value, data){
             break;
 
         case "subject":
-            for (var i = 0; i < data.length; i++){
+            for (i = 0; i < data.length; i++){
                 if(data[i].subject === value){
                     filteredArray.push(data[i]);
                 }
             }
-            for (var i = 0; i < data.length; i++){
+            for ( i = 0; i < data.length; i++){
                 if(data[i].subject == null){
                     filteredArray.push(data[i]);
                 }
@@ -184,15 +172,16 @@ function makePages (data){
         $('.pageNav').append('<div data-page='+i+' class="pageNum">'+i+'</div>');
     }
     if (pageNumber < numOfPages){ $('.pageNav').append('<img class ="arrow" data-page-turn="1" src="/assets/images/nav_forwardArrow.svg">')}
+    $(".pageNum").removeClass("currentPage");
+    $('.pageNum[data-page='+pageNumber+']').addClass('currentPage');
 }
 
 
 function displayCards (data){
     $('#cardContainer').empty();
-    console.log(data);
     for(var i = (pageNumber*30-30); i < data.length && i < (pageNumber * 30); i++){
             var descriptionPlaceholder = "Description Coming Soon";
-        console.log("i is: " + i);
+
         //sets data
         tags="";
         embedName = data[i].embedName;
@@ -216,18 +205,16 @@ function displayCards (data){
         var categoryDiv = '<h3 class="category col-xs-offset-5 col-xs-10">'+ category +'</h3>';
         var videoDiv = '<div class="col-md-offset-1"><iframe width="290" height="150" src="'+ howto +'" frameborder="0" allowfullscreen></iframe></iframe></div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
-        var exampleDiv = ' <i class="col-xs-offset-5 example fa fa-external-link fa-2x"></i>';
+        var exampleDiv = ' <i data-id='+ data[i]._id +' class="col-xs-offset-5 example fa fa-external-link fa-2x"></i>';
         var tagsDiv = '<h6 class="tags col-md-3">'+ tags +'</h6>';
         $('#cardContainer').append(cardDiv);
         $('.card').last().append('<div class="row">'+ logoDiv +'</div><div class="row">'+ categoryDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
-
-        $(".example").on("click", function(){
-            $("#myModal").modal("show");
-        });
     }
 }
 
+function getResourceById (id){
 
+}
 
 
 // ADMIN PAGE CONTENT
@@ -258,5 +245,3 @@ function adminPage (data){
     }
 
 }
-
-
