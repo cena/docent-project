@@ -18,11 +18,6 @@ $(document).ready(function() {
 
     getResources();
 
-    $('body').on('click', '#logoutButton', function(event){
-        event.preventDefault();
-
-    });
-
 });
 
 function  getResources() {
@@ -61,7 +56,6 @@ function displayAdmin (data){
 
         $("#admin").append('<tr><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="editButton">Delete</button></td></tr>')
 
-        console.log("working?")
     }
 
 }

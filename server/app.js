@@ -96,6 +96,7 @@ app.use(function(req,res, next){
 });
 
 app.get('/logout', function(req, res){
+    console.log('logging out');
     req.logOut();
     res.redirect('/');
 });
