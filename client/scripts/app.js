@@ -115,10 +115,6 @@ adminPage();
         });
     });
 
-    $('body').on('click', '#adminButton', function(){
-       location.href = '/login';
-    });
-
 
 });
 
