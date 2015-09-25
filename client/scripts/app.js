@@ -24,9 +24,12 @@ $(document).ready(function(){
 
     $( ".navDirectory" ).on( "mouseenter", function() {
         $('.sub-nav').stop().slideUp( 500 );
-        $(this).find('.sub-nav').stop().slideToggle( 500 );
+        $(this).find('.sub-nav').stop().slideDown( 500 );
     });
-
+    $( ".navDirectory" ).on( "mouseleave", function() {
+        $('.sub-nav').stop().slideUp( 500 );
+        $(this).find('.sub-nav').stop().slideUp( 500 );
+    });
 
 //modal example
 
