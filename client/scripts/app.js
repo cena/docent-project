@@ -116,11 +116,7 @@ $(document).ready(function() {
         getResources(function (response) {
             displayCards(response);
             makePages(response);
-            $(".seeAllResources").on("click", function () {
-                getResources(function (response) {
-                    displayCards(response);
-                    makePages(response);
-                });
+
             })
 
 
@@ -294,5 +290,3 @@ $(document).ready(function() {
             })
         }
     });
-
-});
