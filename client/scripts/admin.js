@@ -9,6 +9,12 @@ $(document).ready(function() {
     $("table").on("click", ".deleteButton", function () {
         $(".deleteModal").modal('show');
     });
+    $(".deleteResource").on("click", function(){
+        console.log("testing delete resource button");
+        var resourceID = $(this).id();
+        console.log(resourceID);
+        deleteResourceById(resourceID);
+    });
     $(".newResourceButton").on("click", function () {
         $(".newModal").modal('show');
     });
@@ -36,6 +42,46 @@ function  getResources() {
     })
 }
 
+//to populate form data in modal for edit mode
+function getResourceById (id){
+    console.log('get call for resources by id is up');
+    $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: "api/resources/"+id,
+        success: function(data) {
+            var embedLink = data.embedLink;
+            $('#embedExample').append(embedLink);
+            embedLink=embedLink.replace(/</g, "&lt");
+            embedLink=embedLink.replace(/>/g, "&gt");
+            $('#embedLink').html(embedLink);
+        },
+        error: function(err){
+            console.log(err);
+        }
+
+    })
+}
+
+//delete ajax call
+function deleteResourceById (id){
+    console.log('delete by id call for resources is up');
+    $.ajax({
+        type: 'DELETE',
+        dataType: 'json',
+        url: "api/resources/"+id,
+        success: function(data) {
+            console.log(this);
+            console.log(data);
+            console.log('resource deleted');
+        },
+        error: function(err){
+            console.log(err);
+        }
+
+    })
+}
+
 // ADMIN PAGE CONTENT
 function displayAdmin (data){
     console.log(data);
@@ -56,7 +102,7 @@ function displayAdmin (data){
 
         $("#admin").append('<tr><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
 
-        console.log("working?")
+        console.log("displayAdmin function working!")
     }
 
 }
