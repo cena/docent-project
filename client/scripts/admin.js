@@ -9,10 +9,10 @@ $(document).ready(function() {
     $("table").on("click", ".deleteButton", function () {
         $(".deleteModal").modal('show');
     });
-    $(".deleteResource").on("click", function(){
+    $(".deleteModal").on("click", ".deleteResource", function(){
         console.log("testing delete resource button");
-        var resourceID = $(this).id();
-        console.log(resourceID);
+        var resourceID = $(this).parent().data("id");
+        console.log("this is resourceID var:", resourceID);
         deleteResourceById(resourceID);
     });
     $(".newResourceButton").on("click", function () {
