@@ -24,6 +24,15 @@ h3 {
   text-align: center;
 }
 
+h4 {
+  font-size: 15px;
+  color: #1a1a1a;
+  font-family: lato, sans-serif;
+  text-align: center;
+  display: inline-block;
+  padding-right:10px;
+}
+
 h6.tags {
   display: inline;
   float: left;
@@ -32,6 +41,9 @@ h6.tags {
 button {
   display: inline-block;
 }
+
+hr {
+  border-top: 2px solid #c8c8c8;}
 
 .card {
   height: 500px;
@@ -102,9 +114,12 @@ img.example {
   text-decoration: underline;
   cursor: pointer;
 }
-/*/ ---------------------- /*/
 /*/ LEVEL ZERO /*/
 
+.arrow {
+  padding-left: 10px;
+  color: #b9b9b9;
+}
 #navigationWrapper {
   margin: 0;
   padding: 0;
@@ -153,8 +168,6 @@ img.example {
   color: #FFFFFF;
   background: #da6727;
 }
-
-/*/ ---------------------- /*/
 /*/ LEVEL ONE /*/
 
 .navigation-option {
@@ -248,11 +261,23 @@ li.navDirectory ul {
   margin-top: 10px;
 }
 
-.search {
+
+#search, button {
   margin-bottom: 20px;
   margin-top: 20px;
+  border-radius: 10px;
+  color: #000000;
+  padding: 7px;
 }
 
+#search {
+  width: 300px;
+  border: 1px solid #000000;
+}
+button {
+  width: 70px;
+  background-color: #c8c8c8;
+}
 /* PAGE NAVIGATION */
 
 .pageNav img {

@@ -244,7 +244,7 @@ function displayCards (data){
         var categoryDiv = '<h3 class="category col-xs-offset-5 col-xs-10">'+ category +'</h3>';
         var videoDiv = '<div class="col-md-offset-1"><iframe width="290" height="150" src="'+ howto +'" frameborder="0" allowfullscreen></iframe></iframe></div>';
         var descriptionDiv = '<p class="paragraph col-md-offset-1 col-md-10">'+ description +'</p>';
-        var exampleDiv = ' <i data-id='+ data[i]._id +' class="example col-xs-offset-5 fa fa-external-link fa-2x"></i>';
+        var exampleDiv = ' <h4 class="col-xs-offset-3">Example</h4><i data-id='+ data[i]._id +' class="example fa fa-external-link fa-2x"></i>';
         var tagsDiv = '<h6 class="tags col-md-3">'+ tags +'</h6>';
         $('#cardContainer').append(cardDiv);
         $('.card').last().append('<div class="row">'+ logoDiv +'</div><div class="row">'+ categoryDiv +'</div><div class="row">'+ videoDiv +'</div><div class="row">'+ descriptionDiv +'</div><div class="row">'+ exampleDiv +'</div><div class="row">'+ tagsDiv +'</div>');
