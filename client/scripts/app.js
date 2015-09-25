@@ -16,12 +16,17 @@ $(document).ready(function(){
 
 
 //the drop downs
-    $(".navDirectory").on("mouseenter", function () {
-        $(this).find(".sub-nav").slideDown();
+//    $(".navDirectory").on("mouseover", function () {
+//            $(".sub-nav").slideUp().stop();
+//            $(this).find(".sub-nav").slideToggle();
+//
+//    });
+
+    $( ".navDirectory" ).on( "mouseenter", function() {
+        $('.sub-nav').stop().slideUp( 500 );
+        $(this).find('.sub-nav').stop().slideToggle( 500 );
     });
-    $(".navDirectory").on("mouseleave", function () {
-        $(this).find(".sub-nav").slideUp();
-    });
+
 
 //modal example
 
