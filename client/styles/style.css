@@ -6,7 +6,7 @@ body {
 
 
 a {
-  color: #00B7FF;
+  color: #000000;
 }
 
 h1 {
@@ -31,8 +31,12 @@ h4 {
   text-align: center;
   display: inline-block;
   padding-right:10px;
+  cursor: pointer;
 }
 
+h4:hover {
+  text-decoration: underline;
+}
 h6.tags {
   display: inline;
   float: left;
@@ -51,7 +55,8 @@ hr {
   width: 360px;
   margin-right:15px;
   border-radius: 5%;
-  border: 1px solid black;
+  border: 1px solid #c8c8c8;
+
 }
 
 .logo {

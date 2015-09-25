@@ -123,7 +123,11 @@ adminPage();
             }
         });
     });
-
+    $('.seeAllResources').on('click', function(){
+        getResources(function(response) {
+            displayCards(response);
+            makePages(response);
+        });
 });
 
 function getNewPage (){
@@ -300,6 +304,7 @@ function adminPage (data){
     }
 
 }
+});
 
 //function searchDatabase (query) {
 //    $.ajax({
