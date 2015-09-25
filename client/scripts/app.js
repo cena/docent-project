@@ -283,33 +283,3 @@ function getResourceById (id){
     })
 }
 
-
-// ADMIN PAGE CONTENT
-
-//function searchDatabase (query) {
-//    $.ajax({
-//        type: 'POST',
-//        dataType: 'json',
-//        data: JSON.stringify(query),
-//        url: "/resources/search",
-//        success: function(data) {
-//            data.resources.sort(compareAlphabetically);
-//            callback(data.resources);
-//        }
-//    })
-//}
-
-//$('#searchForm').submit(function(event){
-//    event.preventDefault();
-//    var formData = $("#searchForm").val();
-//    console.log(formData);
-//    $.ajax({
-//        type: "POST",
-//        url: "/resources/search",
-//        data: formData,
-//        success: function(data){
-//            //displayCards(data);
-//            console.log('success?');
-//        }
-//    })
-//});
