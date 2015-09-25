@@ -33,8 +33,29 @@ $(document).ready(function() {
     $(".newResourceButton").on("click", function () {
         $(".newModal").modal('show');
     });
+
+    //the edit modal on admin page
     $("table").on("click", ".editButton", function () {
         $(".editModal").modal('show');
+        var $el = $(this).parent().parent();
+        var id = $el[0].dataset.id;
+        console.log(id);
+        $(".editModal").on("click", ".submitButton", function(){
+            $.ajax({
+                type: "PUT",
+                url: "/resources/" + id,
+                success: function(){
+                    console.log("Resource edits sent");
+                },
+                error: function(xhr, status){
+                    alert("Error: " + status);
+                },
+                complete: function(){
+                    console.log("Item edited!");
+                    $(".editModal").modal('hide');
+                }
+            });
+        });
     });
 
     getResources();
@@ -77,24 +98,6 @@ function getResourceById (id){
     })
 }
 
-//delete ajax call
-function deleteResourceById (id){
-    console.log('delete by id call for resources is up');
-    $.ajax({
-        type: 'DELETE',
-        dataType: 'json',
-        url: "api/resources/"+id,
-        success: function(data) {
-            console.log(this);
-            console.log(data);
-            console.log('resource deleted');
-        },
-        error: function(err){
-            console.log(err);
-        }
-
-    })
-}
 
 // ADMIN PAGE CONTENT
 function displayAdmin (data){
