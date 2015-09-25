@@ -8,7 +8,8 @@ $(document).ready(function() {
     //the delete modal on admin page
     $("table").on("click", ".deleteButton", function () {
         $(".deleteModal").modal('show');
-        var id = $(this).parent().parent()[0].dataset.id;
+        var $el = $(this).parent().parent();
+        var id = $el[0].dataset.id;
         console.log(id);
         $("#deleteModal").on("click", "#deleteButton", function(){
             $.ajax({
@@ -23,16 +24,12 @@ $(document).ready(function() {
                 complete: function(){
                     console.log("Delete Complete!");
                     $(".deleteModal").modal('hide');
+                    $el.remove();
                 }
             });
         });
     });
-    $(".deleteModal").on("click", ".deleteResource", function(){
-        console.log("testing delete resource button");
-        var resourceID = $(this).parent().data("id");
-        console.log("this is resourceID var:", resourceID);
-        deleteResourceById(resourceID);
-    });
+
     $(".newResourceButton").on("click", function () {
         $(".newModal").modal('show');
     });
@@ -45,7 +42,6 @@ $(document).ready(function() {
 });
 
 function  getResources() {
-    filteredArray=[];
     $.ajax({
         type: 'GET',
         dataType: 'json',
