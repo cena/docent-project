@@ -58,11 +58,10 @@ $(document).ready(function() {
     $('body').on('click', '#submit', function (event) {
         event.preventDefault();
         query = $('#search').val();
-        if (query != null && query != " ") {
+        if (query != null && query != " " && query !="") {
             searchFunction(query, function (response) {
                 displayCards(response);
                 makePages(response);
-                console.log('search');
             })
         }
     });
@@ -71,7 +70,6 @@ $(document).ready(function() {
     getResources(function (response) {
         displayCards(response);
         makePages(response);
-        console.log(response);
 
         //tag button
         $('body').on('click', '.tag', function () {
@@ -110,8 +108,6 @@ $(document).ready(function() {
             displayCards(response);
             makePages(response);
         })
-
-
     });
 });
 
@@ -147,7 +143,7 @@ function getResources(callback) {
 
 function searchFunction(query, callback) {
     filteredArray = [];
-    console.log(query);
+    search = true;
     $.ajax({
         type: 'POST',
         dataType: 'json',
@@ -264,7 +260,6 @@ function displayCards(data) {
 }
 
 function getResourceById(id) {
-    console.log('hello');
     $.ajax({
         type: 'GET',
         dataType: 'json',
