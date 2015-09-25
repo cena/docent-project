@@ -71,6 +71,7 @@ $(document).ready(function() {
                 complete: function(){
                     console.log("Item edited!");
                     $(".editModal").modal('hide');
+                    resetForm('#resourceForm');
                 }
             });
         });
@@ -117,7 +118,6 @@ function getResourceById (id){
 }
 
 
-// ADMIN PAGE CONTENT
 function displayAdmin (data){
     console.log(data);
     for(var i = 0; i < data.resources.length; i++) {
@@ -139,4 +139,10 @@ function displayAdmin (data){
         console.log("displayAdmin function working!")
     }
 
+}
+
+
+function resetForm($form) {
+    $form.find('input:text, input:password, input:file, select, textarea').val('');
+    $form.find('select').removeAttr('checked').removeAttr('selected');
 }
