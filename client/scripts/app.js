@@ -111,10 +111,10 @@ adminPage();
             url: '/resources',
             success: function (data) {
                 displayCards(data);
-                //callback(data.resources);
             }
         });
     });
+
 
 });
 

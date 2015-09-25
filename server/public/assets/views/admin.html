@@ -17,6 +17,9 @@
 
     </head>
     <body class="container">
+    <form action="/logout" method="get">
+        <button id="logoutButton" class="float-right submit-button">Logout</button>
+    </form>
 
         <h2>Manage The DocentEDU Embed Resources Page</h2>
         <button type="button" value="newResource" class="newResourceButton">New Resource</button>
@@ -125,8 +128,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-warning deleteResource" data-append="modal">Delete Resource</button>
-
+                        <button id="deleteButton" type="submit" class="btn btn-warning" data-append="modal">Delete Resource</button>
                     </div>
                 </div>
             </div>

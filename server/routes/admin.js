@@ -5,16 +5,10 @@ var path = require('path');
 var Users = require('../models/localauth');
 
 router.get("/", function (req, res, next){
-
 	var file = req.params[0] || "/assets/views/admin.html";
     res.sendFile(path.join(__dirname, "../public", file));
     //res.sendFile(path.join(__dirname, '../public/assets/views/admin.html'));
 });
-
-router.post("/", passport.authenticate('local', {
-    successRedirect: "/assets/views/admin.html",
-    failureRedirect: "/"
-}));
 
 /*router.post("/", function (req, res, next){
     console.log("Made it to post! ", req.body);

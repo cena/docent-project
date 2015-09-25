@@ -29,6 +29,15 @@ router.get('/', function(req, res){
 
 });
 
+router.delete("/:id", function(req, res, next){
+	resources.findByIdAndRemove(req.params.id, req.body, function(err, post){
+		if(err){
+			console.log("ERROR!! : ", err);
+		}
+		res.json(post);
+	});
+});
+
 /*router.get('/', function(req, res, next) {
     res.json(req.isAuthenticated());
 });

@@ -8,6 +8,24 @@ $(document).ready(function() {
     //the delete modal on admin page
     $("table").on("click", ".deleteButton", function () {
         $(".deleteModal").modal('show');
+        var id = $(this).parent().parent()[0].dataset.id;
+        console.log(id);
+        $("#deleteModal").on("click", "#deleteButton", function(){
+            $.ajax({
+                type: "DELETE",
+                url: "/resources/" + id,
+                success: function(){
+                    console.log("Deletion sent");
+                },
+                error: function(xhr, status){
+                    alert("Error: " + status);
+                },
+                complete: function(){
+                    console.log("Delete Complete!");
+                    $(".deleteModal").modal('hide');
+                }
+            });
+        });
     });
     $(".deleteModal").on("click", ".deleteResource", function(){
         console.log("testing delete resource button");
@@ -99,8 +117,7 @@ function displayAdmin (data){
                 tags += '<p class="tag">' + data.resources[i].tags[j] + '</p>';
             }
         }
-
-        $("#admin").append('<tr><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
+        $("#admin").append('<tr data-id="'+data.resources[i]._id+'"><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
 
         console.log("displayAdmin function working!")
     }
