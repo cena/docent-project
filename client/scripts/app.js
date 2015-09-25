@@ -10,7 +10,7 @@ var pageNumber = 1;
 var resources=[];
 var value="";
 var filteredArray=[];
-var query ="";
+var query;
 
 $(document).ready(function(){
 
@@ -58,8 +58,6 @@ $(document).ready(function(){
     //Arrow navigation button
     $('body').on('click', '.arrow', function(){
         pageNumber += $(this).data('page-turn');
-        console.log(pageNumber);
-
         getResources(function(response){
           getNewPage();
         })
@@ -69,11 +67,12 @@ $(document).ready(function(){
     $('body').on('click', '#submit', function(event){
         event.preventDefault();
         query=$('#search').val();
-        console.log(query);
-        searchFunction(query, function(response){
-            displayCards(response);
-            makePages(response);
-        })
+        if(query != null && query != " ") {
+            searchFunction(query, function (response) {
+                displayCards(response);
+                makePages(response);
+            })
+        }
     });
 
 //append resources to DOM on page load
