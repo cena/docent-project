@@ -10,21 +10,29 @@ var pageNumber = 1;
 var resources=[];
 var value="";
 var filteredArray=[];
+var query;
 
 $(document).ready(function(){
 
 
 
 //the drop downs
-    $(".navDirectory").on("mouseenter", function () {
-        $(this).find(".sub-nav").slideDown();
+//    $(".navDirectory").on("mouseover", function () {
+//            $(".sub-nav").slideUp().stop();
+//            $(this).find(".sub-nav").slideToggle();
+//
+//    });
+
+    $( ".navDirectory" ).on( "mouseenter", function() {
+        $('.sub-nav').stop().slideUp( 500 );
+        $(this).find('.sub-nav').stop().slideDown( 500 );
     });
-    $(".navDirectory").on("mouseleave", function () {
-        $(this).find(".sub-nav").slideUp();
+    $( ".navDirectory" ).on( "mouseleave", function() {
+        $('.sub-nav').stop().slideUp( 500 );
+        $(this).find('.sub-nav').stop().slideUp( 500 );
     });
 
 //modal example
-
     $("body").on("click", '.example', function(){
         getResourceById($(this).data('id'));
         $('#embedExample').empty();
@@ -50,18 +58,24 @@ $(document).ready(function(){
     //Arrow navigation button
     $('body').on('click', '.arrow', function(){
         pageNumber += $(this).data('page-turn');
-        console.log(pageNumber);
-
         getResources(function(response){
           getNewPage();
         })
     });
-adminPage();
+
+    //runs search for input when search button clicked
+    $('body').on('click', '#submit', function(event){
+        event.preventDefault();
+        query=$('#search').val();
+        if(query != null && query != " ") {
+            searchFunction(query, function (response) {
+                displayCards(response);
+                makePages(response);
+            })
+        }
+    });
 
 //append resources to DOM on page load
-
-
-
     getResources(function(response) {
         displayCards(response);
         makePages(response);
@@ -101,32 +115,24 @@ adminPage();
 
 
 
-    //runs search for input when search button clicked
-    $('body').on('click', '#submit', function(event){
-        event.preventDefault();
-        $.ajax({
-            type: 'POST',
-            dataType: 'json',
-            data: {search: $('#search').val()},
-            url: '/resources',
-            success: function (data) {
-                displayCards(data);
-                //callback(data.resources);
-            }
-        });
-    });
+
 
 });
 
-function getNewPage (){
-    if(filteredArray.length > 0){
+function getNewPage () {
+    if (filteredArray.length > 0) {
         displayCards(filteredArray);
         makePages(filteredArray);
-    }else {
+    } else if (search == true) {
+        searchFunction(function (response) {
+            displayCards(response);
+            makePages(response);
+        });
+    } else {
         getResources(function (response) {
             displayCards(response);
             makePages(response);
-        })
+        });
     }
 }
 
@@ -143,6 +149,20 @@ function  getResources(callback) {
     })
 }
 
+function searchFunction(query, callback) {
+    filteredArray = [];
+    console.log(query);
+    $.ajax({
+        type: 'POST',
+        dataType: 'json',
+        data: {search: query},
+        url: '/resources',
+        success: function (data) {
+            console.log(data);
+            callback(data);
+        }
+    })
+}
 
 function filterResources(key, value, data){
     filteredArray = [];
@@ -263,60 +283,3 @@ function getResourceById (id){
     })
 }
 
-
-// ADMIN PAGE CONTENT
-function adminPage (data){
-    for(var i = 0; i<data; i++) {
-        console.log(data);
-        tags = "";
-        embedName = data[i].embedName;
-        logo = data[i].logo;
-        embedLink = (data[i].embedLink) ? data[i].embedLink : data[i].embedName;
-        howto = (data[i].howto) ? data[i].howto : "";
-        description = (data[i].description) ? data[i].description : descriptionPlaceholder;
-        category = (data[i].category) ? data[i].category : "";
-        subject = (data[i].subject) ? "" : data[i].embedName;
-        if (data[i].tags !== null && data[i].tags !== 0) {
-            for (var j = 0; j < data[i].tags.length; j++) {
-                tags += '<p class="tag">' + data[i].tags[j] + '</p>';
-            }
-        }
-        var adminTable = '<table id="adminTable"></table>';
-        var tableHead = '<th>Embed Name</th><th>Logo Link</th><th>Embed Link</th><th>How To Video</th><th>Description</th><th>Category</th><th>Subjects</th><th>Tags</th><th>Edit and Delete</th>';
-        var tableRow = '<tr></tr>';
-
-        $("#admin").append(adminTable);
-        $(adminTable).append(tableHead + tableRow);
-        $(tableRow).append('<td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td>')
-
-    }
-
-}
-
-//function searchDatabase (query) {
-//    $.ajax({
-//        type: 'POST',
-//        dataType: 'json',
-//        data: JSON.stringify(query),
-//        url: "/resources/search",
-//        success: function(data) {
-//            data.resources.sort(compareAlphabetically);
-//            callback(data.resources);
-//        }
-//    })
-//}
-
-//$('#searchForm').submit(function(event){
-//    event.preventDefault();
-//    var formData = $("#searchForm").val();
-//    console.log(formData);
-//    $.ajax({
-//        type: "POST",
-//        url: "/resources/search",
-//        data: formData,
-//        success: function(data){
-//            //displayCards(data);
-//            console.log('success?');
-//        }
-//    })
-//});
