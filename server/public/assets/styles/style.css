@@ -39,11 +39,6 @@ button {
   width: 360px;
   margin-right:15px;
   border-radius: 5%;
-  /*background: -webkit-linear-gradient(#59b65a, white); /!* For Safari 5.1 to 6.0 *!/*/
-  /*background: -o-linear-gradient(#59b65a, white); /!* For Opera 11.1 to 12.0 *!/*/
-  /*background: -moz-linear-gradient(#59b65a, white); /!* For Firefox 3.6 to 15 *!/*/
-  /*background: linear-gradient(#59b65a, white); /!* Standard syntax (must be last) *!/*/
-  /*box-shadow: 7px 7px 5px #888888;*/
   border: 1px solid black;
 }
 
@@ -261,18 +256,23 @@ li.navDirectory ul {
 /* PAGE NAVIGATION */
 
 .pageNav img {
-  height: 50px;
+  height: 30px;
+  margin: auto;
+  text-align: center;
+  cursor: pointer;
 }
 
 .pageNum {
   display: inline-block;
-  font-size: 20px;
+  font-size: 18px;
   margin: 10px;
+  cursor: pointer;
 }
 
 .currentPage {
   text-decoration: underline;
   background-color: #da6727;
   padding: 5px;
+  color: #ffffff;
 }
 
