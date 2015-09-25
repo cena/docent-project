@@ -1,31 +1,37 @@
 body {
     font-family: lato, sans-serif;
+    text-wrap: normal;
 }
 table {
     margin: 50px auto;
+    table-layout: fixed;
+    text-wrap: normal;
 }
 
 table td {
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+    border: 1px solid black;
+    word-wrap: break-word;
+    max-height: 100px;
 }
 
 table th {
     text-align: center;
-    border-bottom: 3px solid black;
-    border-right: 1px solid black;
+    border: 3px solid black;
     padding: 20px;
 }
 
-.description, .embedLink, .reourceLink, .howToLink, .logo {
+.description, .embedLink, .howToLink {
     overflow: scroll;
     height: 100px;
+    text-wrap: normal;
 }
 
 ul {
     text-decoration: none;
 }
 
-
+h4 {
+    padding-left: 10px;
+}

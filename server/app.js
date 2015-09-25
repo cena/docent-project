@@ -1,19 +1,26 @@
 var express = require('express');
-var app = express();
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var path = require('path');
+var User = require('./models/localauth');
 var passport = require('passport');
 var session = require('express-session');
 var localStrategy = require('passport-local');
+//var auth = require('passport-google-oauth');
+//var flash = require('connect-flash');
 
-//var Embed = require('./models/embed');
+//var embed = require('./models/embed');
+//var register = require('./routes/register');
+var login = require('./routes/login');
+var admin = require('./routes/admin');
+var embeds = require('./routes/embeds');
 var index = require('./routes/index');
-var register = require('./routes/register');
-
-var embeddable = require('./routes/embeds');
-var mongo = require('mongodb')
+var mongo = require('mongodb');
 var mongoose = require('mongoose');
+
+
+var app = express();
+
 
 app.use(session({
     secret: 'secret',
@@ -24,13 +31,16 @@ app.use(session({
     cookie: {maxAge: 60000, secure: false}
 }));
 
+
+
+
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
+
 app.use(passport.initialize());
 app.use(passport.session());
-
-
 
 //Mongo Setup
 var mongoURI = "mongodb://localhost:27017/docentdb";
@@ -45,7 +55,7 @@ MongoDB.once('open', function(err){
 });
 
 //PASSPORT SESSION
-/*passport.serializeUser(function(user, done){
+passport.serializeUser(function(user, done){
     done(null, user.id);
 });
 
@@ -75,8 +85,8 @@ passport.use('local', new localStrategy({
         });
     });
 }));
-*/
 
+////////////
 
 app.use(function(req,res, next){
 
@@ -85,13 +95,13 @@ app.use(function(req,res, next){
 
 });
 
-app.all('/*', function(req, res, next) {
+/*app.all('/*', function(req, res, next) {
   // CORS headers
   res.header("Access-Control-Allow-Origin", "*"); // restrict it to the required domain
   res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
   // Set custom headers for CORS
   res.header('Access-Control-Allow-Headers', 'Content-type,Accept');
-  // If someone calls with method OPTIONS, let's display the allowed methods on our API
+  // If someone calls with method OPTIONS, display the allowed methods on our API
   if (req.method == 'OPTIONS') {
     res.status(200);
     res.write("Allow: GET,PUT,POST,DELETE,OPTIONS");
@@ -99,10 +109,12 @@ app.all('/*', function(req, res, next) {
   } else {
     next();
   }
-});
+})*/;
 
 //app.use('/register', register);
-app.use('/resources', embeddable);
+app.use('/login', login);
+app.use('/admin', admin);
+app.use('/resources', embeds);
 app.use('/', index);
 
 app.set("port", (process.env.PORT || 5000));

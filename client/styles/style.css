@@ -4,6 +4,7 @@ body {
   font-family: lato, sans-serif;
 }
 
+
 a {
   color: #00B7FF;
 }
@@ -14,6 +15,13 @@ h1 {
 
 ul {
   display: inline-block;
+}
+
+h3 {
+  font-size: 18px;
+  color: #1a1a1a;
+  font-family: lato, sans-serif;
+  text-align: center;
 }
 
 h6.tags {
@@ -40,12 +48,9 @@ button {
 }
 
 .logo {
-  height: 70px;
-  width: 70px;
+  max-height: 60px;
+  max-width: 270px;
   display: inline-block;
-  float: left;
-  border: 2px solid #1a1a1a;
-  /*padding:40px;*/
   margin-top: 20px;
   background-size: cover;
 }
@@ -57,7 +62,13 @@ button {
   font-family: lato, sans-serif;
 }
 
-.video {
+.category {
+  margin: 10px 0;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.videoPlaceholder {
   height: 150px;
   width: 300px;
   display: inline-block;
@@ -72,11 +83,13 @@ button {
   overflow: scroll;
   height: 50px;
   margin: 20px;
+  cursor: hand;
 }
 
 img.example {
   height: 40px;
   display: inline-block;
+  cursor: pointer;
 }
 /* group of tags in each card */
 .tags {
@@ -92,6 +105,7 @@ img.example {
 
 .tag:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 /*/ ---------------------- /*/
 /*/ LEVEL ZERO /*/
@@ -216,6 +230,7 @@ li.navDirectory ul {
   display: inline-block;
   margin-left: 30px;
   width: 150px;
+  margin-top: 20px;
 }
 /* modal */
 
@@ -226,10 +241,16 @@ li.navDirectory ul {
   margin-bottom:10px;
 }
 
+/* trying something */
+#embedExample:first-child {
+  height: 350px;
+  width: 560px;
+}
 .embedcode {
   border: 2px solid black;
   height: 50px;
   overflow: scroll;
+  margin-top: 10px;
 }
 
 .search {
@@ -249,7 +270,9 @@ li.navDirectory ul {
   margin: 10px;
 }
 
-.pageNum:active, .pageNum:focus, .pageNum:hover {
+.currentPage {
   text-decoration: underline;
+  background-color: #da6727;
+  padding: 5px;
 }
 
