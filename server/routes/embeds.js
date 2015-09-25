@@ -29,6 +29,15 @@ router.get('/', function(req, res){
 
 });
 
+router.get("/:id", function(req, res, next){
+	resources.findById(req.params.id, req.body, function(err, post){
+		if(err){
+			console.log("ERROR!! : ", err);
+		}
+		res.json(post);
+	});
+});
+
 router.delete("/:id", function(req, res, next){
 	resources.findByIdAndRemove(req.params.id, req.body, function(err, post){
 		if(err){

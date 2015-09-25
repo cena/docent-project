@@ -36,10 +36,28 @@ $(document).ready(function() {
 
     //the edit modal on admin page
     $("table").on("click", ".editButton", function () {
-        $(".editModal").modal('show');
         var $el = $(this).parent().parent();
         var id = $el[0].dataset.id;
         console.log(id);
+        $(".editModal").modal('show');
+        //populating form with resource data
+        $.ajax({
+            type: "GET",
+            url: "/resources/" + id,
+            success: function(response){
+                console.log("table edit btn ajax get call working");
+                console.log(response);
+                $(".modal-title").text(response.embedName);
+                $(".resourceName").val(response.embedName);
+                $(".resourceLink").val(response.embedLink);
+                $(".howToLink").val(response.howto);
+                $(".resDescrip").val(response.description);
+                $(".resCategory").val(response.category);
+                $(".resSubject").val(response.subject);
+                $(".resTags").val(response.tags);
+            }
+        });
+
         $(".editModal").on("click", ".submitButton", function(){
             $.ajax({
                 type: "PUT",
