@@ -3,6 +3,22 @@ var express = require('express');
 var router = express.Router();
 var resources = require('../models/embed');
 
+
+router.put("/edits/:id", function(req, res, next){
+
+	resources.findByIdAndUpdate(req.params.id, req.body, function(err, post){
+		return resources.find({}).exec(function(err, resource){
+			if(err) throw new Error(err);
+			res.send(resource);
+		});
+		if(err){
+			console.log("ERROR!! : ", err);
+		}
+		res.json(post);
+		console.log("this is the post param for put call: ", post);
+	});
+});
+
 router.post('/', function(req, res){
 	resources.find({ $text: { $search: req.body.search}}, function(err,item) {
 		if (err) {

@@ -48,7 +48,7 @@ $(document).ready(function() {
                 console.log("table edit btn ajax get call working");
                 console.log(response);
                 $(".modal-title").text(response.embedName);
-                $(".resourceName").val(response.embedName);
+                $("#resourceName").val(response.embedName);
                 $(".resourceLink").val(response.embedLink);
                 $(".howToLink").val(response.howto);
                 $(".resDescrip").val(response.description);
@@ -59,11 +59,45 @@ $(document).ready(function() {
         });
 
         $(".editModal").on("click", ".submitButton", function(){
+            var title,
+                logo,
+                resourceLink,
+                howTo,
+                description,
+                category,
+                subject,
+                tags;
+
+            $(".editForm").change(function () {
+                title = $("#resourceName").val();
+                logo = $(".logoLink").val();
+                resourceLink = $(".resourceLink").val();
+                howTo = $(".howToLink").val();
+                description = $(".resDescrip").val();
+                category = $(".resCategory").val();
+                subject = $(".resSubject").val();
+                tags = $(".resTags").val();
+                console.log("is the .change thing working? ", title);
+            }).change();
+
+            var dataObj = {
+                embedName: title,
+                logo: logo,
+                embedLink: resourceLink,
+                howto: howTo,
+                description: description,
+                category: category,
+                subject: subject,
+                tags: tags
+            };
+
             $.ajax({
                 type: "PUT",
-                url: "/resources/" + id,
+                url: "/resources/edits/" + id,
+                data: dataObj,
+                dataType: "json",
                 success: function(){
-                    console.log("Resource edits sent");
+                    console.log("data being put: ", dataObj);
                 },
                 error: function(xhr, status){
                     alert("Error: " + status);
@@ -71,6 +105,8 @@ $(document).ready(function() {
                 complete: function(){
                     console.log("Item edited!");
                     $(".editModal").modal('hide');
+                    //resetForm('#resourceForm');
+                    getResources();
                 }
             });
         });
@@ -95,29 +131,7 @@ function  getResources() {
     })
 }
 
-//to populate form data in modal for edit mode
-function getResourceById (id){
-    console.log('get call for resources by id is up');
-    $.ajax({
-        type: 'GET',
-        dataType: 'json',
-        url: "api/resources/"+id,
-        success: function(data) {
-            var embedLink = data.embedLink;
-            $('#embedExample').append(embedLink);
-            embedLink=embedLink.replace(/</g, "&lt");
-            embedLink=embedLink.replace(/>/g, "&gt");
-            $('#embedLink').html(embedLink);
-        },
-        error: function(err){
-            console.log(err);
-        }
 
-    })
-}
-
-
-// ADMIN PAGE CONTENT
 function displayAdmin (data){
     console.log(data);
     for(var i = 0; i < data.resources.length; i++) {
@@ -139,4 +153,10 @@ function displayAdmin (data){
         console.log("displayAdmin function working!")
     }
 
+}
+
+
+function resetForm($form) {
+    $form.find('input:text, input:password, input:file, select, textarea').val('');
+    $form.find('select').removeAttr('checked').removeAttr('selected');
 }
