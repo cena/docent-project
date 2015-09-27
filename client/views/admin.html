@@ -64,8 +64,25 @@
                         </div>
                         <div>
                             <h4>Description:</h4> <textarea id="description" placeholder="Description" rows="4" cols="25"></textarea>
-                            <h4>Categories:</h4> <input id="category" type="text" placeholder="Categories of Resource">
-                            <h4>Subjects:</h4> <input id="subject" type="text" placeholder="Subjects of Resource">
+                            <h4>Categories:</h4>
+                            <select input id="category">
+                            <option value="Graphs and Diagrams">Graphs and Diagrams</option>
+                            <option value="Interactives">Interactives</option>
+                            <option value="Creation">Creation</option>
+                            <option value="Videos">Videos</option>
+                            <option value="Presentations">Presentations</option>
+                            <option value="Assessment">Assessment</option>
+                        </select>
+                            <h4>Subjects:</h4>
+                            <select id="subject">
+                                <option>Any Subject</option>
+                                <option value="English">English</option>
+                                <option value="Math">Math</option>
+                                <option value="Science" selected="selected">Science</option>
+                                <option value="Social Studies">Social Studies</option>
+                                <option>Add New Subject</option>
+                            </select>
+                            <h4>Tags: (separate by comma)</h4> <input id="tags" type="text" placeholder="Tags of Resource">
                         </div>
                     </form>
                 </div>
