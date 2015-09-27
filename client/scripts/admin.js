@@ -123,17 +123,21 @@ $(document).ready(function() {
         getResources();
     });
 
-    getResources();
+    getResources(function (response) {
+        displayAdmin(response);
+
+    })
 
 });
 
-function  getResources() {
+function  getResources(callback) {
     $.ajax({
         type: 'GET',
         dataType: 'json',
         url: "/resources",
         success: function(data) {
-            displayAdmin(data);
+            data.resources.sort(compareAlphabetically);
+            callback(data.resources);
 
         }
     })
@@ -141,23 +145,22 @@ function  getResources() {
 
 function displayAdmin (data){
     $('.resourceRow').remove();
-    for(var i = 0; i < data.resources.length; i++) {
+    for(var i = 0; i < data.length; i++) {
         tags = "";
-        embedName = data.resources[i].embedName;
-        logo = data.resources[i].logo;
-        embedLink = (data.resources[i].embedLink) ? data.resources[i].embedLink : "";
-        howto = (data.resources[i].howto) ? data.resources[i].howto : "";
-        description = (data.resources[i].description) ? data.resources[i].description : "";
-        category = (data.resources[i].category) ? data.resources[i].category : "";
-        subject = (data.resources[i].subject) ? data.resources[i].subject : "";
-        if (data.resources[i].tags !== null && data.resources[i].tags !== 0) {
-            for (var j = 0; j < data.resources[i].tags.length; j++) {
-                tags += '<p class="tag">' + data.resources[i].tags[j] + '</p>';
+        embedName = data[i].embedName;
+        logo = data[i].logo;
+        embedLink = (data[i].embedLink) ? data[i].embedLink : "";
+        howto = (data[i].howto) ? data[i].howto : "";
+        description = (data[i].description) ? data[i].description : "";
+        category = (data[i].category) ? data[i].category : "";
+        subject = (data[i].subject) ? data[i].subject : "";
+        if (data[i].tags !== null && data[i].tags !== 0) {
+            for (var j = 0; j < data[i].tags.length; j++) {
+                tags += '<p class="tag">' + data[i].tags[j] + '</p>';
             }
         }
-        $("#admin").append('<tr class="resourceRow" data-id="'+data.resources[i]._id+'"><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
+        $("#admin").append('<tr class="resourceRow" data-id="'+data[i]._id+'"><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
 
-        console.log("displayAdmin function working!")
     }
 
 }
@@ -193,4 +196,12 @@ function postNewResource (){
             console.log("POST Complete!");
         }
     });
+}
+
+function compareAlphabetically(a, b) {
+    if (a.embedName < b.embedName)
+        return -1;
+    if (a.embedName > b.embedName)
+        return 1;
+    return 0;
 }
