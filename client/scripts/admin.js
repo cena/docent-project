@@ -77,6 +77,36 @@ $(document).ready(function() {
         });
     });
 
+    $("#newModal").on("click", "#submitNew", function(){
+
+
+        var embedObj= {
+            embedName:$("input#embedName").val(),
+            embedLink : $("input#embedLink").val(),
+            logo: $("input#logo").val(),
+            howto : $("input#howto").val(),
+            description : $("textarea#description").val(),
+            category : $("input#category").val(),
+            tags : $("input#tags").val(),
+            subject : $("input#subject").val()
+        };
+
+
+        $.ajax({
+            type: "POST",
+            url: "/resources/new",
+            data: embedObj,
+            success: function(){
+                console.log("POST sent");
+            },
+            error: function(xhr, status){
+                console.log("Error: " + status,+xhr);
+            },
+            complete: function(){
+                console.log("POST Complete!");
+            }
+        });
+    });
     getResources();
 
 });

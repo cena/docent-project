@@ -47,20 +47,23 @@ router.delete("/:id", function(req, res, next){
 	});
 });
 
-/*router.get('/', function(req, res, next) {
-    res.json(req.isAuthenticated());
+router.post('/new', function(req, res){
+	var newEmbed = new resources({
+		embedName: req.body.embedName,
+		embedLink: req.body.embedLink,
+		logo: req.body.logo,
+		howto: req.body.howto,
+		description: req.body.description,
+		category: req.body.category,
+		tags: req.body.tags,
+		subject: req.body.subject,
+		complete:false});
+
+	newEmbed.save(function(err){
+		if(err)console.log("uh-oh...", err);
+		res.send(newEmbed.toJSON());
+	});
+
 });
-
-router.get('/name', function(req, res, next){
-    res.json(req.user);
-});
-
-router.put("/id", function(req,res,next){
-    User.findByIdAndUpdate(req.user.id, {lastlogin: Date.now()}, function(){
-        console.log("User Updated!");
-    });
-
-    res.json(req.user);
-});*/
 
 module.exports = router;
