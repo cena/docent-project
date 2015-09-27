@@ -10,19 +10,17 @@ $(document).ready(function() {
         $(".deleteModal").modal('show');
         var $el = $(this).parent().parent();
         var id = $el[0].dataset.id;
-        console.log(id);
         $("#deleteModal").on("click", "#deleteButton", function(){
             $.ajax({
                 type: "DELETE",
                 url: "/resources/" + id,
                 success: function(){
-                    console.log("Deletion sent");
+                    console.log("Delete success");
                 },
                 error: function(xhr, status){
                     alert("Error: " + status);
                 },
                 complete: function(){
-                    console.log("Delete Complete!");
                     $(".deleteModal").modal('hide');
                     $el.remove();
                 }
@@ -38,15 +36,13 @@ $(document).ready(function() {
     $("table").on("click", ".editButton", function () {
         var $el = $(this).parent().parent();
         var id = $el[0].dataset.id;
-        console.log(id);
+
         $(".editModal").modal('show');
         //populating form with resource data
         $.ajax({
             type: "GET",
             url: "/resources/" + id,
             success: function(response){
-                console.log("table edit btn ajax get call working");
-                console.log(response);
                 $(".modal-title").text(response.embedName);
                 $("#resourceName").val(response.embedName);
                 $(".resourceLink").val(response.embedLink);
@@ -187,13 +183,10 @@ function postNewResource (){
         url: "/resources/new",
         data: embedObj,
         success: function(){
-            console.log("POST sent");
+            console.log("POST success");
         },
         error: function(xhr, status){
             console.log("Error: " + status,+xhr);
-        },
-        complete: function(){
-            console.log("POST Complete!");
         }
     });
 }
