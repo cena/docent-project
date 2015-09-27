@@ -103,13 +103,20 @@ $(document).ready(function() {
                     alert("Error: " + status);
                 },
                 complete: function(){
-                    console.log("Item edited!");
+                    $("#newEmbedForm")[0].reset();
                     $(".editModal").modal('hide');
                     //resetForm('#resourceForm');
                     getResources();
                 }
             });
         });
+    });
+
+    $("#newModal").on("click", "#submitNew", function(){
+        postNewResource();
+        $("#newModal").modal('show');
+        $("#newEmbedForm")[0].reset();
+        getResources();
     });
 
     getResources();
@@ -122,18 +129,14 @@ function  getResources() {
         dataType: 'json',
         url: "/resources",
         success: function(data) {
-            //data.resources.sort(compareAlphabetically);
-            //callback(data.resources);
-            console.log(data);
             displayAdmin(data);
 
         }
     })
 }
 
-
 function displayAdmin (data){
-    console.log(data);
+    $('.resourceRow').remove();
     for(var i = 0; i < data.resources.length; i++) {
         tags = "";
         embedName = data.resources[i].embedName;
@@ -148,15 +151,38 @@ function displayAdmin (data){
                 tags += '<p class="tag">' + data.resources[i].tags[j] + '</p>';
             }
         }
-        $("#admin").append('<tr data-id="'+data.resources[i]._id+'"><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
+        $("#admin").append('<tr class="resourceRow" data-id="'+data.resources[i]._id+'"><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
 
         console.log("displayAdmin function working!")
     }
 
 }
 
+function postNewResource (){
+    var embedObj= {
+        embedName:$("input#embedName").val(),
+        embedLink : $("input#embedLink").val(),
+        logo: $("input#logo").val(),
+        howto : $("input#howto").val(),
+        description : $("textarea#description").val(),
+        category : $("input#category").val(),
+        tags : $("input#tags").val(),
+        subject : $("input#subject").val()
+    };
 
-function resetForm($form) {
-    $form.find('input:text, input:password, input:file, select, textarea').val('');
-    $form.find('select').removeAttr('checked').removeAttr('selected');
+
+    $.ajax({
+        type: "POST",
+        url: "/resources/new",
+        data: embedObj,
+        success: function(){
+            console.log("POST sent");
+        },
+        error: function(xhr, status){
+            console.log("Error: " + status,+xhr);
+        },
+        complete: function(){
+            console.log("POST Complete!");
+        }
+    });
 }
