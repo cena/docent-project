@@ -150,7 +150,7 @@ function searchFunction(query, callback) {
         data: {search: query},
         url: '/resources',
         success: function (data) {
-            console.log(data);
+            $("#search").val("");
             callback(data);
         }
     })
