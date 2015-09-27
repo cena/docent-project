@@ -68,6 +68,11 @@ $(document).ready(function() {
                 subject,
                 tags;
 
+            tagArray=$(".resTags").val().split(",");
+            for(i=0; i<tagArray.length; i++){
+                tagArray[i] = tagArray[i].trim();
+            }
+
             $(".editForm").change(function () {
                 title = $("#resourceName").val();
                 logo = $(".logoLink").val();
@@ -76,8 +81,7 @@ $(document).ready(function() {
                 description = $(".resDescrip").val();
                 category = $(".resCategory").val();
                 subject = $(".resSubject").val();
-                tags = $(".resTags").val();
-                console.log("is the .change thing working? ", title);
+                tags = tagArray;
             }).change();
 
             var dataObj = {
@@ -159,6 +163,11 @@ function displayAdmin (data){
 }
 
 function postNewResource (){
+    tagArray=$("input#tags").val().split(",");
+    for(i=0; i<tagArray.length; i++){
+        tagArray[i] = tagArray[i].trim();
+    }
+
     var embedObj= {
         embedName:$("input#embedName").val(),
         embedLink : $("input#embedLink").val(),
@@ -166,10 +175,9 @@ function postNewResource (){
         howto : $("input#howto").val(),
         description : $("textarea#description").val(),
         category : $("input#category").val(),
-        tags : $("input#tags").val(),
+        tags : tagArray,
         subject : $("input#subject").val()
     };
-
 
     $.ajax({
         type: "POST",
