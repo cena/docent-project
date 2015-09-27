@@ -121,7 +121,7 @@ function getResourceById (id){
 
 
 function displayAdmin (data){
-    $('#admin').empty();
+    $('.resourceRow').remove();
     for(var i = 0; i < data.resources.length; i++) {
         tags = "";
         embedName = data.resources[i].embedName;
@@ -136,7 +136,7 @@ function displayAdmin (data){
                 tags += '<p class="tag">' + data.resources[i].tags[j] + '</p>';
             }
         }
-        $("#admin").append('<tr data-id="'+data.resources[i]._id+'"><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
+        $("#admin").append('<tr class="resourceRow" data-id="'+data.resources[i]._id+'"><td>' + embedName + '</td><td>' + logo + '</td><td class="embedlink">' + embedLink + '</td><td class="howtolink">' + howto + '</td><td class="description">' + description + '</td><td>' + category + '</td><td>' + subject + '</td><td>' + tags + '</td><td><button type="submit" class="editButton">Edit</button><button type="submit" class="deleteButton">Delete</button></td></tr>')
 
         console.log("displayAdmin function working!")
     }
