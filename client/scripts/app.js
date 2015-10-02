@@ -39,6 +39,11 @@ $(document).ready(function() {
 
     });
 
+    //reset page to show all resources
+    $('.seeAllResources').on('click', function () {
+        pageNumber = 1;
+        mainDisplayFunction ();
+    });
 
     //page number navigation button
     $('body').on('click', '.pageNum', function () {
@@ -66,49 +71,7 @@ $(document).ready(function() {
         }
     });
 
-//append resources to DOM on page load
-    getResources(function (response) {
-        displayCards(response);
-        makePages(response);
-
-        //tag button
-        $('body').on('click', '.tag', function () {
-            value = $(this).text();
-            pageNumber = 1;
-            filterResources("tag", value, response);
-            displayCards(filteredArray);
-            makePages(filteredArray);
-            return filteredArray;
-
-        });
-
-        //category selection
-        $('body').on('click', '.category', function () {
-            value = $(this).text();
-            pageNumber = 1;
-            filterResources("category", value, response);
-            displayCards(filteredArray);
-            makePages(filteredArray);
-            return filteredArray;
-        });
-
-        //subject selection
-        $('body').on('click', '.subject', function () {
-            value = $(this).text();
-            pageNumber = 1;
-            filterResources("subject", value, response);
-            displayCards(filteredArray);
-            makePages(filteredArray);
-            return filteredArray;
-        });
-    });
-
-    $('.seeAllResources').on('click', function () {
-        getResources(function (response) {
-            displayCards(response);
-            makePages(response);
-        })
-    });
+    mainDisplayFunction ();
 });
 
 function getNewPage() {
@@ -276,4 +239,45 @@ function getResourceById(id) {
         }
 
     })
+}
+
+function mainDisplayFunction (){
+//append resources to DOM on page load
+    getResources(function (response) {
+        displayCards(response);
+        makePages(response);
+
+        //tag button
+        $('body').on('click', '.tag', function () {
+            value = $(this).text();
+            pageNumber = 1;
+            filterResources("tag", value, response);
+            displayCards(filteredArray);
+            makePages(filteredArray);
+            return filteredArray;
+
+        });
+
+        //category selection
+        $('body').on('click', '.category', function () {
+            value = $(this).text();
+            pageNumber = 1;
+            filterResources("category", value, response);
+            displayCards(filteredArray);
+            makePages(filteredArray);
+            return filteredArray;
+        });
+
+        //subject selection
+        $('body').on('click', '.subject', function () {
+            value = $(this).text();
+            pageNumber = 1;
+            filterResources("subject", value, response);
+            displayCards(filteredArray);
+            makePages(filteredArray);
+            return filteredArray;
+        });
+    });
+
+
 }
