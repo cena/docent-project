@@ -105,7 +105,6 @@ $(document).ready(function() {
                 complete: function(){
                     $("#newEmbedForm")[0].reset();
                     $(".editModal").modal('hide');
-                    //resetForm('#resourceForm');
                     getResources();
                 }
             });
@@ -121,7 +120,6 @@ $(document).ready(function() {
 
     getResources(function (response) {
         displayAdmin(response);
-
     })
 
 });
@@ -134,7 +132,6 @@ function  getResources(callback) {
         success: function(data) {
             data.resources.sort(compareAlphabetically);
             callback(data.resources);
-
         }
     })
 }
@@ -187,6 +184,10 @@ function postNewResource (){
         },
         error: function(xhr, status){
             console.log("Error: " + status,+xhr);
+        },
+        complete: function(){
+            $("#newEmbedForm")[0].reset();
+
         }
     });
 }
